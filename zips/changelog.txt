@@ -1,8 +1,0 @@
-2.0.1
-- Update icon to show name of repository...in runes. I'm not as good at the graphic stuff as SHAFT is, maybe if I spent more than 5 minutes on it, though, it would look nicer.
-
-2.0.0
-- Move repository to ramblingahoge due to issues with github for some reason.
-
-1.0.0
-- Creation
