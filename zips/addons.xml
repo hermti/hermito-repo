@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.hermitoassistent" name="Hermito Assistent" version="1.0.0" provider-name="Hermito">
+<addon id="plugin.program.hermitoassistent" name="Hermito Assistent" version="1.0.1" provider-name="Hermito">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
