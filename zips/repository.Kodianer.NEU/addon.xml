@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.Kodianer.NEU" name="[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR]" version="1.0.1" provider-name="[COLOR gold]Kodianer [COLOR red]Team[/COLOR] | [COLOR red]El[COLOR white]Turko[/COLOR]">
+    <extension point="xbmc.addon.repository" name="Kodianer NEU Repository">
+		<info compressed="false">http://neu.kodianer.de/repos/kodianer/addons.xml</info>
+		<checksum>http://neu.kodianer.de/repos/kodianer/addons.xml.md5</checksum>
+		<datadir zip="true">http://neu.kodianer.de/repos/kodianer</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR]</summary>
+        <description>[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR] 
+[COLOR skyblue]Facebook Gruppe:[/COLOR] [COLOR gold]Kodianer[/COLOR]
+[COLOR red]Danke fur den Support  [COLOR white]http://paypal.me/elturkotc[/COLOR]
+[COLOR white]Emek icin bize Bagisda Bulunmak Isterseniz [COLOR red] http://paypal.me/elturkotc[/COLOR]</description>
+        <platform>all</platform>
+      <assets>
+       <icon>icon.gif</icon>
+       <fanart>fanart.gif</fanart>
+  </assets>
+  </extension>
+</addon>

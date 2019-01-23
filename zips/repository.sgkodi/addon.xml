@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.sgkodi" name="[B][COLORblue]SGK[/COLOR][/B][COLORwhite]ODI REPOSITORY[/COLOR]" version="1.1.3" provider-name="SGK">
+    <extension point="xbmc.addon.repository" name="Kodi Addons + Repos">
+		<info compressed="false">http://sgkodi.de/SGK-Repo/Repo-Daten/addons.xml</info>
+		<checksum>http://sgkodi.de/SGK-Repo/Repo-Daten/addons.xml.md5</checksum>
+		<datadir zip="true">http://sgkodi.de/SGK-Repo/Repo-Daten/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLORwhite]All in One Repository[/COLOR]</summary>
+        <description>
+[COLORwhite]Eine Sammlung von KODI-Repositories und Addons.[/COLOR]
+[COLORred]Der Ersteller der Repository ist nicht der Entwickler der Addons/Repos und nicht für deren Inhalt verantwortlich/haftbar![/COLOR]
+[CR][COLORwhite]Kontakt + Support:[/COLOR]
+[COLORblue]https://www.facebook.com/groups/kodiunlimited[/COLOR]
+[COLORwhite]Spenden:[/COLOR]
+[COLORblue]https://www.paypal.me/KodiUnlimited[/COLOR]</description>
+        <platform>all</platform>
+    </extension>
+</addon>

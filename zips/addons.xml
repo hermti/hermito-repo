@@ -785,6 +785,104 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.doku-stream.org" name="Doku-Stream.org" version="1.0.1" provider-name="itouch5000">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.7.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+        <import addon="script.module.html5lib" version="0.999.0"/>
+        <import addon="plugin.video.youtube" version="5.1.20.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Doku-Stream.org - your program, at any time.</summary>
+        <description lang="en">"Those who stay on the coast cannot discover new oceans." (Magellan, 1480-1521) Discover the world. With every documentary a little bit more.</description>
+        <summary lang="de">Doku-Stream.org - Dein Programm, zu jeder Zeit.</summary>
+		<description lang="de">"Wer an der Küste bleibt, kann keine neuen Ozeane entdecken." (Magellan, 1480-1521) Entdecke die Welt. Mit jeder Dokumentation ein bisschen mehr.</description>
+        <license>GPL 2.0</license>
+    </extension>
+</addon>
+
+<addon id="plugin.video.dokumonster" name="dokumonster.de" version="0.1.3" provider-name="mdmdmdmdmd">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="script.module.xbmcswift2" version="1.2.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.3.1"/>
+        <import addon="script.module.requests" version="2.7.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <language>en de</language>
+        <platform>all</platform>
+        <website>http://dokumonster.de/</website>
+        <source>https://github.com/mdmdmdmdmd/plugin.video.dokumonster</source>
+        <forum></forum>
+        <email></email>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <summary lang="de">Deutsche Dokus</summary>
+        <summary lang="en">German documentaries</summary>
+        <description lang="de">Dein Online Doku Stream Archiv. Die besten deutschen Dokumentationen einfach online anschauen. Tägliche Updates!</description>
+        <description lang="en">German online documentary stream archive. The best german documentaries online. Daily updates!</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.dokustreams.de" name="Dokustreams.de" version="1.0.4" provider-name="itouch5000">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.7.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+        <import addon="script.module.html5lib" version="0.999.0"/>
+        <import addon="plugin.video.youtube" version="5.1.20.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">View documentation and reports online</summary>
+        <description lang="en">Watch documentaries, reports, interviews and discussion programmes online for free.</description>
+        <summary lang="de">Dokumentationen und Reportagen online schauen</summary>
+		<description lang="de">Dokumentationen, Reportagen, Interviews und Diskussionssendungen kostenlos online schauen.</description>
+        <license>GPL 2.0</license>
+    </extension>
+</addon>
+
+<addon id="plugin.video.exodusredux" version="1.0.7" name="Exodus Redux" provider-name="I-A-C">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.exodusredux" />
+		<import addon="script.exodusredux.artwork" />
+		<import addon="script.exodusredux.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.lambdascrapers" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus Redux</summary>
+		<description lang="en">[B]Exodus Redux[/B][CR] [B]***Lambda Sources Edition***[/B][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot></screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -800,6 +898,23 @@
         <description></description>
         <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="plugin.video.freshstart" name="Fresh Start"
+	version="1.0.5" provider-name="tvaddons.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Factory Restore Functionality for Kodi</summary>
+    <description lang="en">Easily Factory Restore your Kodi Configuration in One Simple Click! This tool will bring your Kodi back to its original installation state, deleting all customizations and add-ons you may have previously enabled, giving you a fresh start!</description>
+    <platform>all</platform>
+    <forum>http://forums.tvaddons.ag/forums/141-FRESH-START</forum>
+    <website>http://www.tvaddons.ag/</website>
+  </extension>
 </addon>
 
 <addon id="plugin.video.ghost.tv" name="[B][COLOR lightyellow]Ghost [COLOR purple][COLOR lightyellow]Portal[/COLOR][/B]" version="1.0.2" provider-name="Team Ghost">
@@ -887,6 +1002,34 @@
     <website></website>
     <email></email>
     <source></source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.sport365.live" name="Sport365" version="1.0" provider-name="GalAnonim">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.cronxbmc" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sport365</summary>
+    <description lang="en">Sport365</description>
+    <disclaimer lang="en">Wtyczka tworzona na użytek prywatny, autor nie odpowiada za jej nieodpowienie wykorzystywanie oraz rozpowszechnianie! Wszystkie treści multimedialne są własnością strony sport365.live! Kod pochodzi od RamicSPA</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.png</fanart>
+  </assets>
+  <news>
+   Pierwsza wersja :)
+  </news>
   </extension>
 </addon>
 
@@ -991,6 +1134,20 @@
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>
     </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.usbwizard" name=".Backup Restore WIZARD" version="1.2.9" provider-name="LittleWiz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">USB-SDCARD WIZARD</summary>
+    <description lang="en">Configure Kodi with all the Best Goodies!</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
@@ -1187,6 +1344,63 @@
 	</extension>
 </addon>
 
+    <addon id="repository.Firestickplusman" name="Firestickplusman Addons" version="6.0" provider-name="Firestickplusman">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Firestickplusman Addons">
+            <info compressed="false">http://fspmkodi.com/_repo/addons.xml</info>
+            <checksum>http://fspmkodi.com/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://fspmkodi.com/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Firestickplusman addon repo</summary>
+            <description>Firestickplusman addon repo to in the best and update addons from Firestickplusman.</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.Ghost" name="[B][COLOR red]Ghost Repo[/COLOR][/B]" version="1.0" provider-name="Ghost">
+	<extension point="xbmc.addon.repository" name="Ghost Repo">
+		<info compressed="false">http://ghostrepo.de/Plugins/addons.xml</info>
+		<checksum>http://ghostrepo.de/Plugins/addons.xml.md5</checksum>
+		<datadir zip="true">http://ghostrepo.de/Plugins/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>[COLOR red]Ghost Repo[/COLOR]</summary>
+		<description>[COLOR red]Ghost Repo[/COLOR]</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+    <addon id="repository.guilouz" name="Guilouz Repository" version="1.0.3" provider-name="Guilouz">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Guilouz Repository">
+                <info compressed="false">https://raw.githubusercontent.com/Guilouz/repository.guilouz/master/_repo/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Guilouz/repository.guilouz/master/_repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://github.com/Guilouz/repository.guilouz/raw/master/_repo</datadir>
+                <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">Guilouz's addons repository</summary>
+            <summary lang="fr">Extensions du dépôt de Guilouz.</summary>
+            <description lang="en">Download and install Guilouz's addons repository.</description>
+            <description lang="fr">Téléchargez et installez les extensions du dépôt de Guilouz.</description>
+            <platform>all</platform>
+            <assets>
+ 			   <icon>resources/icon.png</icon>
+ 			   <fanart>resources/fanart.jpg</fanart>
+ 			   <screenshot>resources/screenshot-01.jpg</screenshot>
+ 			   <screenshot>resources/screenshot-02.jpg</screenshot>
+ 			   <screenshot>resources/screenshot-03.jpg</screenshot>
+ 		    </assets>
+            <news>[B]1.0.3[/B][CR]• Changes for Kodi Krypton[CR][CR][B]1.0.2[/B][CR]• Fixes[CR][CR][B]1.0.1[/B][CR]• Changes for Kodi Krypton[CR][CR][B]1.0.0[/B][CR]• Initial release</news>
+    </extension>
+</addon>
+
 <addon id="repository.hermito" name="Hermito's Kodi Addons" version="1.0.3" provider-name="Hermito">
 	<extension point="xbmc.addon.repository" name="Hermito's Kodi Addon Repository">
 		<info compressed="false">https://github.com/hermti/hermito-repo/raw/master/zips/addons.xml</info>
@@ -1199,6 +1413,53 @@
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="repository.jsergio" name="jsergio repo" version="1.0.4" provider-name="jsergio">
+	<extension point="xbmc.addon.repository" name="jsergio repo">
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo for jsergio Add-ons</summary>
+		<description>Repo for jsergio Add-ons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.Kodianer.NEU" name="[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR]" version="1.0.1" provider-name="[COLOR gold]Kodianer [COLOR red]Team[/COLOR] | [COLOR red]El[COLOR white]Turko[/COLOR]">
+    <extension point="xbmc.addon.repository" name="Kodianer NEU Repository">
+		<info compressed="false">http://neu.kodianer.de/repos/kodianer/addons.xml</info>
+		<checksum>http://neu.kodianer.de/repos/kodianer/addons.xml.md5</checksum>
+		<datadir zip="true">http://neu.kodianer.de/repos/kodianer</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR]</summary>
+        <description>[COLOR gold]Kodianer[/COLOR] [COLOR red]Repository[/COLOR] [COLOR silver]NEU[/COLOR]
+[COLOR skyblue]Facebook Gruppe:[/COLOR] [COLOR gold]Kodianer[/COLOR]
+[COLOR red]Danke fur den Support  [COLOR white]http://paypal.me/elturkotc[/COLOR]
+[COLOR white]Emek icin bize Bagisda Bulunmak Isterseniz [COLOR red] http://paypal.me/elturkotc[/COLOR]</description>
+        <platform>all</platform>
+      <assets>
+       <icon>icon.gif</icon>
+       <fanart>fanart.gif</fanart>
+  </assets>
+  </extension>
+</addon>
+
+<addon id="repository.kodil" name=".[COLOR blue].Kodil [/COLOR][COLOR white] Repository [/COLOR]" version="1.3" provider-name="kodil">
+    <extension point="xbmc.addon.repository" name=".Kodil  Repository ">
+        <info compressed="false">https://raw.githubusercontent.com/kodil/kodil/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/kodil/kodil/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/kodil/kodil/master/repo</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>kodisrael repository</summary>
+        <description>kodil repository - the most extensive repository in isrl </description>
+        <description>הריפו של קודישראל - מאגר ההרחבות הגדול והאיכותי בישראל  </description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.kodinerds" name="kodinerds.net Add-ons" version="6.0.0" provider-name="L0RE">
@@ -1235,6 +1496,74 @@
 		<description lang="de">Lastship Repository</description>
 		<platform>all</platform>
    	</extension>
+</addon>
+
+<addon id="repository.marcelveldt" version="1.0.1" name="Marcelveldt's BETA repository" provider-name="marcelveldt">
+
+	<extension point="xbmc.addon.repository" name="Marcelveldt's BETA repository">
+		<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository for beta/test versions of Marcelveldt's addons</summary>
+		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.sgkodi" name="[B][COLORblue]SGK[/COLOR][/B][COLORwhite]ODI REPOSITORY[/COLOR]" version="1.1.3" provider-name="SGK">
+    <extension point="xbmc.addon.repository" name="Kodi Addons + Repos">
+		<info compressed="false">http://sgkodi.de/SGK-Repo/Repo-Daten/addons.xml</info>
+		<checksum>http://sgkodi.de/SGK-Repo/Repo-Daten/addons.xml.md5</checksum>
+		<datadir zip="true">http://sgkodi.de/SGK-Repo/Repo-Daten/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLORwhite]All in One Repository[/COLOR]</summary>
+        <description>
+[COLORwhite]Eine Sammlung von KODI-Repositories und Addons.[/COLOR]
+[COLORred]Der Ersteller der Repository ist nicht der Entwickler der Addons/Repos und nicht für deren Inhalt verantwortlich/haftbar![/COLOR]
+[CR][COLORwhite]Kontakt + Support:[/COLOR]
+[COLORblue]https://www.facebook.com/groups/kodiunlimited[/COLOR]
+[COLORwhite]Spenden:[/COLOR]
+[COLORblue]https://www.paypal.me/KodiUnlimited[/COLOR]</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.StreamArmy" name="[COLOR crimson]S[COLOR silver]tream Army Repo[/COLOR]" version="10.2" provider-name="@Nemzzy668 / @_Manc_">
+    <extension point="xbmc.addon.repository" name="Stream Army">
+        <info compressed="false">https://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml</info>
+        <checksum>http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml.md5</checksum>
+        <datadir zip="true">http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/zips/</datadir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Stream Army Repo</summary>
+        <description>Repo For Stream Army, Bought to you by @Nemzzy668 /  @_MANC_</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+    <addon id="repository.turkvod" name="TURKvod repository" version="2.0.1" provider-name="TURKvod TeaM">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="TURKvod repository">
+            <info compressed="false">http://turkvod.me/repo/addons.xml</info>
+            <checksum>http://turkvod.me/repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://turkvod.me/repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Based on enigma2 plugin TURKvod. Support: www.turk-dreamworld.com</summary>
+            <description>Based on enigma2 plugin TURKvod. Support: www.turk-dreamworld.com</description>
+            <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.xstream" name="xStream Repository" version="1.1.3" provider-name="xStream-Team">
@@ -2152,6 +2481,85 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 [COLORblue]https://www.paypal.me/KodiUnlimited[/COLOR]</description>
 	<disclaimer></disclaimer>
   </extension>
+</addon>
+
+	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.24" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0"/>
+        <import addon="script.module.cherrypy" version="11.0.0"/>
+	</requires>
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\lib\context_animatedart.py">
+              <label>32024</label>
+              <visible>!IsEmpty(Window(Home).Property(SkinHelper.EnableAnimatedPosters)) + Container.Content(movies)</visible>
+            </item>
+            <item library="resources\lib\context_pvr.py">
+                <label>32023</label>
+                <description>PVR artwork Configuration</description>
+                <visible>
+                    !IsEmpty(Window(Home).Property(SkinHelper.EnablePvrThumbs)) +
+                    [Window.IsActive(MyPVRChannels.xml) |
+                    Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) |
+                    Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
+                </visible>
+            </item>
+            <item library="resources\lib\context_music.py">
+                <label>32023</label>
+                <description>Music artwork Configuration</description>
+                <visible>
+                    !IsEmpty(Window(Home).Property(SkinHelper.EnableMusicArt)) +
+                    [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
+                </visible>
+            </item>
+        </menu>
+	</extension>
+
+    <extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+    </extension>
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/marcelveldt/script.skin.helper.service</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.38" provider-name="marcelveldt,patrick-klein">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.0" />
+        <import addon="script.module.simplecache" version="1.0.0"/>
+	</requires>
+
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Ready to use widgets for all kind of media types</summary>
+        <description></description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
+	</extension>
 </addon>
 
 <addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
