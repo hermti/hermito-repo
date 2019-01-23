@@ -1,0 +1,318 @@
+[B]3.0.4[/B]
+  13.01.2019
+- Hompagelink aktualisiert
+- Fix Trailer abspiel Probleme
+- Beliebige IMDB Listen hinzufügen (lastship.py, movies.py, navigator.py, settings.xml)
+	Es ist nun möglich beliebige IMDB-Listen mit ihren IDs (z.B. ls123456789) unter Einstellungen einzutragen und zu 
+	benennen
+	Der Punkt „IMDB-Listen“ erscheint dann in der Kategorienübersicht der Filme. Standardsortierung ist immer die Sortierung 
+	der Liste
+	Die Einstellung befindet sich unter „Allgemein“ und ist Standardmäßig deaktiviert
+	
+[B]3.0.3.0[/B]
+  03.01.2019
+- Update fixzipfile (damit das nightly Update auf Android funktioniert)
+
+[B]3.0.2.9[/B]
+  30.12.2018
+- Update fixzipfile
+- Update sources.py (Openload wird bei Hoster mit Captcha jetzt auch deaktiviert)
+-  moovie entfernt (Authentifizierung zum Abspielen der Links notwendig)
+- Update movies.py, tvshows.py, settings.xml:
+   Genre kann nun unabhängig von den Schlagwörtern benannt werden
+   Kurze Erklärung zum notwendigen Eintrag eingefügt
+- Add tmovie
+- [tvshows.py] Anpassung der Auszeichnungen Icons
+- [navigator.py] In tvshows Icon Anpassung
+- [movies.py] optische Optimierung
+
+[B]3.0.2.8[/B]
+  09.12.2018
+- Fix TV Sender (nächste Seite)
+- DuckDuckgo als Fallback Suche entfernt
+- Personal Generes Code Optimierung
+- Fix HDFilme
+- [watchbox] Serien werden jetzt auch gefunden
+- Update Icons Verweis für Studio und Auszeichnungen
+  [settings.xml], [movies.py], [navigator.py]
+- Update cinemaxx.to (Staffel fix)
+- Update foxx
+- Update serienstream.to (Suche angepasst)
+- Persönliche Genres hinzugefügt:
+  - [movies.py], [tvshows.py], [settings.xml]
+- [settings.xml] Untertitel Standard Deutsch, Menue neu sortiert
+- [HDFilme] Update auf Domain Endung .net
+- Watchbox neu hinzugefügt (nur Filme)
+- [kinox] Domain Update (kinox.nu)
+- kinoking entfernt (Seite gibt es nicht mehr)
+
+- movies.py:
+  Kategorie „Herkunftsland“ hinzugefügt (dient als sinnvollerer „Ersatz“ für „Sprachen“)
+  Wird von „Filter by Year“ beeinflusst (Anmerkung: Oft gibt es mehrere „Herkunftsländer“ und somit Überschneidungen; Dies ist 
+  auf IMDB nicht anders)
+  Symbole angepasst
+  
+  Alle IMDB-Links aktualisiert/bereinigt, Moviemeter in Links entfernt da von IMDB nicht mehr unterstützt. Alle IMDB-Links 
+  auf „include=adult“ gesetzt und unnötige Teile entfernt. Nahezu alle Ergebnisse der Kategorien werden jetzt, wie standardmäßig  
+  in IMDB, nach Popularität sortiert
+  
+  Kategorie „Studios“ hinzugefügt (Filterbar mit „Filter by Years“), Code bereinigt/reduziert
+  tvshows.py: Top/Bottom wird zwar von IMDB angeboten aber liefert auch auf der Website keine Ergebnisse
+  Über Alternativen, die über IMDB realisierbar sind, wird nachgedacht. Funktion somit deaktiviert
+
+- tvshows.py:
+  Kategorie „Herkunftsland“ hinzugefügt (dient als sinnvollerer „Ersatz“ für „Sprachen“). (Anmerkung: Oft gibt es mehrere „    
+  Herkunftsländer und somit Überschneidungen; Dies ist auf IMDB nicht anders)
+  Emmy und „Golden Globe“ unter „Auszeichnungen & Co“ hinzugefügt. (Anmerkung: Auf Grund der Vielzahl verliehener Preise sehen   
+  die Liste auf dem ersten Blick identisch aus, sie sind es aber nicht)
+  Symbole angepasst
+  
+  Populär“ wieder hergestellt als Ersatz für IMDB-Top-Listen
+
+- navigator.py:
+  Anpassungen für neue Kategorien
+  Anzeige der Versionsnummer im Bereich Infos und Updates
+  Punkt „Studios“ hinzugefügt
+
+- lastship.py:
+  Anpassung für Kategorie „Studios“
+
+- settings.xml:
+  Anpassung des Hinweises für „Filter by Year“
+  
+- Populär aus „Auszeichnungen & Co“ gelöscht da identisch zu „IMDB Top 1000“
+  Links bleiben bestehen wegen Movie Widget
+- Aktive Betrachter wird bei Filter by Year nicht gefiltert (wie vorher) und Boxoffice sowie Meistbewertet wird nun auch   
+  gefiltert
+- Icons hinzugefügt
+- Schreibweise zu einer optischen schöneren geändert
+
+- Übersicht in movies.py, tvshows.py, navigator.py umsortiert
+- Mehr Auszeichnungen und Bewertungen unter einen Punkt vereint um die Übersichtlichkeit zu steigern
+- Bewertungen/Auszeichnungen ergänzt
+- Filter by year für Genres, FSK, Auszeichnungen möglich. Allerdings nicht für populär, boxoffice, aktive Betrachter und   
+  besten bewertet (hier muss jemand dan der besser Python kann)
+- https einheitlich (in bearbeiteten Dateien) zu http geändert
+- Cleanup von auskommentierten Funktionen und weitere Kleinigkeiten
+
+- [updatemanager.py] Lizenz Update
+- Update downloader.py und settings.xml:
+	- Benennung der Downloads (Dateien und Ordner) in Deutsch ist nun vollständig für Serien und Filme möglich 
+	  (inkl. Downloadanzeige)
+	  Code übersichtlicher gestaltet (downloader.py, settings.xml)
+- Fake-Genre Superhelden hinzugefügt (movies.py, tvshows.py, cleangenre.py)
+
+- downloader.py (Filme und Ordner werden beim Download in Deutsch angelegt)
+	Egal ob die Option aktiviert oder deaktiviert ist werden Serien vorerst in Englisch benannt
+	Downloadanzeige gibt vorerst bei Filmen und Serien den englischen Namen aus
+- Update serienstream (Anzeigetext geändert, bei nicht eingetragenem Konto bzw. Recpatcha)
+
+- Option für deutsche Datei- und Ordnerstruktur:
+- settings.xml
+- libtools.py
+
+-Umstellung auf Deutsch:
+	- metacache.py
+	- sources.py
+	- trailer.py
+	- library.py
+	- libtools.py
+- Lizenz Update
+	- episodes.py
+	- movies.py
+	- tvshows.py
+
+- [duckduckgo.py] orion header und referer Update
+
+[B]3.0.2.7[/B]
+  11.11.2018
+- [settings.xml] Update für Kodi18beta5
+- Lizenzen erneuert
+- "Finde ähnliches" Kontexmenü hinzugefügt
+- 24h Verzögerung bevor Episoden Importiert werden und Spezial Episoden:
+	- episodes.py (tv.specials)
+	- tvshows.py  (Kontexmenü "Finde ähnliche)
+	- movies.py  (Kontexmenü "Finde ähnliche)
+	- libtools.py (24h Verzögerung vor Episoden Imprtierung)
+- settings.xml (24h Verzögerung, Spezial Episoden, Menü neu/übersichtlich angeordnet)
+- [episodes.py] 
+	- Umstellung auf primär deutsch (außer TVMaze/Kalender da deutsch nicht möglich)
+- [navigator, movies, tvshows.py] 
+	- Kategorie Sprachen entfernt (da nur deutsche Sprache verwendet wird)
+- [cleangenre.py]
+	- Nicht supportete Sprachen entfernt
+	- unnötige Unicode-Codierung entfernt
+	- Genres alphabetisch sortiert (deutsch)
+- [tvshows und movies.py]
+	- Genres alphabetisch geordnet
+- [navigator.py] FSK anstelle Freigabe
+- [tvshows.py] FSK Update
+- [movies.py] FSK Update
+- Fix Emby (No Cache)
+- [animeloads] fixx https
+- [movies.py] fix "In den Kinos"
+- [player.py] richtige string schreibweise
+- Fix Download Context Menü
+- upadate settings, lvalue auf value
+- [language] string.po komplett entfernt
+- [settings.xml] Einstellung für Sprache entfernt
+- [recaptcha_app.py] Umlaute entfernt
+- [cache.py] Suchverlauf leeren“ aus „Alle Speicher leeren“ entfernt
+- Seriesever Konto entfernt
+- Bereits implementierte Einstellung sichtbar gemacht: "Streamsuche vorzeitig abbrechen" 
+- [downloader.py] DE Übersetzung ergänzt
+
+- UTF-8 code (# -*- coding: UTF-8 -*-) hinzugefügt
+  - recaptcha_app.py
+  - captcha9kw.py
+  - TwoCaptcha.py
+
+- Lastship Menü Geschwindigkeit verbessert:
+	- string.po Zahlenverweis, durch Klartext ersetzt:
+	   - [trakt.py] Verweise teilweise entfernt
+	   - [player.py]
+	   - [libtools.py]
+	   - [cache.py]
+	   - [settings.xml]
+	   - [lastship.py]
+	   - [sources.py]
+	   - [settings.xml]
+	   - [episodes.py]
+	   - [movies.py]
+	   - [tvshows.py]
+	   - [trakt.py]
+	   - [serienstream.py]
+	   - [navigator.py]
+   
+- Rechtschreibung aktualisiert:
+   - [captcha9kw.py]
+   - [TwoCaptcha.py] 
+   - [recaptcha_app.py]
+
+[B]3.0.2.6[/B]
+ - Fix Nanime Genre
+ - nanime Standard: AUS
+ - Fix noch nicht ausgestrahlte Episoden in die Bibliothek aufnehmen
+ - Fix 9kw liefert Timeoutwert mit / Performance Tuning
+ - Reihenfolge der Caches geändert, damit „Suchverlauf löschen“ nicht mittendrin steht
+ - Vereinheitlichung der Übersetzung "Cache" in string.po
+
+[B]3.0.2.5[/B]
+  18.10.2018
+- Übersetzungen des nicht in der string.py befindlichen Textes
+- Add Maxdome
+- Fix "Resume/Fortsetzen" anzeige
+- Fix, noch nicht ausgestrahlte Episoden in die Bibliothek aufnehmen
+- Ausgabe der Downloadanzeige optimiert
+- Fix Trakt Fortsetzungspunkt einstellen -> enabled wenn trakt konto eingestellt
+- Fix bookmark settings
+- Kodi18 Nightly Update Fix (fixzip und updatemanager.py)
+
+[B]3.0.2.4[/B]
+  12.10.2018
+- Add naninme
+- Update HDKino (Add Duckduckgo)
+- Fix Problem Suche in Kodi18
+- Add cine.to mit ReCaptcha Funktion
+- Fix fehlende Icons unter Linux
+- Fix HDGO.py (Resolver)
+- Update kinox (new domains)
+- Cache optimiert
+- Fix Trakt Autentifizierung
+- add TwoCaptcha
+- Update emby
+- Fix Fortsetzungspunkt in Kodi18
+- Fix angefangen/nicht beendete Episoden werden nicht angezeigt wenn IMDb Key verwendet wird
+- Dependence script.lastship.metadata entfernt
+- Fix duckduckgo (Provider werden oft geblockt)
+
+[B]3.0.2.3[/B]
+  17.09.2018
+- Update myjdownloader.py, recaptcha_app.py
+- Add Captcha9kw
+- Update HDStreams
+- Add bs.to mit Recaptcha
+- Fix Iload
+
+[B]3.0.2.2[/B]
+  09.09.2018
+- Emby Debug Logging entfernt
+- Amazon suche gefixt und voll kompatibel zu Amazon VOD auf allen Systemen
+- Amazon nun als Premium gekennzeichnet, immer on Top bei den Suchergebnissen (source.py)
+- Fix Amazon Serien und Film Suche
+- Fix HDFilme (Fix Serien)
+- Fix Cinemaxx (Fix Serien und Suche)
+- Fix Alleserien (and add duckduckgo search)
+- Fix Foxx 
+- Fix Serienstream 
+- Fix streamworld 
+- stream.to Debugging entfernt
+- Fix Duckduckgo.py 
+- Add Netflix
+- Update source.py
+- Add MyJdownloader rCaptcher
+- streamword, stream.to Captcha Solving available
+
+[B]3.0.2.1[/B]
+  24.08.2018
+- Bugfix und Update moovie
+
+[B]3.0.2[/B]
+  23.08.2018
+- Fix HDFilme
+- Update kinox (Fix Serien Links)
+- Update foxx (Fix Serien)
+- Update Moovie (es werden nun auch Serien gefunden)
+- Update library.py (Fault Logging entfernt)
+- Update sources.py (foxx.to Resolver Fix)
+- Add Alleserien.com
+- Add Kino.cx
+- Add Feedme Scraper
+- Streamdream Anpassung auf Moviedream.ws
+
+[B]3.0.1[/B]
+  10.08.2018
+- Update HDFilme
+- Update kinox
+- FaultLogging verbessert
+- FaultLogger Standard EIN (Fehler werden damit automatisch an den Forum Server gesendet /siehe dazu FAQ)
+- Update Emby (Wird immer als erster Anbieter angezeigt, extra Stream Info Video und Audio)
+- Update Emby (Fix Umlaut Suche)
+ -VODHD Streama Scraper entfernet
+- allg. Emby Client implementation hinzugefügt. Es werden alle Emby ( auch eigene ) Server via API unterstützt
+- Update settings, string.po und sources.py
+- kinodogs entfernt
+
+[B]3.0.0[/B]
+  20.07.2018
+- Rework auf Ursprungs Version, ein Modul, plugin.video.lastship
+- Update VodHD
+- Update Kinoger
+- Add Cinematrix und Update
+- Add and Update HDGO.py (Modules)
+- Add Cinemaxx
+- Add HDKino
+- Add Amazon
+- Update movietown (add cloudflare scraper)
+- Update moovie
+- Update HDFilme.tv
+- Update Duckduckgo
+- Seriesever entfernt, Seite Offline-Umleitung auf Moviesever
+
+[B]2.0.8.3[/B]
+  15.06.2018
+- TMovie entfernt 
+
+[B]2.0.8.2[/B]
+  08.06.2018
+- Update movie2k-sh
+- Add movie4k-lt
+- Alluc Konto entfernt
+- cine.to entfernt (Captcha)
+- Pure-Anime.tv (Seite gibt es nicht mehr)
+- Kategorie Kanäle (Channels) entfernt
+- bs.to (Captcha und API changed) und alluc.ee (Seite stillgelegt) entfernt
+- add vodhd
+- add movie-gg
+- add moovie
+- Update string.po

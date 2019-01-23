@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.SGKPAIR"
+  name="[B][COLORblue]SGK[/COLOR][/B][COLORwhite]PAIR[/COLOR]"
+  version="1.0.2" 
+  provider-name="SGK">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="addon.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="de">SGK Pairing-Script</summary>
+    <description lang="de">
+[COLORwhite]Mit diesem kleinen Script kann man direkt aus Kodi heraus via Webbrowser die Seiten diverser Hoster aufrufen um zu Pairen bzw. sich bei diversen Diensten einloggen.[/COLOR]
+[CR][COLORwhite]Kontakt + Support:[/COLOR]
+[COLORblue]https://www.facebook.com/groups/kodiunlimited[/COLOR]
+[COLORwhite]Spenden:[/COLOR]
+[COLORblue]https://www.paypal.me/KodiUnlimited[/COLOR]</description>
+	<disclaimer></disclaimer>
+  </extension>
+</addon>

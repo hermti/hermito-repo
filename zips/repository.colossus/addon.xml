@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.colossus" name="[COLOR gold]Colossus Repository[/COLOR]" version="999.999.666" provider-name="Colossal STOPPED">
+    <extension point="xbmc.addon.repository" name="[COLOR gold]Colossus Repository[/COLOR]">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Colossus STOPPED, uninstall (t)his repo...</summary>
+        <description>Colossus STOPPED (info: http://koditips.com/colossus-repo-gone-urlresolver-offline/)</description>
+        <disclaimer>Colossus STOPPED, see: http://koditips.com/colossus-repo-gone-urlresolver-offline/ for more info, please uninstall (t)his repo.</disclaimer>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <forum>http://koditips.com/colossus-repo-gone-urlresolver-offline/</forum>
+        <website>http://koditips.com/colossus-repo-gone-urlresolver-offline/</website>
+        <source>http://koditips.com/colossus-repo-gone-urlresolver-offline/</source>
+        <news>Colossal ABANDONED (t)his repo</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot></screenshot>
+        </assets>
+        <broken>Colossus STOPPED! (t)his repo is ABANDONED!</broken>
+    </extension>
+</addon>

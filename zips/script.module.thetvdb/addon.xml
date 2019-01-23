@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.thetvdb"
+       name="The TVDB API v2"
+       version="1.0.27.010"
+       provider-name="marcelveldt, YLLOW_DRAGON">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="script.module.requests" version="2.3.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.arrow" version="0.6.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">TheTVDB API v2 python module for Kodi</summary>
+        <summary lang="ru_RU">TheTVDB API v2 модуль python для Kodi</summary>
+        <description lang="en_GB">TheTVDB API v2 python module for Kodi</description>
+        <description lang="ru_RU">TheTVDB API v2 модуль python для Kodi</description>
+        <license>Apache 2.0</license>
+        <platform>all</platform>
+        <email>nkvoronov@gmail.com</email>
+        <source>https://github.com/nkvoronov/script.module.thetvdb.git</source>
+    </extension>
+</addon>

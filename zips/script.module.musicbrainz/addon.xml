@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.musicbrainz"
+       name="Musicbrainz NGS webservice python bindings"
+       version="0.6.0.002"
+       provider-name="marcelveldt, YLLOW_DRAGON">
+  <requires>
+  <import addon="xbmc.python" version="2.24.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python bindings for Musicbrainz' NGS webservice</summary>
+    <summary lang="ru_RU">Python модуль для вебсервиса Musicbrainzngs</summary>    
+    <description lang="en_GB">Kodi module library for the Python bindings for Musicbrainz' NGS webservice developed by alastair.</description>
+    <description lang="ru_RU">Kodi Python модуль для вебсервиса Musicbrainzngs, разработанного alastair.</description>    
+    <license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+    <platform>all</platform>
+    <email>nkvoronov@gmail.com</email>
+    <source>https://github.com/nkvoronov/script.module.simplecache.git</source>
+  </extension>
+</addon>

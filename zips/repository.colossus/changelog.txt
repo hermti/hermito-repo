@@ -1,0 +1,4 @@
+Colossus STOPPED:
+ http://koditips.com/colossus-repo-gone-urlresolver-offline/ (Colossal ABANDONED (t)his repo)
+
+**You should uninstall all broken/stopped/unused REPOs

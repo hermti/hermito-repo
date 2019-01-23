@@ -1,0 +1,6 @@
+﻿1.1.9
+- Renamed to kodinerds.net Add-ons
+- official Repo of german kodinerds.net
+
+1.1.3
+- Added Structure
