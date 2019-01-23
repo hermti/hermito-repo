@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.CannaPower" name="CannaPower" version="1.0.1" provider-name="skatulskijean">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform><language>de</language><license>GPL 2.0</license>
+   		<summary lang="de">CannaPower</summary>
+		<description lang="en">
+			CannaPower streams music-charts and Year-Charts from your Country.
+		</description>
+	</extension>
+</addon>

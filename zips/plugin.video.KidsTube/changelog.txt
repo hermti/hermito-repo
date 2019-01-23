@@ -1,0 +1,10 @@
+1.0.3- Art to URL, add Music
+1.0.2
+- update Menu
+- add submenus
+- update Channels
+- add new Categories
+
+
+1.0.1
+- First Release
