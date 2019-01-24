@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.freshstart" name="Fresh Start"
-	version="1.0.5" provider-name="tvaddons.ag">
+	version="1.0.6" provider-name="tvaddons.ag">
   <requires>
+   <import addon="plugin.program.indigo" version="1.0.0" />
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
