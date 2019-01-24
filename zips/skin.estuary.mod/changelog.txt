@@ -1,0 +1,610 @@
+1.7.14
+• Fix power menu
+
+1.7.13
+• Fix context menu for CU LRC Lyrics addon
+
+1.7.12
+• Add support for Videolyrics v2 (thanks to manfeed)
+
+1.7.11
+• Add polish translation
+
+1.7.10
+• Fix Youtube call
+
+1.7.9 :
+• Fix missing lyrics fonts for Arial
+• Minnor fix
+
+1.7.8 :
+• Add Videolyrics (credits to manfeed)
+• Change widget name on Hub window for pictures
+
+1.7.7 :
+• Fix missing justify plots
+• Fix italian language
+• Minnor fix
+
+1.7.6 :
+• Add finish time flag icons for preconfigured widgets
+• Justify all plots
+• Remove TVTunes workaround
+• Fix RSS Editor support with new XML
+
+1.7.5 :
+• Workaround for fanarts on video/music info dialog
+• Changes on scrollbars
+• Fix overlapping rating with TV Shows
+• Minnor fix
+
+1.7.4 :
+• Add support for postplay screen from Nextup Service Notification addon
+• Add pattern to extended info windows
+• Fix missing changes for new Skin Helper Service addons
+• Fix clearlogos aspect ratio for TV Shows widgets
+• Fix rss on widgets focus
+• Minnor fix
+
+1.7.3 :
+• Add possibility to choose number of items to display on widgets
+• Add possibility to disable pattern
+• Add duration flag icon for widgets
+• Add first aired date on dialog video info
+• Add disc to home menu
+• Fix animated posters issue
+• Fix TMDB/TVDB flag icons
+• Minnor fix
+
+1.7.2 :
+• Add genre for list view
+• Add possibility to show rating of TMDB rather than IMDB
+• Add TVDB rating flag icon for TV Shows
+• Add possibility to change pattern of background and his color
+• Fix context menu for 21:9 screen
+• Fix extended info for 21:9 screen
+• Fix on favourites window
+• Minnor fix
+
+1.7.1 :
+• Fix arrow position	
+	
+1.7.0 :
+• Add support for 21:9 screens
+• Add skin setting to use basic vertical menu instead of dynamic vertical menu
+• Add DVD and BluRay flag icons
+• Add Extrafanarts support on widgets
+• Add genres colors for PVR Guide
+• Add possibility to disable Kodi screensaver on fullscreen music playback
+• Replace window for chapters
+• Fix for new Skin Helper Service addons
+• Fix personnalize menu focus when item is disabled
+• Fix opacity background on Next Aired addon
+• Fix videoinfo button
+• Fix getting stuck on rss control
+• Many others fixes
+
+1.6.6 :
+• Add possibility to disable items in personnalize home menu (with button and context menu)
+• Add privacy policy support on system info
+• Rework on vertical home menu
+• Rewrite xmls for script.globalsearch
+• Fix power menu
+• Minnor fixes
+
+1.6.5 :
+• Add possibility to replace backgrounds shortcuts
+• Rework on extendedinfo windows
+• Allow longer header for dialognumeric
+• Adjust gamecontrollerdialog button order
+• Fix PVR dialogs
+• Fix animations
+• Fix dialogsubtitles image
+• Minnor tweaks
+
+1.6.4 :
+• Add status of tv shows from Next Aired addon on video infos
+• Add genres icons for thumbnails
+• Add bigger font (Thanks to schumi2004)
+• Add possibility to pause video when viewing extended info
+• Hide videowindow and visualisation of background when slideshow is active
+• Minnor fixes
+
+1.6.3 :
+• Replace channels numbers by channels icons on PVR Guide
+• Replace some Skin Helper widgets had to recent changes of Skin Helper Services
+• Fix on smartplaylist editor	
+• Fix widgets on addons launcher
+• New 4K flag icon
+• Minnor fixes
+	
+1.6.2 :
+• Add seeklabel on music OSD
+• Add new Icons view
+• Add info wall view for episodes
+• Add script.module.simplecache in necessary addon
+• Use RGB color space for country flags
+• Changes in smartplaylist editor
+• Misc fixes
+
+1.6.1 :
+• Add possibility to hide plots of unwatched episodes to avoid spoilers
+• Add possibility to search addons with search function on home menu
+• Add new submenu items for addons
+• Changes for script.skin.helper.colorpicker
+• Misc fixes
+
+1.6.0 :
+• Add in progress/watched flag icons for widgets
+• Add 'Stop Scanning' option to Submenu
+• Add vertical scrollbar to channel list in PVR Guide
+• Add fallback labels to some viewtypes
+• Add 'Add timer' button in PVR info dialog
+• Add script.skin.helper.colorpicker in necessary addon
+• Add recordings widget to home screen
+• Separate tv/radio widgets for current and next recording
+• Fix selection with Picture Widget and Hub Widget when 'Select widget first' is enable
+• Fix shortcut issue with Live TV and Radios
+• Fix navigation issue with PVR Guide
+• Fix missing Options button in the BottomBar in pictures section
+• Fix non-scrolling plot for PVR recordings
+• Fix on PVR widgets
+• Workaround for navigation issue on dialog addon settings
+• Drop some PVR viewtypes
+• Remove window type, id and zorder defenitions
+• Hide 'Update Library' button in Addon section
+• Avoid empty variables
+• Many other fixes
+
+1.5.8 :
+• Add possibility to navigate main menu to widgets rather than main menu to submenus icons
+• Fix 'Play recording' button on Recordings Info dialog
+• Fix/improve user experience in case of empty recordings list
+• Fix/unify PVR window breadcrumbs
+• Fix channel icons/thumbnails
+• Update some icons
+• Remove all use of hyphen as none value
+
+1.5.7 :
+• Add buffering progress on video fullscreen
+• Add setting to hide notification popup during playback
+• Improve esthetic appearance
+• Fix missing skin settings icons
+• Fix broken addon message
+• Other Fixes
+
+1.5.6 :
+• Add DTS-HD High Resolution icon
+• Add possiblity to hide time and date on top bar
+• Fix playspeed label
+• Fix poster, clearlogo and fanart when pressing "i" button on widgets
+• Fix poster, clearlogo and fanart on video info
+• Fix 'Show fanart' on music/video info
+• Fix osd not showing with live tv
+• Hide notifications on fullscreen
+• Allow skip chapters with button on video OSD
+• Updated language files from Transifex
+
+1.5.5 :
+• Add possiblity to hide CD case on music visualisation screen
+• Add language and subtitles language of current video on video OSD
+• Add possibility to hide pictures info on some views
+• Add new mosaics view for pictures
+
+1.5.4 :
+• Fix bad Textures.xbt
+
+1.5.3 :
+• Add aired time, season and episode number for next aired widget
+• Add fallback music disc (Thanks to mikeSiLVO)
+• Add possibility to delete / add more one rule for smartplaylist
+• Improve esthetic appearance
+• Fix media settings icon
+• Krypton : Update DialogGameControllers.xml
+• Krypton : Show playspeed on video OSD
+
+1.5.2 :
+• Add support for Library Editor addon
+• Add year for albums in wall info view
+• Move RSS at bottom
+• Fix Seekbar color
+• Fix Seekbar label
+• Improve esthetic appearance
+• PVR channel windows now can be used as Kodi start windows
+
+1.5.1 :
+• Fix on music visualisation
+
+1.5.0 :
+• Add new horizontal advanced home menu
+• Changes on Hub Widget
+• Fix slider color on PlayerProcessInfo window
+• Fix clearlogos on Clearlogos view
+• Fix home screen channel widget's start and end time when no epg available
+• Fix sort attribute and order for tv and radio channels on home screen
+• Improve esthetic appearance
+• Many others fixes
+
+1.4.1 :
+• Add possibility to use clearlogos instead of thumbnails for TV Shows Widget and Customizable Widget (thumbs)
+• Fix typo in mypics.xml
+• Fix Android apps (thanks to maxtherabbit)
+• Minnor fixes
+• Krypton : Renaming of Library settings to Media settings
+• Krypton : Add PlayerProcessInfo window (button 'o')
+
+1.4.0 :
+• Add 'Next airing episodes' widget for TV Shows (Requires script.module.thetvdb which is not yet in any repo (BETA stage), get it from github)
+• Add possibility to configure up to 6 widgets for Customizable widgets
+• Add new changes from original Estuary 0.8.4
+• Rearrange type of widgets
+• Improve esthetic appearance
+• Fix thumbnails for TV Shows Widgets
+• Fix submenu with Picture Widget
+• Fix Label2 when movie is linked to TV show
+• Fix ClearLogos
+• Fix access to addons widgets when there is no submenu
+
+1.3.12 :
+• Add possibility to disable banners for TV Shows Widget/Custom Widget (Thumbs)
+• Add possibility to replace episodes thumbnails by TV shows thumbnails for Custom Widget (Thumbs) 
+• Fix widgets visibility in Customize home menu (Thanks to BobCratchett)
+• Media textures are now packed
+
+1.3.11 :
+• Changes in TV Shows Widget/Custom Widget (Thumbs)
+• Improve esthetic appearance
+
+1.3.10 :
+• Add possibility to change type of widgets for preconfigured widgets
+• Add new Hub widget
+• Show fallback behind thumb in addoninfo preview list
+• Make slideshow window a dialog
+• Updated language files from Transifex
+• Fix second label with home widgets
+
+1.3.9 :
+• Add Movies/TV Shows Hubs and ability to create up to 3
+• Add last played on video info
+• Fix artist label
+
+1.3.8 :
+• Now use extrafanarts for music visualisation (Artist Slideshow addon is no longer necessary)
+• Fix background opacity on music visualisation
+• Fix PVR icon
+• Fix next up popup for PVR
+• Fix animated posters on some views
+• Fix numeric button
+• Replace years by artists for albums
+• Other minor fixes
+
+1.3.7 :
+• Add new 'Simple wall' view
+• Add possibility to hide posters info
+• Add Next Up popup for Live TV (Thanks to sualfred)
+• Add preview for select dialog
+• Add screenshots support on addon info
+• Fix seasons posters on some views
+• Fix fullscreen button with vertical menu
+• Other minor fixes
+
+1.3.6 :
+• Fix Sources widget
+
+1.3.5 :
+• Add new fully customizable widgets : posters, thumbs and icons
+• Add player processing info on video osd
+• Allow TVTunes to play themes
+• Fix duplicate shortcuts with home menu
+• Fix popup notification
+• Other minor fixes
+
+1.3.4 :
+• Add LibreELEC / OpenELEC settings shortcut on settings panel
+• Add LibreELEC / OpenELEC settings shortcut on home menu
+• Add a small menu in personnalise home menu to move / add / delete items
+• Add possibility to change popup notification position
+• Fix on music visualisation
+• Fix thumbs on tv shows widgets
+• Fix total / watched / unwatched episodes flag with special characters (need to use Arial font)
+• Reordering skin settings
+
+1.3.3 :
+• Add IMDB Top 250 flag icon
+• Add possibility to change background color regardless of main skin color
+• Add button for Color Management on video OSD
+• Add complete discography on artist info
+• Now use Skin Helper Service for artists and albums description
+• Fix missing posters and fanarts on some views
+• Other minor fixes
+• Updated language files from Transifex
+• Cleanup code
+
+1.3.2 :
+• Add total / watched / unwatched episodes number for tv shows and seasons
+• Add possibility to hide info from Rotten Tomatoes and Metacritic
+• Add possibility to hide clearlogos on home menu
+• Add flag icons on home menu and possibility to hide them
+• Minor fixes
+
+1.3.1 :
+• Fix widget selection
+• Fix extendedinfo button on OSD with music videos
+
+1.3.0 :
+• Add 'My TV shows airing today' on default tv shows widget
+• Add 'Next episodes to watch' on default tv shows widget
+• Add yes/no dialog window when reset skin settings
+• Hide hard disk usage on Android system
+• Changes in PVR guide
+• Changes in personnalise home menu
+• Fix widgets with horizontal menu
+• Improve esthetic appearance
+
+1.2.9 :
+• Add horizontal home menu
+• Add Rotten TomatoMeter and Rotten Tomatoes Audience Score for tv shows
+• Fix rating flag icon color
+• Minnor fix 
+
+1.2.8 :
+• Now use Skin Helper Service for Music Clearlogos and CDArts
+• Add ClearLogos on home screen for widgets
+• Add Fanarts on home screen for widgets
+• Add new Live TV widget (thanks to im85288)
+• Add support for music extrafanarts with Skin Helper Service
+• Add Clearlogos on music visualisation
+• Add banner on music visualisation
+• Add banner on tv shows info
+• Add new views for images : Icons wall and List
+• Add casting list on video OSD (thanks to im85288)
+• Add the file size of add-ons packages
+• Changes in functioning of personnalise home menu
+• Changes in widgets with labels on top
+• Changes for Krypton
+• Improve esthetic appearance
+
+1.2.7 :
+• Krypton : Replace changelog file with a 'news' section in addon.xml
+• Add possibility to change skin color
+• Add Clearlogo on video OSD
+• Add IMDB flag icon on video OSD
+• Add possibility to choose multi images for home menu background
+• Replace year by total episodes in list views for tv shows and seasons
+• Improve esthetic appearance
+• Fix poster on video OSD
+• Fix duration flag icon with music videos
+• Fix ratings with tv shows
+• Updated language files from Transifex
+
+1.2.6 :
+• Add new icons flags : Rotten TomatoMeter, Rotten Tomatoes Audience Score and MetaCritic rating
+• Add possibility to show music visualisation screen directly when playing song
+
+1.2.5 :
+• Add changes from original Estuary 0.8.0
+• Improve icons resolution
+• Changes in dialog select
+• Fix studios icons
+• Fix missing string
+
+1.2.4 :
+• Improve esthetic appearance
+• Fix recently added episodes widget
+
+1.2.3 :
+• Add info on Big Poster view
+• Add extrafanarts support for 'Show Fanart' button on video info
+• Now use Skin Helper Service for extrafanarts
+
+1.2.2 :
+• Add album cover for next track on music OSD
+• Add possibility to disable zoom effect on focus
+• Add Show Path button on music video info
+• Improve volume progress with unit
+• Improve clock icon
+• Update AudioDSPManager.xml with core changes
+
+1.2.1 :
+• Add CU LRC Lyrics addon integration on music OSD
+• Add new CD case on music visualisation
+• Add button on video OSD to access extended info
+• Add a setting in personnalise home menu to replace thumbnails of episodes by fanarts
+• Add description for each skin setting
+• Improve esthetic appearance
+• Fix list on dialog settings
+• Fix play/pause button on media menu
+• Fix episode label on videos search
+
+1.2.0 :
+• Changes in skin settings to be the same as others settings
+• Add possibility to reset each skin settings category individually
+• Add possibility to show/hide background visualisation effect
+• Add possibility to access to music playlist from music OSD
+• Add music videos on default menu
+• Add default music videos widget
+• Add AudioDSP settings & manager to music OSD
+• Add arrows for home menu when there is more than 9 items
+• Fix fanarts when playing media
+• Fix settings widgets
+• Fix video info for music videos
+• Improve esthetic appearance
+• Updated language files from Transifex
+
+1.1.9 :
+• Changes in ClearLogos and ClearArts views
+• Changes in profile settings to be the same as others settings
+• Replace settings widget by system info widget
+• Fix channels 4 digits on PVR guide
+• Fix missing recently added widget after updating library
+• Fix audio DSP if no modes
+• Improve esthetic appearance
+
+1.1.8 :
+• Add Last/Next Aired episode on some views and on TV Shows info
+• Add Extendedinfo video search support
+• Add T9 search dialog addon support
+• Update for GlobalSearch addon
+• Fix visualisation over fading
+• Fix header label of picture widget
+• Fix widget selection when no submenu is define
+• Fix popup notification on startup
+• Fix scrollbars and media menu in some case
+• Fix posters on some views
+
+1.1.7 :
+• Add Big Posters view
+• Add Library view
+• Add all icons for Skin Shortcuts (latest git is needed)
+• Add 'Recent unwatched episodes' and 'Recent unwatched movies' smartplaylists
+• Add possibility to hide watched episodes from recently added episodes for default TV Shows widget
+• Add possibility to hide watched movies from recently added movies for default Movies widget
+• Improve esthetic appearance
+• Move scrollbar to the left on left panel in File Manager
+• Move scrollbar to the left on select and file browser dialogs
+• Updated language files from Transifex
+• Updated default slider
+
+1.1.6 :
+• Add watched, unwatched and resume indicators on all views
+• Add possibility to choose ClearArt position on OSD
+• Add ClearLogos view
+• Add ClearArts view
+• Add Big Fanart view
+• Improve esthetic appearance
+• Changes on Shift view
+
+1.1.5 :
+• Add possibility to hide banner of picture widget
+• Add Estuary Mod logo to media menu
+• Changes on video OSD and ClearArt
+• Changes on TV shows widget
+• Fix exception in ContentProvider with extrafanarts and plugins
+• Fix playlist scrollbar
+• Other fix 
+
+1.1.4 :
+• Add possibility to replace busy spinner (.gif file, multiimages folder or built-in skin)
+• Add possibility to show/hide background video
+• Add support for extrafanarts
+• Updated language files from Transifex
+• Reorganization of shortcuts and widgets
+• Fix Eventlog buttons
+• Other minor fixes
+
+1.1.3 :
+• Add track duration on album infos
+• Add widgets for search and bottom menu
+• Many fixes in PVR
+• Changes in skin settings 
+
+1.1.2 :
+• Add settings layout changes
+• Remove no more needed Audio DSP Manager items
+• Fix buttons on Audio DSP Manager
+• Changes on LibreELEC Configuration and OpenELEC Configuration
+• Bump xbmc.gui to 5.12.0
+• Updated language files from Transifex
+
+1.1.1 :
+• Add support for LibreELEC Configuration and OpenELEC Configuration addons
+• Changes on keyboard
+• Fix autoscroll on list view
+• Fix syntax
+
+1.1.0 :
+• Add Kiosk Mode
+• Add possibility to hide information bars all over skin
+• Add possibility to change background opacity
+• Fix bottom bar and scroll bar
+• Fix on media menu
+
+1.0.9 :
+• Add possibility to hide information bars on library
+• Add support for recordlabels icons 
+• Add possibility to show video/song path on info screen
+• Several changes
+
+1.0.8 :
+• Add last changes from original Estuary build
+• Add total number of installed addons on addons screen
+• Add languages and subtitles languages on video infos
+• Fix widgets position to not interfere with submenu
+
+1.0.7 :
+• Add song bitrate on osd infos
+• Add support for "Weather Fanart - Multi" addon
+• Add default icon for roles node
+• Change for returns duration of a video will end if you resume it, instead of playing it from the beginning
+• Fix ClearArt
+• Fix esthetic appearance
+
+1.0.6 :
+• Add changes from original Estuary 0.7.9
+• Add possibility to set background in personnalize home menu
+• Fix tvshows posters when posters is selected for widget
+• Fix description label in select dialog
+• Fix english translation
+• Display fixes
+
+1.0.5 :
+• Add new search function in media menu
+• Remove script-globalsearch-contextmenu.xml. Not need with latest build
+• Minnor fixes
+
+1.0.4 :
+• Add director search support in Global Search
+• Add TV Show - Next Aired addon support
+• Changes in context menu
+• Fix addons icons
+• Add latest original build 0.7.8
+
+1.0.3 :
+• Fix on PVR
+• Fix on skin settings
+
+1.0.2 :
+• Add possibility to set media flags of the same color as skin
+• Add animated posters support
+• Add posters support for video addons
+• Replace watched and unwatched icons
+• Changes in duration labels and flags icons
+• Fix library default icons
+• Many others changes
+
+1.0.1 :
+• Add duration, finish time and rating flags icons
+• Fix OSD infos
+• Fix on video infos
+• Fix on Global Search
+• Fix on RSS Editor
+• Update french translation
+
+1.0.0 :
+• Initial release (with latest original Estuary 0.7.7)
+  - Add Skin Shortcuts support to manage home menu and power menu
+  - Widgets from original Estuary are selectable in personnalize home menu
+  - Add Artwork Downloader support to download artworks
+  - Add Artist Slideshow support for music osd
+  - Add Global Search support to search in local library
+  - Add Play Album support to play album directly on album infos
+  - Add Nextup Service Notification support to show popup with next episode
+  - Add RSS Editor support
+  - Add ClearLogos support
+  - Add ClearArts support
+  - Add Music CDArts support
+  - Add possibility to choose picture, vidéo or music at startup
+  - Add possibility to download artworks after library update
+  - Add possibility to choose a pictures folder with picture widget to show a slideshow 
+  - Add possibility to change weather icons
+  - Add possibility to backup/restore skin settings
+  - Add debug infos setting
+  - Add new genres view with icons
+  - Rearranging skin settings
+  - Replace flags icons
+  - Replace OSD buttons (Thanks Ichabod Fletchman)
+  - Replace backgrounds without banding (Thanks Ichabod Fletchman)
+  - Replace duration format with hours and minutes
+  - Dolby Atmos and DTS-X naming support
+  - Increase to 25 the number of widgets items
+  - Bug fixes

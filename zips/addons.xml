@@ -838,6 +838,26 @@
     </extension>
 </addon>
 
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="1.0.1" provider-name="Philipp Temminghoff (phil65)">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.autocompletion" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="plugin.py" />
+    <extension point="xbmc.python.script"       library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">AutoCompletion for the virtual keyboard (needs skin support)</summary>
+        <description lang="en">AutoCompletion for the virtual keyboard (needs skin support)</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+        <source>https://github.com/phil65/plugin.program.autocompletion</source>
+    </extension>
+</addon>
+
 <addon id="plugin.program.Hermito" name="[B][COLOR skyblue]Hermito Assistent[/COLOR][/B]" version="1.0.1" provider-name="Hermito">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1204,6 +1224,85 @@
 - Hompagelink aktualisiert
 		</news>
 	</extension>
+</addon>
+
+<addon id="plugin.video.metalliq-forqed" name="[COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed" version="6.0.17krypton" provider-name="[COLOR lime][B]Serious Fork[/B][/COLOR]">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="repository.cdrepo" version="1.2"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.futures" version="2.2.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="[login|startup]">
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<menu>
+				<label>[COLOR lime]M[/COLOR]etalli[COLOR lime]Q[/COLOR] For[COLOR lime]Q[/COLOR]ed</label>
+				<item library="context_toggle.py">
+					<label>Preferred toggle</label>
+					<visible>!System.HasAddon(context.metalliq-forqed) + !Skin.HasSetting(Toggling)</visible>
+				</item>
+				<item library="context_movie.py">
+					<label>$ADDON[plugin.video.metalliq-forqed 30602]</label>
+					<visible>StringCompare(ListItem.dbtype,movie) + SubString(ListItem.Path, plugin.video.metalliq-forqed)</visible>
+				</item>
+				<item library="context_tvshow.py">
+					<label>$ADDON[plugin.video.metalliq-forqed 30602]</label>
+					<visible>StringCompare(ListItem.dbtype,tvshow) + SubString(ListItem.Path, plugin.video.metalliq-forqed)</visible>
+				</item>
+				<item library="context_live.py">
+					<label>$ADDON[plugin.video.metalliq-forqed 30602]</label>
+					<visible>[SubString(ListItem.FileNameAndPath, plugin.video.metalliq-forqed\\Live) | SubString(ListItem.FileNameAndPath, plugin.video.metalliq-forqed\\Live)]</visible>
+				</item>
+				<item library="context_playable.py">
+					<label>$ADDON[plugin.video.metalliq-forqed 30622]</label>
+					<visible>!System.HasAddon(context.metalliq-forqed) + !Skin.HasSetting(Contexting)</visible>
+				</item>
+			</menu>
+		</menu>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<language></language>
+		<summary lang="en">TMDb, TVDb, Trakt, AudioDb, LastFM Browser</summary>
+		<description lang="en">[COLOR lime]I don’t take any credits for this add-on. Without the original developers this add-on would never exist. Thanks for all they have brought to the community.[/COLOR][CR]Browse The MovieDb, The TVDb, Trakt, The AudioDb and LastFM and pass info along to library or an addon to try and play it. Needs player-files and the appropriate addon to actually play.</description>
+		<summary lang="nl">Blader door TMDb, TVDb, Trakt, AudioDb en LastFM</summary>
+		<description lang="nl">Blader door The MovieDb, The TVDb, Trakt, The AudioDb en LastFM en geef info door aan de bibliotheek of een addon om te proberen het af te spelen. Vereist player-bestanden en de bijbehorende addon om daadwerkelijk af te kunnen spelen.</description>
+		<supportedcontent>
+			<content>movies</content>
+			<content>tvshows</content>
+			<content>episodes</content>
+			<content>musicvideos</content>
+			<content>music</content>
+			<content>livetv</content>
+		</supportedcontent>
+		<genre>movies,tv,music,livetv</genre>
+		<!--<video_guide>yt-id</video_guide>
+		<video_preview>yt-id</video_preview>-->
+		<forum></forum>
+		<source></source>
+		<email></email>
+		<news>Fixed duration error on non-default version of kodi</news>
+                <website></website>
+
+		<source></source>
+
+		<assets>
+
+			<icon>icon.gif</icon>
+
+			<fanart>fanart.jpg</fanart>
+
+		</assets>
+
+		<news></news>
+
+	</extension>
+
 </addon>
 
 <addon id="plugin.video.nonu" name="Phantom Xtrmz" version="0.1" provider-name="Phantom">
@@ -1873,6 +1972,18 @@
     </extension>
 </addon>
 
+<addon id="resource.images.weathericons.white" name="Weather Icons - White" version="0.0.6" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">White Weather Icons</summary>
+		<description lang="en">White Weather Icons</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon
   id="resource.language.de_de"
   version="9.0.13"
@@ -1963,6 +2074,43 @@
 	</extension>
 </addon>
 
+<addon id="script.extendedinfo" name="[COLOR limegreen]EIM[/COLOR]4[COLOR limegreen]Q[/COLOR]ed" version="100.0.3" provider-name="[COLOR lime][B]Serious Fork[/B][/COLOR], original by phil65">
+  <requires>
+    <import addon="xbmc.python"                     version="2.19.0"/>
+    <import addon="plugin.program.super.favourites"/>
+    <import addon="plugin.video.metalliq-forqed"/>
+    <import addon="plugin.video.youtube"            version="5.3.10"/>
+    <import addon="repository.cdrepo"/>
+    <import addon="script.module.pil"               version="1.1.7"/>
+    <import addon="script.module.requests"          version="1.1.0"/>
+    <import addon="script.module.simplejson"        version="2.0.10"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.youtube.dl"        version="14.519.1"/>
+  </requires>
+  <extension point="xbmc.python.script"             library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.library"            library="default.py" />
+  <extension point="xbmc.python.pluginsource"       library="plugin.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language/>
+    <summary lang="en">Modded for [COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed</summary>
+    <description lang="en">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions. Uses [COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed for playback and library functions.</description>
+    <summary lang="nl">[COLOR ff0084ff]E[/COLOR]xtended [COLOR ff0084ff]I[/COLOR]nfo [COLOR ff0084ff]M[/COLOR]od</summary>
+    <description lang="nl">Dit script biedt meerdere mogelijkheden om online content weer te geven in skins en bevat ook een complete MovieDB browser inclusief info dialogen voor verscheidene media types. Gebruikte diensten zijn themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com en nog veel meer. Vereist skin implementatie voor de meeste functies. Gebruikt [COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed voor afspeel en bibliotheek functies.</description>
+    <platform>all</platform>
+    <genre>movies,tv,trailers</genre>
+    <video_guide>3nlzITuJizg</video_guide>
+    <video_preview>OIp3Ry7qml8</video_preview>
+    <license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+    <forum></forum>
+    <source></source>
+    <email></email>
+  </extension>
+</addon>
+
 <addon id="script.lastship.artwork" version="2.0.3" name="Lastship Artwork" provider-name="Lastship Team">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -2019,6 +2167,21 @@
     <source>https://github.com/Razzeee/script.module.arrow</source>
     <email>beenje AT gmail.com</email>
   </extension>
+</addon>
+
+<addon id="script.module.autocompletion" name="AutoCompletion library" version="1.1.2" provider-name="Philipp Temminghoff (phil65)">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.simplejson" version="3.3.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Module providing some AutoCompletion functions</summary>
+        <description lang="en">Module providing some AutoCompletion functions</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+        <source>https://github.com/phil65/script.module.autocompletion</source>
+    </extension>
 </addon>
 
 <addon id="script.module.beautifulsoup"
@@ -2955,6 +3118,51 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 	</extension>
 </addon>
 
+<addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.0.18" provider-name="BigNoid,marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.20.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.unidecode" version="0.4.14"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<news>Template improvements and bug fixes</news>
+		<description lang="bg">Добавка за облици, която осигурява просто управление и списък с потребителски преки пътища (изисква поддръжка от облика)</description>
+		<description lang="de">Add-on für Skins für einfache Bearbeitung und Auflistung von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
+		<description lang="el">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+		<description lang="en">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="es">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+		<description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+		<description lang="gl">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+		<description lang="hr">Dodatak za presvlake koja omogućava jednostavno upravljanje i prikaz korisnikovih prečaca (zahtijeva podršku presvlake) </description>
+		<description lang="hu">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+		<description lang="is">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+		<description lang="it">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+		<description lang="lt">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo  sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+		<description lang="nl">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+		<description lang="no">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+		<description lang="pl">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+		<description lang="pt">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+		<description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+		<description lang="ru">Дополнение для обложек, предоставляющее простой способ управления и список пользовательских ярлыков (требуется поддержка обложкой)</description>
+		<description lang="sv">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+		<description lang="zh">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU General Public License, v2</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=178294</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/BigNoid/script.skinshortcuts</source>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>
+	</extension>
+</addon>
+
 <addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
@@ -3088,5 +3296,184 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
         <email></email>
         <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
     </extension>
+</addon>
+
+<addon
+    id="skin.arctic.zephyr"
+    version="2.3.13"
+    name="Arctic: Zephyr"
+    provider-name="jurialmunkey">
+    <requires>
+        <import addon="xbmc.gui" version="5.12.0"/>
+        <import addon="script.skinshortcuts" version="0.4.0"/>
+        <import addon="service.library.data.provider" version="0.1.0"/>
+        <import addon="script.skin.helper.service" version="0.0.1"/>
+        <import addon="script.extendedinfo" version="3.0.0"/>
+        <import addon="script.globalsearch" version="5.0.0"/>
+        <import addon="script.image.resource.select" version="0.0.5"/>
+        <import addon="script.toolbox" version="1.0.0"/>
+        <import addon="plugin.program.autocompletion" version="1.0.1"/>
+        <import addon="resource.images.weathericons.white" version="0.0.6"/>
+    </requires>
+    <extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false"
+    effectslowdown="1">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
+        <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="en_AU">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="en_US">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="es">Limpio, minimalista, elegante, simple, ligero.</summary>
+        <summary lang="fr">Clair, minimaliste, élégant, simple et léger.</summary>
+        <summary lang="fr_CA">Net, minimal, élégant, simple, léger.</summary>
+        <summary lang="lt">Švari, minimali, elegantiška, paprasta, lengva.</summary>
+        <summary lang="nl">Schoon, minimaal, elegant, simpel, licht.</summary>
+        <summary lang="no">Rent, minimalt, elegant, enkelt, lett.</summary>
+        <summary lang="pl">Prosta, minimalista, elegancka i lekka</summary>
+        <summary lang="pt_BR">Limpa, simplista, elegante, leve.</summary>
+        <summary lang="ro">Curat, minimalist, elegant, simplu, ușor</summary>
+        <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
+        <description lang="de">Arctic: Zephyr ist die dritte Iteration des Arctic Skins von jurialmunkey und ein minimalistisches, klares und simples Interface für deine Medien mit dem gewissen Etwas.</description>
+        <description lang="en">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_AU">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_US">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="es">Arctic: Zephyr es la tercera versión de Arctic skin creada por jurialmunkey. La skin Arctic se centra en ser simple, limplia y minimalista con un toque de luminosidad.</description>
+        <description lang="fr">Arctic: Zephyr est la 3ème version du skin Arctic créé par jurialmunkey. Arctic se focalise sur le fait d'être simple, claire et minimaliste.</description>
+        <description lang="fr_CA">Arctique : Zéphyr est la troisième version de l'habillage Arctique créé par jurialmunkey. Arctique se veut être simple, net et minimaliste tout en étant léger. </description>
+        <description lang="lt">Arctic: Zephyr yra trečia Arctic teminės išvaizdos, kurios autorius yra jurialmunkey, iteracija. Arctic sutelkia dėmesį ties paprastumu, švarumu ir minimalizmu su lengvu veikimu.</description>
+        <description lang="nl">Arctic: Zephyr is de derde herhaling van de arctic skin ge creëerd door jurialmunkey. Arctic focust zich op een eenvoudig zeinde, schoon en minimaal met een lichte twist.</description>
+        <description lang="no">Arctic: Zephyr er den tredje iterasjonen av Arctic skallet som ble laget av jurialmunkey. Arctic fokuserer på å være enkel, rent og minimalistisk med et snev av letthet.</description>
+        <description lang="pl">Arctic: Zephyr jest trzecią wersją oryginalnej skóry Arctic stworzonej przez jurialmunkey. Arctic skupia się na prostocie i minimalizmie z lekką dozą szaleństwa.</description>
+        <description lang="pt_BR">Arctic: Zephyr é a terceira iteração da interface Arctic criada por jurialmunkey. Arctic foi criada para ser simples, limpa e minimalistica.</description>
+        <description lang="ru">Arctic: Zephyr это третий виток обложки Arctic, созданной jurialmunkey. Arctic старается быть простой, опрятной и минималистичной.</description>
+        <platform>all</platform>
+        <license>Creative Commons Non Commercial 3.0 License</license>
+        <forum>http://forum.kodi.tv/forumdisplay.php?fid=221</forum>
+        <source>https://github.com/jurialmunkey/skin.arctic.zephyr</source>
+        <assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-09.jpg</screenshot>
+		</assets>
+    </extension>
+</addon>
+
+<addon id="skin.estuary.mod" version="1.7.14" name="Estuary MOD (KODI 17)" provider-name="Guilouz">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="script.skinshortcuts" version="0.6.0"/>
+		<import addon="script.skin.helper.service" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="21x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Estuary MOD skin by Guilouz</summary>
+		<summary lang="fr_FR">Thème Estuary MOD par Guilouz</summary>
+		<description lang="en_GB">Estuary MOD is a mod from Estuary by Guilouz for Kodi 17. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="fr_FR">Estuary MOD est un mod de Estuary par Guilouz pour Kodi 17. Il est facile à comprendre et à utiliser pour les utilisateurs novices de Kodi.</description>
+		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the theme.</disclaimer>
+		<disclaimer lang="fr_FR">Pour une meilleure expérience, assurez-vous d'installer toutes les extensions requises par le thème.</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=267343</forum>
+		<source>https://github.com/Guilouz/skin.estuary.mod</source>
+		<assets>
+ 			<icon>resources/icon.png</icon>
+ 			<fanart>resources/fanart.jpg</fanart>
+ 			<screenshot>resources/screenshot-01.jpg</screenshot>
+ 			<screenshot>resources/screenshot-02.jpg</screenshot>
+ 			<screenshot>resources/screenshot-03.jpg</screenshot>
+ 			<screenshot>resources/screenshot-04.jpg</screenshot>
+ 			<screenshot>resources/screenshot-05.jpg</screenshot>
+ 			<screenshot>resources/screenshot-06.jpg</screenshot>
+ 			<screenshot>resources/screenshot-07.jpg</screenshot>
+ 			<screenshot>resources/screenshot-08.jpg</screenshot>
+ 			<screenshot>resources/screenshot-09.jpg</screenshot>
+ 			<screenshot>resources/screenshot-10.jpg</screenshot>
+ 			<screenshot>resources/screenshot-11.jpg</screenshot>
+ 			<screenshot>resources/screenshot-12.jpg</screenshot>
+ 			<screenshot>resources/screenshot-13.jpg</screenshot>
+ 			<screenshot>resources/screenshot-14.jpg</screenshot>
+ 		</assets>
+		<news>[B]1.7.14[/B][CR]• Fix power menu[CR][CR][B]1.7.13[/B][CR]• Fix context menu for CU LRC Lyrics addon[CR][CR][B]1.7.12[/B][CR]• Add support for Videolyrics v2 (thanks to manfeed)[CR][CR][B]1.7.11[/B][CR]• Add polish translation[CR][CR][B]1.7.10[/B][CR]• Fix Youtube call[CR][CR][B]1.7.9[/B][CR]• Fix missing lyrics fonts for Arial[CR]• Minnor fix[CR][CR][B]1.7.8[/B][CR]• Add Videolyrics (credits to manfeed)[CR]• Change widget name on Hub window for pictures[CR][CR][B]1.7.7[/B][CR]• Fix missing justify plots[CR]• Fix italian language[CR]• Minnor fix[CR][CR][B]1.7.6[/B][CR]• Add finish time flag icons for preconfigured widgets[CR]• Justify all plots[CR]• Remove TVTunes workaround[CR]• Fix RSS Editor support with new XML[CR][CR][B]1.7.5[/B][CR]• Workaround for fanarts on video/music info dialog[CR]• Changes on scrollbars[CR]• Fix overlapping rating with TV Shows[CR]• Minnor fix[CR][CR][B]1.7.4[/B][CR]• Add support for postplay screen from Nextup Service Notification addon[CR]• Add pattern to extended info windows[CR]• Fix missing changes for new Skin Helper Service addons[CR]• Fix clearlogos aspect ratio for TV Shows widgets[CR]• Fix rss on widgets focus[CR]• Minnor fix[CR][CR][B]1.7.3[/B][CR]• Add possibility to choose number of items to display on widgets[CR]• Add possibility to disable pattern[CR]• Add duration flag icon for widgets[CR]• Add first aired date on dialog video info[CR]• Add disc to home menu[CR]• Fix animated posters issue[CR]• Fix TMDB/TVDB flag icons[CR]• Minnor fix[CR][CR][B]1.7.2[/B][CR]• Add genre for list view[CR]• Add possibility to show rating of TMDB rather than IMDB[CR]• Add TVDB rating flag icon for TV Shows[CR]• Add possibility to change pattern of background and his color[CR]• Fix context menu for 21:9 screen[CR]• Fix extended info for 21:9 screen[CR]• Fix on favourites window[CR]• Minnor fix[CR][CR][B]1.7.1[/B][CR]• Fix arrow position[CR][CR][B]1.7.0[/B][CR]• Add support for 21:9 screens[CR]• Add skin setting to use basic vertical menu instead of dynamic vertical menu[CR]• Add DVD and BluRay flag icons[CR]• Add Extrafanarts support on widgets[CR]• Add genres colors for PVR Guide[CR]• Add possibility to disable Kodi screensaver on fullscreen music playback[CR]• Replace window for chapters[CR]• Fix for new Skin Helper Service addons[CR]• Fix personnalize menu focus when item is disabled[CR]• Fix opacity background on Next Aired addon[CR]• Fix videoinfo button[CR]• Fix getting stuck on rss control[CR]• Many others fixes[CR][CR][B]1.6.6[/B][CR]• Add possibility to disable items in personnalize home menu (with button and context menu)[CR]• Add privacy policy support on system info[CR]• Rework on vertical home menu[CR]• Rewrite xmls for script.globalsearch[CR]• Fix power menu[CR]• Minnor fixes[CR][CR][B]1.6.5[/B][CR]• Add possibility to replace backgrounds shortcuts[CR]• Rework on extendedinfo windows[CR]• Allow longer header for dialognumeric[CR]• Adjust gamecontrollerdialog button order[CR]• Fix PVR dialog[CR]• Fix animations[CR]• Fix dialogsubtitles image[CR]• Minnor tweaks[CR][CR][B]1.6.4[/B][CR]• Add status of tv shows from Next Aired addon on video infos[CR]• Add genres icons for thumbnails[CR]• Add bigger font (Thanks to schumi2004)[CR]• Add possibility to pause video when viewing extended info[CR]• Hide videowindow and visualisation of background when slideshow is active[CR]• Minnor fixes[CR][CR][B]1.6.3[/B][CR]• Replace channels numbers by channels icons on PVR Guide[CR]• Replace some Skin Helper widgets had to recent changes of Skin Helper Services[CR]• Fix on smartplaylist editor[CR]• Fix widgets on addons launcher[CR]• New 4K flag icon[CR]• Minnor fixes[CR][CR][B]1.6.2[/B][CR]• Add seeklabel on music OSD[CR]• Add info wall view for episodes[CR]• Add new Icons view[CR]• Add script.module.simplecache in necessary addon[CR]• Use RGB color space for country flags[CR]• Changes in smartplaylist editor[CR]• Misc fixes[CR][CR][B]1.6.1[/B][CR]• Add possibility to hide plots of unwatched episodes to avoid spoilers[CR]• Add possibility to search addons with search function on home menu[CR]• Add new submenu items for addons[CR]• Changes for script.skin.helper.colorpicker[CR]• Misc fixes[CR][CR][B]1.6.0[/B][CR]• Add in progress/watched flag icons for widgets[CR]• Add 'Stop Scanning' option to Submenu[CR]• Add vertical scrollbar to channel list in PVR Guide[CR]• Add fallback labels to some viewtypes[CR]• Add 'Add timer' button in PVR info dialog[CR]• Add script.skin.helper.colorpicker in necessary addon[CR]• Add recordings widget to home screen[CR]• Separate tv/radio widgets for current and next recording[CR]• Fix selection with Picture Widget and Hub Widget when 'Select widget first' is enable[CR]• Fix shortcut issue with Live TV and Radios[CR]• Fix navigation issue with PVR Guide[CR]• Fix missing Options button in the BottomBar in pictures section[CR]• Fix non-scrolling plot for PVR recordings[CR]• Fix on PVR widgets[CR]• Workaround for navigation issue on dialog addon settings[CR]• Drop some PVR viewtypes[CR]• Remove window type, id and zorder defenitions[CR]• Hide 'Update Library' button in Addon section[CR]• Avoid empty variables[CR]• Many other fixes[CR][CR][B]1.5.8[/B][CR]• Add possibility to navigate main menu to widgets rather than main menu to submenus icons[CR]• Fix 'Play recording' button on Recordings Info dialog[CR]• Fix/improve user experience in case of empty recordings list[CR]• Fix/unify PVR window breadcrumbs[CR]• Fix channel icons/thumbnails[CR]• Update some icons[CR]• Remove all use of hyphen as none value[CR][CR][B]1.5.7[/B][CR]• Add buffering progress on video fullscreen[CR]• Add setting to hide notification popup during playback[CR]• Improve esthetic appearance[CR]• Fix missing skin settings icons[CR]• Fix broken addon message[CR]• Other Fixes[CR][CR][B]1.5.6[/B][CR]• Add DTS-HD High Resolution icon[CR]• Add possiblity to hide time and date on top bar[CR]• Fix playspeed label[CR]• Fix poster, clearlogo and fanart when pressing "i" button on widgets[CR]• Fix poster, clearlogo and fanart on video info[CR]• Fix osd not showing with live tv[CR]• Fix 'Show fanart' on music/video info[CR]• Hide notifications on fullscreen[CR]• Allow skip chapters with button on video OSD[CR]• Updated language files from Transifex[CR][CR][B]1.5.5[/B][CR]• Add possiblity to hide CD case on music visualisation screen[CR]• Add language and subtitles language of current video on video OSD[CR]• Add possibility to hide pictures info on some views[CR]• Add new mosaics view for pictures[CR][CR][B]1.5.4[/B][CR]• Fix bad Textures.xbt[CR][CR][B]1.5.3[/B][CR]• Add aired time, season and episode number for next aired widget[CR]• Add fallback music disc (Thanks to mikeSiLVO)[CR]• Add possibility to delete / add more one rule for smartplaylist[CR]• Improve esthetic appearance[CR]• Fix media settings icon[CR]• Krypton : Update DialogGameControllers.xml[CR]• Krypton : Show playspeed on video OSD[CR][CR][B]1.5.2[/B][CR]• Add support for Library Editor addon[CR]• Add year for albums in wall info view[CR]• Move RSS at bottom[CR]• Fix Seekbar color[CR]• Fix Seekbar label[CR]• Improve esthetic appearance[CR]• PVR channel windows now can be used as Kodi start windows[CR][CR][B]1.5.1[/B][CR]• Fix on music visualisation[CR]• Improve esthetic appearance[CR][CR][B]1.5.0[/B][CR]• Add new horizontal advanced home menu[CR]• Changes on Hub Widget[CR]• Fix slider color on PlayerProcessInfo window[CR]• Fix clearlogos on Clearlogos view[CR]• Fix home screen channel widget's start and end time when no epg available[CR]• Fix sort attribute and order for tv and radio channels on home screen[CR]• Improve esthetic appearance[CR]• Many others fixes[CR][CR][B]1.4.2[/B][CR]• Changes on Hub Widget[CR]• Fix slider color on PlayerProcessInfo window[CR]• Fix clearlogos on Clearlogos view[CR]• Improve esthetic appearance[CR][CR][B]1.4.1[/B][CR]• Add possibility to use clearlogos instead of thumbnails for TV Shows Widget and Customizable Widget (thumbs)[CR]• Fix typo in mypics.xml[CR]• Fix Android apps (thanks to maxtherabbit)[CR]• Minnor fixes[CR]• Krypton : Renaming of Library settings to Media settings[CR]• Krypton : Add PlayerProcessInfo window (button 'o')[CR][CR][B]1.4.0[/B][CR]• Add 'Next airing episodes' widget for TV Shows (Requires script.module.thetvdb which is not yet in any repo (BETA stage), get it from github)[CR]• Add possibility to configure up to 6 widgets for Customizable widgets[CR]• Add new changes from original Estuary 0.8.4[CR]• Rearrange type of widgets[CR]• Improve esthetic appearance[CR]• Fix thumbnails for TV Shows Widgets[CR]• Fix submenu with Picture Widget[CR]• Fix Label2 when movie is linked to TV show[CR]• Fix ClearLogos[CR]• Fix access to addons widgets when there is no submenu[CR][CR][B]1.3.12[/B][CR]• Add possibility to disable banners for TV Shows Widget/Custom Widget (Thumbs)[CR]• Add possibility to replace episodes thumbnails by TV shows thumbnails for Custom Widget (Thumbs)[CR]• Fix widgets visibility in Customize home menu (Thanks to BobCratchett)[CR]• Media textures are now packed[CR][CR][B]1.3.11[/B][CR]• Changes in TV Shows Widget/Custom Widget (Thumbs)[CR]• Improve esthetic appearance[CR][CR][B]1.3.10[/B][CR]• Add possibility to change type of widgets for preconfigured widgets[CR]• Add new Hub widget[CR]• Show fallback behind thumb in addoninfo preview list[CR]• Make slideshow window a dialog[CR]• Updated language files from Transifex[CR]• Fix second label with home widgets[CR][CR][B]1.3.9[/B][CR]• Add Movies/TV Shows Hubs and ability to create up to 3[CR]• Add last played on video info[CR]• Fix artist label[CR][CR][B]1.3.8[/B][CR]• Now use extrafanarts for music visualisation (Artist Slideshow addon is no longer necessary)[CR]• Fix background opacity on music visualisation[CR]• Fix PVR icon[CR]• Fix next up popup for PVR[CR]• Fix animated posters on some views[CR]• Fix numeric button[CR]• Replace years by artists for albums[CR]• Other minor fixes[CR][CR][B]1.3.7[/B][CR]• Add new 'Simple wall' view[CR]• Add possibility to hide posters info[CR]• Add Next Up popup for Live TV (Thanks to sualfred)[CR]• Add preview for select dialog[CR]• Add screenshots support on addon info[CR]• Fix seasons posters on some views[CR]• Fix fullscreen button with vertical menu[CR]• Other minor fixes[CR][CR][B]1.3.6[/B][CR]• Fix Sources widget[CR][CR][B]1.3.5[/B][CR]• Add new fully customizable widgets : posters, thumbs and icons[CR]• Add player processing info on video osd[CR]• Allow TVTunes to play themes[CR]• Fix duplicate shortcuts with home menu[CR]• Fix popup notification[CR]• Other minor fixes[CR][CR][B]1.3.4[/B][CR]• Add LibreELEC / OpenELEC settings shortcut on settings panel[CR]• Add LibreELEC / OpenELEC settings shortcut on home menu[CR]• Add a small menu in personnalise home menu to move / add / delete items[CR]• Add possibility to change popup notification position[CR]• Fix on music visualisation[CR]• Fix thumbs on tv shows widgets[CR]• Fix total / watched / unwatched episodes flag with special characters (need to use Arial font)[CR]• Reordering skin settings[CR][CR][B]1.3.3[/B][CR]• Add IMDB Top 250 flag icon[CR]• Add possibility to change background color regardless of main skin color[CR]• Add button for Color Management on video OSD[CR]• Add complete discography on artist info[CR]• Now use Skin Helper Service for artists and albums description[CR]• Fix missing posters and fanarts on some views[CR]• Other minor fixes[CR]• Updated language files from Transifex[CR]• Cleanup code[CR][CR][B]1.3.2[/B][CR]• Add total / watched / unwatched episodes number for tv shows and seasons[CR]• Add possibility to hide info from Rotten Tomatoes and Metacritic[CR]• Add possibility to hide clearlogos on home menu[CR]• Add flag icons on home menu and possibility to hide them[CR]• Minor fixes[CR][CR][B]1.3.1[/B][CR]• Fix widget selection[CR]• Fix extendedinfo button on OSD with music videos[CR][CR][B]1.3.0[/B][CR]• Add 'My TV shows airing today' on default tv shows widget[CR]• Add 'Next episodes to watch' on default tv shows widget[CR]• Add yes/no dialog window when reset skin settings[CR]• Hide hard disk usage on Android system[CR]• Changes in PVR guide[CR]• Changes in personnalise home menu[CR]• Fix widgets with horizontal menu[CR]• Improve esthetic appearance[CR][CR][B]1.2.9[/B][CR]• Add horizontal home menu[CR]• Add Rotten TomatoMeter and Rotten Tomatoes Audience Score for tv shows[CR]• Fix rating flag icon color[CR]• Minnor fix[CR][CR][B]1.2.8[/B][CR]• Now use Skin Helper Service for Music Clearlogos and CDArts[CR]• Add ClearLogos on home screen for widgets[CR]• Add Fanarts on home screen for widgets[CR]• Add new Live TV widget (thanks to im85288)[CR]• Add support for music extrafanarts with Skin Helper Service[CR]• Add Clearlogos on music visualisation[CR]• Add banner on music visualisation[CR]• Add banner on tv shows info[CR]• Add new views for images : Icons wall and List[CR]• Add casting list on video OSD (thanks to im85288)[CR]• Add the file size of add-ons packages[CR]• Changes in functioning of personnalise home menu[CR]• Changes in widgets with labels on top[CR]• Changes for Krypton[CR]• Improve esthetic appearance[CR][CR][B]1.2.7[/B][CR]• Krypton : Replace changelog file with a 'news' section in addon.xml[CR]• Add possibility to change skin color[CR]• Add Clearlogo on video OSD[CR]• Add IMDB flag icon on video OSD[CR]• Add possibility to choose multi images for home menu background[CR]• Replace year by total episodes in list views for tv shows and seasons[CR]• Improve esthetic appearance[CR]• Fix poster on video OSD[CR]• Fix ratings with tv shows[CR]• Fix duration flag icon with music videos[CR]• Fix ratings with tv shows[CR]• Updated language files from Transifex[CR][CR][B]1.2.6[/B][CR]• Add new icons flags : Rotten TomatoMeter, Rotten Tomatoes Audience Score and MetaCritic rating[CR]• Add possibility to show music visualisation screen directly when playing song[CR][CR][B]1.2.5[/B][CR]• Add changes from original Estuary 0.8.0[CR]• Improve icons resolution[CR]• Changes in dialog select[CR]• Fix studios icons[CR]• Fix missing string[CR][CR][B]1.2.4[/B][CR]• Improve esthetic appearance[CR]• Fix recently added episodes widget[CR][CR][B]1.2.3[/B][CR]• Add info on Big Poster view[CR]• Add extrafanarts support for 'Show Fanart' button on video info[CR]• Now use Skin Helper Service for extrafanarts[CR][CR][B]1.2.2[/B][CR]• Add album cover for next track on music OSD[CR]• Add possibility to disable zoom effect on focus[CR]• Add Show Path button on music video info[CR]• Improve volume progress with unit[CR]• Improve clock icon[CR]• Update AudioDSPManager.xml with core changes[CR][CR][B]1.2.1[/B][CR]• Add CU LRC Lyrics addon integration on music OSD[CR]• Add new CD case on music visualisation[CR]• Add button on video OSD to access extended info[CR]• Add a setting in personnalise home menu to replace thumbnails of episodes by fanarts[CR]• Add description for each skin setting[CR]• Improve esthetic appearance[CR]• Fix list on dialog settings[CR]• Fix play/pause button on media menu[CR]• Fix episode label on videos search[CR][CR][B]1.2.0[/B][CR]• Changes in skin settings to be the same as others settings[CR]• Add possibility to reset each skin settings category individually[CR]• Add possibility to show/hide background visualisation effect[CR]• Add possibility to access to music playlist from music OSD[CR]• Add music videos on default menu[CR]• Add default music videos widget[CR]• Add AudioDSP settings and manager to music OSD[CR]• Add arrows for home menu when there is more than 9 items[CR]• Fix fanarts when playing media[CR]• Fix settings widgets[CR]• Fix video info for music videos[CR]• Improve esthetic appearance[CR]• Updated language files from Transifex[CR][CR][B]1.1.9[/B][CR]• Changes in ClearLogos and ClearArts views[CR]• Changes in profile settings to be the same as others settings[CR]• Replace settings widget by system info widget[CR]• Fix channels 4 digits on PVR guide[CR]• Fix missing recently added widget after updating library[CR]• Fix audio DSP if no modes[CR]• Improve esthetic appearance[CR][CR][B]1.1.8[/B][CR]• Add Last/Next Aired episode on some views and on TV Shows info[CR]• Add Extendedinfo video search support[CR]• Add T9 search dialog addon support[CR]• Update for GlobalSearch addon[CR]• Fix visualisation over fading[CR]• Fix header label of picture widget[CR]• Fix widget selection when no submenu is define[CR]• Fix popup notification on startup[CR]• Fix scrollbars and media menu in some case[CR]• Fix posters on some views[CR][CR][B]1.1.7[/B][CR]• Add Big Posters view[CR]• Add Library view[CR]• Add all icons for Skin Shortcuts (latest git is needed)[CR]• Add 'Recent unwatched episodes' and 'Recent unwatched movies' smartplaylists[CR]• Add possibility to hide watched episodes from recently added episodes for default TV Shows widget[CR]• Add possibility to hide watched movies from recently added movies for default Movies widget[CR]• Improve esthetic appearance[CR]• Move scrollbar to the left on left panel in File Manager[CR]• Move scrollbar to the left on select and file browser dialogs[CR]• Updated language files from Transifex[CR]• Updated default slider[CR][CR][B]1.1.6[/B][CR]• Add watched, unwatched and resume indicators on all views[CR]• Add possibility to choose ClearArt position on OSD[CR]• Add ClearLogos view[CR]• Add ClearArts view[CR]• Add Big Fanart view[CR]• Improve esthetic appearance[CR]• Changes on Shift view[CR][CR][B]1.1.5[/B][CR]• Add possibility to hide banner of picture widget[CR]• Add Estuary Mod logo to media menu[CR]• Changes on video OSD and ClearArt[CR]• Changes on TV shows widget[CR]• Fix exception in ContentProvider with extrafanarts and plugins[CR]• Fix playlist scrollbar[CR]• Other fix[CR][CR][B]1.1.4[/B][CR]• Add possibility to replace busy spinner (.gif file, multiimages folder or built-in skin)[CR]• Add possibility to show/hide background video[CR]• Add support for extrafanarts[CR]• Updated language files from Transifex[CR]• Reorganization of shortcuts and widgets[CR]• Fix Eventlog buttons[CR]• Other minor fixes[CR][CR][B]1.1.3[/B][CR]• Add track duration on album infos[CR]• Add widgets for search and bottom menu[CR]• Many fixes in PVR[CR]• Changes in skin settings[CR][CR][B]1.1.2[/B][CR]• Add settings layout changes[CR]• Remove no more needed Audio DSP Manager items[CR]• Fix buttons on Audio DSP Manager[CR]• Changes on LibreELEC Configuration and OpenELEC Configuration[CR]• Bump xbmc.gui to 5.12.0[CR]• Updated language files from Transifex[CR][CR][B]1.1.1[/B][CR]• Add support for LibreELEC Configuration and OpenELEC Configuration addons[CR]• Changes on keyboard[CR]• Fix autoscroll on list view[CR]• Fix syntax[CR][CR][B]1.1.0[/B][CR]• Add Kiosk Mode[CR]• Add possibility to hide information bars all over skin[CR]• Add possibility to change background opacity[CR]• Fix bottom bar and scroll bar[CR]• Fix on media menu[CR][CR][B]1.0.9[/B][CR]• Add possibility to hide information bars on library[CR]• Add support for recordlabels icons[CR]• Add possibility to show video/song path on info screen[CR]• Several changes[CR][CR][B]1.0.8[/B][CR]• Add last changes from original Estuary build[CR]• Add total number of installed addons on addons screen[CR]• Add languages and subtitles languages on video infos[CR]• Fix widgets position to not interfere with submenu[CR][CR][B]1.0.7[/B][CR]• Add song bitrate on osd infos[CR]• Add support for 'Weather Fanart - Multi' addon[CR]• Add default icon for roles node[CR]• Change for returns duration of a video will end if you resume it, instead of playing it from the beginning[CR]• Fix ClearArt[CR]• Fix esthetic appearance[CR][CR][B]1.0.6[/B][CR]• Add changes from original Estuary 0.7.9[CR]• Add possibility to set background in personnalize home menu[CR]• Fix tvshows posters when posters is selected for widget[CR]• Fix description label in select dialog[CR]• Fix english translation[CR]• Display fixes[CR][CR][B]1.0.5[/B][CR]• Add new search function in media menu[CR]• Remove script-globalsearch-contextmenu.xml. Not need with latest build[CR]• Minnor fixes[CR][CR][B]1.0.4[/B][CR]• Add director search support in Global Search[CR]• Add TV Show - Next Aired addon support[CR]• Changes in context menu[CR]• Fix addons icons[CR]• Add latest original build 0.7.8[CR][CR][B]1.0.3[/B][CR]• Fix on PVR[CR]• Fix on skin settings[CR][CR][B]1.0.2[/B][CR]• Add possibility to set media flags of the same color as skin[CR]• Add animated posters support[CR]• Add posters support for video addons[CR]• Replace watched and unwatched icons[CR]• Changes in duration labels and flags icons[CR]• Fix library default icons[CR]• Many others changes[CR][CR][B]1.0.1[/B][CR]• Add duration, finish time and rating flags icons[CR]• Fix OSD infos[CR]• Fix on video infos[CR]• Fix on Global Search[CR]• Fix on RSS Editor[CR]• Update french translation[CR][CR][B]1.0.0[/B][CR]• Initial release (with latest original Estuary 0.7.7)[CR]- Add Skin Shortcuts support to manage home menu and power menu[CR]- Widgets from original Estuary are selectable in personnalize home menu[CR]- Add Artwork Downloader support to download artworks[CR]- Add Artist Slideshow support for music osd[CR]- Add Global Search support to search in local library[CR]- Add Play Album support to play album directly on album infos[CR]- Add Nextup Service Notification support to show popup with next episode[CR]- Add RSS Editor support[CR]- Add ClearLogos support[CR]- Add ClearArts support[CR]- Add Music CDArts support[CR]- Add possibility to choose picture, vidéo or music at startup[CR]- Add possibility to download artworks after library update[CR]- Add possibility to choose a pictures folder with picture widget to show a slideshow[CR]- Add possibility to change weather icons[CR]- Add possibility to backup/restore skin settings[CR]- Add debug infos setting[CR]- Add new genres view with icons[CR]- Rearranging skin settings[CR]- Replace flags icons[CR]- Replace OSD buttons (Thanks Ichabod Fletchman)[CR]- Replace backgrounds without banding (Thanks Ichabod Fletchman)[CR]- Replace duration format with hours and minutes[CR]- Dolby Atmos and DTS-X naming support[CR]- Increase to 25 the number of widgets items[CR]- Bug fixes[CR]</news>
+	</extension>
+</addon>
+
+<addon id="skin.estuary.modv2" version="3.0.5" name="Estuary MOD V2 (KODI 18)" provider-name="Guilouz">
+	<requires>
+		<import addon="xbmc.gui" version="5.14.0"/>
+		<import addon="script.skinshortcuts" version="0.6.5"/>
+		<import addon="script.skin.helper.service" version="1.0.0"/>
+        <import addon="script.skin.helper.widgets" version="1.0.0"/>
+        <import addon="script.image.resource.select" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+ 		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.service" library="scripts/viewswitcher.py" visible="!String.IsEmpty(Window(home).Property(CurrentSkin)) + Skin.HasSetting(ForcedViews.Enabled)" />
+	<extension point="kodi.context.item">
+      	<menu id="kodi.core.main">
+      		<item library="scripts/context_menu_jumptoletter.py">
+ 				<label>$LOCALIZE[40165]</label>
+ 				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)] + !Window.IsVisible(Home)</visible>
+ 			</item>
+      		<item library="scripts/context_menu_moviessets.py">
+ 				<label>$LOCALIZE[40181]</label>
+ 				<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + String.IsEqual(ListItem.DBType,set) + !Window.IsVisible(Home)</visible>
+ 			</item>
+      		<item library="scripts/context_menu_extendedinfo.py">
+        		<label>$LOCALIZE[40182]</label>
+        		<visible>!String.IsEmpty(Window(home).Property(CurrentSkin)) + System.HasAddon(script.extendedinfo) + !System.HasAddon(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
+      		</item>
+    	</menu>
+ 	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Estuary MOD V2 skin by Guilouz</summary>
+		<summary lang="fr_FR">Thème Estuary MOD V2 par Guilouz</summary>
+		<description lang="en_GB">Estuary MOD V2 is a mod from Estuary by Guilouz for Kodi 18. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="fr_FR">Estuary MOD V2 est un mod de Estuary par Guilouz pour Kodi 18. Il est facile à comprendre et à utiliser pour les utilisateurs novices de Kodi.</description>
+		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the theme.</disclaimer>
+		<disclaimer lang="fr_FR">Pour une meilleure expérience, assurez-vous d'installer toutes les extensions requises par le thème.</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<source>https://github.com/Guilouz/skin.estuary.modv2</source>
+			<assets>
+				<icon>resources/icon.png</icon>
+				<fanart>resources/fanart.jpg</fanart>
+				<screenshot>resources/screenshot-01.jpg</screenshot>
+				<screenshot>resources/screenshot-02.jpg</screenshot>
+				<screenshot>resources/screenshot-03.jpg</screenshot>
+				<screenshot>resources/screenshot-04.jpg</screenshot>
+				<screenshot>resources/screenshot-05.jpg</screenshot>
+				<screenshot>resources/screenshot-06.jpg</screenshot>
+				<screenshot>resources/screenshot-07.jpg</screenshot>
+				<screenshot>resources/screenshot-08.jpg</screenshot>
+				<screenshot>resources/screenshot-09.jpg</screenshot>
+				<screenshot>resources/screenshot-10.jpg</screenshot>
+				<screenshot>resources/screenshot-11.jpg</screenshot>
+			</assets>
+			<news>[B]3.0.5[/B][CR]• Add number of bits per sample on music OSD[CR]• Add Russian translation by salashnik[CR]• Add Czech translation by Pavuucek[CR]• Add Spanish translation by notorius28[CR]• Display seekbar on showtime action[CR]• Improve detection of audio CDs using an infobool[CR]• Fix Holidays themes[CR]• Minor fixes[CR][CR][B]3.0.4[/B][CR]• KODI 18 : Bump target GUI API to 5.14.0[CR]• KODI 18 : Add GUI for Radio Data System (RDS)[CR]• Add support for 'Next Up' addon by im85288[CR]• Add 8K flag icon[CR]• Add Rip audio-cd from 'Disc' on home menu[CR]• Add Hebrew and Armenian typefaces to the fonts[CR]• Video OSD and Music OSD enhancements/fixes[CR]• Minor fixes[CR][CR][B]3.0.3[/B][CR]• KODI 18 : Video OSD - Hide 'Previous' button for non-seekable streams[CR]• KODI 18 : Game - Add controller description[CR]• KODI 18 : Game - Add 'Get all' button to controller dialog[CR]• KODI 18 : Game OSD - Show help dialog on first view[CR]• KODI 18 : Game OSD - Finish renaming 'View mode' to 'Stretch mode'[CR]• KODI 18 : Game OSD - Extend help dialog to explain lack of remote support[CR]• Add 'HDTV', 'VHS' and 'HDDVD' flag icons[CR]• Fix condition for focus on the stop button[CR]• Minor fixes[CR][CR][B]3.0.2[/B][CR]KODI 18 : • Add 'sorty by' and 'sort order' for epg grid channels[CR]• Add 'mp3float' flag icon[CR]• Fix TV Shows ratings in some views[CR]• Minor fixes[CR][CR][B]3.0.1[/B][CR]• Add support for CoreELEC settings addon[CR]• Add DefaultMusicSources icon[CR]• Game : Update available views[CR]• Game OSD : Rename 'View mode' setting label to 'Stretch mode'[CR]• Game OSD : Rename 'Input settings' setting label to 'Controls'[CR]• Fix lists on dialog video info[CR]• Fix some textures[CR]• Fix keyboard navigation[CR]• Minor fixes[CR][CR][B]3.0.0[/B][CR]• KODI 18 : Add 'Advanced settings' button to settings list for Game OSD[CR]• KODI 18 : Add video rotation setting for Game OSD[CR]• Add new video info dialog (Thanks to jurialmunkey and VikkiXavier)[CR]• Add new music info dialog[CR]• Add new extended info dialog[CR]• Add new text viewer window[CR]• Add setting to disable fullscreen video info for movies and TV shows[CR]• Remove music themes feature which caused crashes[CR]• Minor fixes[CR][CR][B]2.9.9[/B][CR]• KODI 18 : Allow user to select resolutions[CR]• Add video fps flag icon on OSD[CR]• Changes in playing trailers on video info (Thanks to jurialmunkey)[CR]• Fix music themes with video addons[CR]• Minor fixes[CR][CR][B]2.9.8[/B][CR]• KODI 18 : Audio DSP removal[CR]• Add support for music themes for movies and TV shows (theme.mp3 files) (Thanks to manfeed)[CR]• Minor fixes[CR][CR][B]2.9.7[/B][CR]• KODI 18 : Add PVR Timeshift Offset[CR]• KODI 18 : Add Epg Event Seek Time[CR]• KODI 18 : Introduced control 402 for epg event seek percentage[CR]• Enable 'Wall (thumbnails)' and 'InfoWall (thumbnails)' views for artists[CR]• Improvements[CR]• Fix forced views (thanks to hawkeyexp)[CR]• Minor fixes[CR][CR][B]2.9.6[/B][CR]• KODI 18 : Use subtitle setting osd instead of custom dialog[CR]• Add possibility to disable default splash screen[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.9.5[/B][CR]• KODI 18 : RetroPlayer: Disable reset hotkey[CR]• Add default splash screen[CR]• Add new Icon and Fanart[CR]• Add icon for font addons[CR]• Add original title on video info[CR]• Remove possibility to edit power menu to avoid some crash[CR]• Improvement[CR][CR][B]2.9.4[/B][CR]• Add scope mode for constant image height (CIH) setup (OSD only)[CR]• Add new fullscreen info for movies and episodes[CR]• Add possibility to show ratings and user ratings in same time[CR]• Add tags on dialog info[CR]• Improve support for GlobalSearch 8.x.x addon[CR]• Improve PVR channels OSD[CR]• Others improvements[CR]• Minor fixes[CR][CR][B]2.9.3[/B][CR]• Add support GlobalSearch 8.x.x addon[CR]• Add support for music artworks with Artwork Beef addon[CR]• Add movies set button on video info dialog[CR]• Add progress bar to PVR widgets[CR]• Add support for 'KN Switchtimer Service' addon on PVR info dialog[CR]• Improve 'Icons Wall' view for PVR channels[CR]• Improve dialog info windows[CR]• Add possibility to show channels groups on PVR Guide[CR]• Many others improvements in PVR[CR]• Fix forced views with a script from hawkeyexp[CR]• Fix PVR NextUp popup[CR]• Minor fixes[CR][CR][B]2.9.2[/B][CR]• Fix for movies sets overview[CR]• Minor fixes (Thanks to Angelinas)[CR][CR][B]2.9.1[/B][CR]• Add new 'Icons Wall' view for PVR channels[CR]• Add Valentine's Day and Easter themes[CR]• Add possibility to change video lyrics colors[CR]• Minor fixes[CR][CR][B]2.9.0[/B][CR]• KODI 18 : Move recording control and info functionality from player to PVR[CR]• KODI 18 : Add button to bring up program selection dialog[CR]• Add support for more aspect ratios (used by newer phones)[CR]• Add Christmas (1 december to 2 january) and Halloween (30-31 october) themes[CR]• Add extended info when playing music[CR]• Minor fixes[CR][CR][B]2.8.9[/B][CR]• Add support for music clearart on music OSD[CR]• Improvements[CR]• Fix font issue[CR]• Minor fixes[CR][CR][B]2.8.8[/B][CR]• Improve PVR info dialog[CR]• Add new 'Christmas' pattern[CR]• Fix libraries fanarts when music is played[CR]• Fix movies sets logos on 'Shift View'[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.8.7[/B][CR]• Remove protection against banned addons aka Caretaker[CR]• Replace 'Artwork Downloader' support by 'Artwork Beef' (several advantages)[CR]• Enable 'Fanart' view for music videos[CR]• Fix PVR Group Manager channellist scrollbar position[CR]• Fix video in background when opacity is set to 100%[CR]• Minor fixes[CR][CR][B]2.8.6[/B][CR]• Add warning popup to just alert people and possible to disable it[CR]• Remove unload skin for protection against banned addons[CR][CR][B]2.8.5[/B][CR]• Fix close warning popup[CR][CR][B]2.8.4[/B][CR]• Add protection against banned addons (Thanks to sualfred)[CR]• Add (rating) star symbols to fontset (Thanks to Jeroen)[CR]• Improvements[CR]• Fix logon/logoff on power menu[CR]• Minor fixes[CR][CR][B]2.8.3[/B][CR]• Remove 'doNotShareMenu' argument[CR][CR][B]2.8.2[/B][CR]• Add games addons widget to games tab[CR]• Add Genres on list and wide list views[CR]• New Favourites window[CR]• Fix Favourites widget[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.8.1[/B][CR]• KODI 18 : Add filter description to video filter dialog[CR]• Minor fixes[CR][CR][B]2.8.0[/B][CR]• KODI 18 : Add Volume setting to Game OSD[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.7.10[/B][CR]• KODI 18 : RetroPlayer: Add renderer for Windows, OpenGL and OpenGLES[CR]• Add possibility to use small video OSD[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.7.9[/B][CR]• Add possibility to show visualisation effects behind background[CR]• Improvements[CR]• Fix missing 'Jump to letter' functionality for some views[CR]• Fix pause video during access to extended info with TV Shows[CR]• Fix on PVR Radio[CR]• Minor fixes[CR][CR][B]2.7.8[/B][CR]• Add possibility to disable Clearlogo on OSD[CR]• OSD info improvements[CR]• Fix Video Lyrics[CR]• Minor fixes[CR][CR][B]2.7.7[/B][CR]• Add 'Jump to letter' functionality to context menu[CR]• Video OSD improvements[CR]• Music OSD improvements[CR]• PVR OSD improvements[CR]• Fix for PVR info[CR]• Minor fixes[CR][CR][B]2.7.6[/B][CR]• KODI 18 : Implement FullscreenGame window[CR]• Replace genres widget by new one based on genres content (thanks to sualfred for his idea)[CR]• Add new genres widgets list/panel for Personal widgets[CR]• Add new 'Most played music videos' default widget[CR]• Add possibility to show media names with widgets names[CR]• Add new functionality 'Jump to letter' when scrollbar is focused (thanks to jurialmunkey for his idea)[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.7.5[/B][CR]• KODI 18 : Add support for epg tag playback[CR]• KODI 18 : New OSD dialog for video games settings[CR]• Add possibility to automatically show music video info at beginning and end of playing (Thanks to jurialmunkey)[CR]• Add possibility to replace background when fanarts are disabled[CR]• Improve PVR OSD info[CR]• Improve video OSD info[CR]• Improve 'TV Show - Next Aired' addon[CR]• Enable more views for video addons[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.7.4[/B][CR]• Add possibility to choose when video info must be shown on video OSD[CR]• Add support for Artworks on OSD video info for addons[CR]• Add 'Recommended Youtube videos' button on OSD for Youtube addon (Thanks to jurialmunkey)[CR]• Add support for video countries icons pack[CR]• Add 'Get all Artworks' button to context menu[CR]• Improve music visualisation[CR]• Minor fix[CR][CR][B]2.7.3[/B][CR]• Video info are now displayed when video is paused with possibility to disable it[CR]• Improve OSD info[CR]• Add fallback icons for mediaflags[CR]• Add animated poster on video info dialog[CR]• Minor changes and improvements[CR]• Fix issue with scripts for others skins[CR]• Minor fixes[CR][CR][B]2.7.2[/B][CR]• Add Top 250 from IMDb on dialog video info[CR]• Add button to download all Artworks on dialog video info[CR]• Add toggle button on PVR Guide to enable standard colors for genres[CR]• Add setting to pause video during access to extended info[CR]• Add possibility to configure media flags[CR]• Change appearance of 'TV Show - Next Aired' addon[CR]• Fix fanarts when 'Show video on background' is disable[CR]• Minor changes[CR]• Minor fixes[CR][CR][B]2.7.1[/B][CR]• Add possibility to change media flags color[CR]• Add possibility to show a border for media and choose his color[CR]• Improve dialog video info[CR]• Fix movies sets info with 'Banner' view[CR]• Fix media flags for sets with 'Banner' view[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.7.0[/B][CR]• Add number of oscars on video info (thanks to jurialmunkey)[CR]• Add possibility to hide fanart opacity in fullscreen mode on music visualisation[CR]• Improve navigation with better animations[CR]• Improve some views[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.6.2[/B][CR]• Add support for Skin Helper Service PVR Artworks[CR]• Enable 'Fanart' view for episodes[CR]• Enable 'Banner' view for movies[CR]• Improve 'Banner' view [CR]• Update thumbs previews for views[CR]• Fix duplicate ratings in list views[CR]• Improvements[CR]• Minor fixes[CR[CR][B]2.6.1[/B][CR]• Changes for Kodi 18[CR]• Add possibility to hide OSD when video is paused[CR]• Add 4K HDR flag icon (filename must contain 'HDR')[CR]• Add shortcut in skin settings to configure personal API key[CR]• Add scrolling text on music visualisation (thanks to jurialmunkey)[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.6.0[/B][CR]• Add possibility to choose gradient colors (thanks to jurialmunkey for idea)[CR]• Add classic list for power menu[CR]• Add Game OSD[CR]• Improvements[CR]• Minor fixes[CR][CR][B]2.5.10[/B][CR]• Add support for movies genres icons for Personalized Widgets[CR]• Add missing H262 flag icon[CR]• Improvements[CR]• Fix for PVR in some conditions[CR]• Minor fixes[CR][CR][B]2.5.9[/B][CR]• Add possibility to play trailers on movie information screen[CR]• Reorder necessary addons in Skin Settings[CR]• Minor fixes[CR][CR][B]2.5.8[/B][CR]• Add possibility to show item label on top with minimize main menu setting[CR]• Show mute icon on libraries when mute is enable[CR]• Fix clearlogos disappearance when mute is enable[CR]• Fix for LibreELEC settings addon[CR]• Minor fixes[CR][CR][B]2.5.7[/B][CR]• Add possibility to minimize main menu[CR]• Add media flags icons for 'Triple lists' and 'Double lists' views[CR]• Remove always attrib for defaultcontrol on Settings[CR]• Changes on login screen[CR]• Minor fixes[CR][CR][B]2.5.6[/B][CR]• Add new 'Triple lists' view for TV shows[CR]• Add new 'Double lists' view for seasons[CR]• Changes for Kodi 18 : Migrate add-on settings to settings library[CR]• Minor fixes[CR][CR][B]2.5.5[/B][CR]• Add possibility to show clearlogos at the top of home menu[CR]• Add clearlogos on dialog music info[CR]• Add banners on dialog video info[CR]• Fix episodes thumbs with Personalized Widgets[CR]• Fix on 'Double lists' and 'Triple lists' views to launch full album[CR]• Minor fixes[CR][CR][B]2.5.4[/B][CR]• Add posters on 'Fanart' view[CR]• Add new 'Double lists' view for sets[CR]• Fix end time resume flag icon with AM/PM[CR]• Fix visibility for 'Double lists' and 'Triple lists' views[CR]• Minor fixes[CR][CR][B]2.5.3[/B][CR]• Add new 'Double lists' view for artists and albums[CR]• Add new 'Triple lists' view for artists[CR]• Improve esthetic appearance[CR]• Minor fixes[CR][CR][B]2.5.2[/B][CR]• Add miniatures panel for Personalized Widgets[CR]• Add support for animated weather icons[CR]• Fix missing watched icons and progress bars for Personalized Widgets[CR]• Minor fixes[CR][CR][B]2.5.1[/B][CR]• Fix aspect ratio for widgets[CR]• Minor fixes[CR]• Update German translation[CR][CR][B]2.5.0[/B][CR]/!\ Reboot Kodi and 'Reset main menu and power menu settings' in skin settings after installation of this version /!\[CR]• Add vertical panels for Personalized Widgets[CR]• Add 'Categories' appearance for Personalized Widgets[CR]• Add support for albums back thumbs (file must be placed in album folder and named 'thumbback.jpg')[CR]• Add possibility to change rating text color[CR]• Fix issue with Appearance for Personalized Widgets[CR]• Minor fixes[CR][CR][B]2.4.0[/B][CR][B]/!\ Reboot Kodi and 'Reset main menu and power menu settings' in skin settings after installation of this version /!\[/B][CR]• Add support for Skin Shortcuts template to avoid personalized widgets reloading[CR]• Add possibility to define sort method and sort direction for personalized widgets[CR]• Add rating on video osd info[CR]• Minor changes[CR]• Minor fixes[CR][CR][B]2.3.2[/B][CR]• Add VP9 video codec icon[CR]• Add rewind and forward OSD buttons for PVR TimeShift[CR]• Fix on PVR/Radio widgets[CR]• Fix duration flag icon with Global Search[CR]• Many fixes for Arial font[CR]• Minor changes[CR]• Minor fixes[CR][CR][B]2.3.1[/B][CR]• Add Next Up popup for Live TV[CR]• Add albums count on artists dialog info[CR]• Add possibility to disable 'Settings' shortcut widget[CR]• Add PVR overlay when switching channels[CR]• Fix artists/albums plots on music dialog info[CR]• Fix on PVR[CR]• Fix caterories labels for personalized widgets[CR][CR][B]2.3.0[/B][CR]• Add parental control to protect home menu items and widgets with password[CR]• Add support for German language (Thanks to rainman74)[CR]• Fix CDArts position on Global Search screen[CR]• Fix esthetic appearance[CR]• Minor fixes[CR]• Minor changes[CR][CR][B]2.2.9[/B][CR]• Add support for extendedinfo youtube list[CR]• Add shortcut for movies set info to context menu[CR]• Add shortcut for extended info to context menu[CR]• Fix lyrics on music visualisation[CR]• Fix aspect ratio on tv shows widgets[CR]• Fix channel osd recording indicator visibility[CR]• Fix esthetic appearance[CR]• Minor fixes[CR]• Minor changes[CR][CR][B]2.2.8[/B][CR]• Add info dialog for movies sets[CR]• Fix playlists editor[CR]• Minor fixes[CR][CR][B]2.2.7[/B][CR]• Changes for Kodi 18[CR]• Add possibility to disable colored outline for CDArts[CR]• Add possibility to disable animated lyrics for classic lyrics[CR]• Fix disc overlay for some CDArts[CR]• Fix extended info window for some resolutions[CR]• Fix playlists editor[CR]• Minor fixes[CR][CR][B]2.2.6[/B][CR]• Change extension file '.png' to '.jpg' for games artworks[CR]• Minor fixes[CR][CR][B]2.2.5[/B][CR]• Add games sources widget[CR]• Add support for games artworks (artworks must be named identical to the file name of the game with the extension '.png' and must be in the same folder as games)[CR]• Fix personalized widget 5[CR]• Fix plots and thumbs on info dialog to avoid spoilers[CR]• Fix widgets property[CR]• Changes on widgets when libraries are not populated[CR][CR][B]2.2.4[/B][CR]• Add possibility to show CDArt on widgets and on library[CR]• Add possibility to install addons zip files directly from home submenu[CR]• Minor fixes[CR][CR][B]2.2.3[/B][CR]• Add possibility to use alphabet for scrolling on library (experimental)[CR]• Add more personalized widgets to bypass problem with disappearance and animations of widgets (use one personalized widget per home menu item)[CR]• Changes on duration flag icon with hours and minutes[CR]• Changes on PVR Guide with Kodi 18 last build[CR]• Minor fixes[CR][CR][B]2.2.2[/B][CR]• Add possibility to greyed out watched items in library and on widgets[CR]• Add support for Videolyrics v3 with possibility to fix lyrics colors by song (thanks to manfeed)[CR]• Add support for Kodi Log Uploader addon[CR]• Fix LibreELEC settings buttons[CR]• Minor fixes[CR][CR][B]2.2.1[/B][CR]• Changes for Kodi 18[CR]• Add 'All channels' and 'All radios' widgets[CR]• Fix PVR channels OSD[CR]• Fix esthetic appearance[CR][CR][B]2.2.0[/B][CR]• Add possibility to force views in library[CR]• Add possibility to customize power menu[CR]• Add flags for moviesets widget[CR]• Fix missing view for music[CR]• Fix esthetic appearance[CR]• Fix context menu position[CR]• Minor fixes[CR][CR][B]2.1.9[/B][CR]• Changes for Kodi 18[CR]• Add preview for view mode[CR]• Minor fixes[CR][B]2.1.8[/B][CR]• Add new 'Mosaic (vertical)' view[CR][CR][B]2.1.7[/B][CR]• Changes for Kodi 18[CR]• Fix setting to disable submenu[CR]• Minor fixes[CR][CR][B]2.1.6[/B][CR]• Add new 'Gallery' view[CR]• Add new 'Mosaic' view[CR]• Add clearlogos list for 'Shift' view[CR]• Minor fixes[CR][CR][B]2.1.5[/B][CR]• Add library info on settings widget[CR]• Add ratings/user ratings in list views[CR]• Changes on 'Next episode to watch' widget[CR]• Minor fixes[CR][CR][B]2.1.4[/B][CR]• Add possibility to configure submenus for Personnal Widget[CR]• Add possibility to show banners for episodes/thumbs widgets[CR]• Decrease number of personal widgets to 8 because not possible to show more[CR]• Fix context menu for CU LRC Lyrics addon[CR]• Fix disable Clearlogos on library[CR]• Minor fixes[CR][CR][B]2.1.3[/B][CR]• Fix centered posters on some views[CR]• Fix missing posters flag for moviesets with Wall (Thumbnails) view[CR]• Minnor fixes[CR][CR][B]2.1.2[/B][CR]• Fix adding item with Skin Shortcut[CR][CR][B]2.1.1[/B][CR]• Add support for submenus with Skin Shortcuts addon[CR]• Minnor fixes[CR][CR][B]2.1.0[/B][CR]• Add support for Skin Shortcuts addon to customize home menu and widgets[CR]• Add support for thumbnails with NextUp Service addon[CR]• Add support for Videolyrics v2 (thanks to manfeed)[CR]• Minnor fixes[CR]• Special Thanks to Gracus and ferent for reporting issue[CR][CR][B]2.0.6[/B][CR]• Add two views for power menu[CR]• Add possibility to hide thumbs episodes to avoid spoilers[CR]• Fix banner on music visualisation when next tracks are not available[CR]• Fix missing clearlogos with moviesets widget[CR]• Fix in musicvideo views[CR]• Fix label with moviesets thumbnails[CR]• Enable landscape views for seasons[CR]• Drop support for using hyphen as none value[CR]• Minnor fixes[CR][CR][B]2.0.5[/B][CR]• Add info button on video OSD[CR]• Add language and subtitles language on fullscreen info[CR]• Add button to switch between all/watched/unwatched recordings[CR]• Replace rating badge[CR]• Fix Youtube call[CR]• Minnor fixes[CR][CR][B]2.0.4[/B][CR]• Add new 'InfoWall (thumbnails)' view[CR]• Add new 'Wall (thumbnails)' view[CR]• Add extrafanarts support for 'Fanart' view[CR]• Add icon when item is resumable[CR]• Hide OSD directly after pause[CR]• Fix esthetic appearance[CR]• Minnor fixes[CR][CR][B]2.0.3[/B][CR]• Add Videolyrics (credits to manfeed)[CR]• Add new 'Next episodes to see' widget[CR]• Replace music videos widgets[CR]• Fix color with lyrics[CR]• Fix banner on music fullscreen[CR]• Fix music visualisation[CR]• Fix esthetic appearance[CR][CR][B]2.0.2[/B][CR]• Fix selecting widgets[CR][CR][B]2.0.1[/B][CR]• Add possibility to reorder main menu items[CR]• Add possibility to reset main menu items back to default[CR]• Add possibility to show smaller icons for 'Categories' widgets[CR]• Add studios flag icons for movies widgets[CR]• Add shortcuts on power menu to update video/music library[CR]• Fix colordiffuse for studios and labels flag icons[CR]• Minnor fixes[CR][CR][B]2.0.0[/B][CR]• Initial release[CR]• Add possibility to hide main menu when selecting widgets[CR]• Add possibility to disable each widget[CR]• Add possibility to hide watched items from recently added widgets[CR]• Add possibility to hide episodes plots to avoid spoilers[CR]• Add possibility to change skin color[CR]• Add possibility to change background color[CR]• Add possibility to change pattern color[CR]• Add possibility to change background opacity[CR]• Add possibility to top and bottom bars opacity[CR]• Add possibility to change weather icons pack[CR]• Add possibility to change studios icons pack[CR]• Add possibility to change genres icons pack[CR]• Add possibility to set splash screen (photo, video or music)[CR]• Add possibility to set number of items to display on widgets[CR]• Add possibility to backup/restore skin settings[CR]• Add possibility to disable zoom effect[CR]• Add possibility to enable/disable music visualisation effects on background[CR]• Add possibility to enable/disable video on background[CR]• Add possibility to hide notification popup during playback[CR]• Add possibility to show music visualisation screen when playing song[CR]• Add possibility to ExtraFanarts on music visualisation screen[CR]• Add possibility to animate Fanart/ExtraFanarts on music visualisation screen[CR]• Add possibility to add music visualisation effects on music visualisation screen[CR]• Add possibility to disable Kodi screensaver on music visualisation screen[CR]• Add possibility to start Artwork Downloader at startup[CR]• Add next tracks on music visualisation screen[CR]• Add actors list on video OSD[CR]• Add more buttons on OSD[CR]• Add more flag icons[CR]• Add next airing episodes widget for tv shows[CR]• Add horizontal view for PVR Guide[CR]• Add support for records labels icons pack[CR]• Add support for ExtraFanarts[CR]• Add support for animated posters[CR]• Add support for Clearlogos[CR]• Add support for CDArts[CR]• Add support for Artwork Downloader addon[CR]• Add support for NextUp Notification addon[CR]• Add support for CU LRC Lyrics addon[CR]• Add support for RSS Editor addon[CR]• Add support for Global Search addon[CR]• Add support for TV Show Next Aired addon[CR]• Add support for Extended Info addon[CR]• Add support for LibreELEC settings addon[CR]• Add support for Kiosk mode[CR]• Changes on views[CR]• Changes on volume bar[CR]• Some fixes[CR][CR]</news>
+	</extension>
 </addon>
 </addons>
