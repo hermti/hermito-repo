@@ -671,6 +671,7 @@ def youtubeMenu(url=None):
 	setView('files', 'viewType')
 
 def maintMenu(view=None):
+	wiz.forceUpdate()
 	on = '[B][COLOR lime]AN[/COLOR][/B]'; off = '[B][COLOR red]AUS[/COLOR][/B]'
 	autoclean   = 'true' if AUTOCLEANUP    == 'true' else 'false'
 	cache       = 'true' if AUTOCACHE      == 'true' else 'false'
@@ -2240,8 +2241,8 @@ elif mode=='editthird'      : editThirdParty(name); wiz.refresh()
 elif mode=='maint'          : maintMenu(name)
 elif mode=='kodi17fix'      : wiz.kodi17Fix()
 elif mode=='advancedsetting': advancedWindow(name)
-elif mode=='packageinstall'   : AddonsInstallieren.starten(); wiz.refresh()
-elif mode=='repoinstallall'   : AddonsInstallieren.repoinstallall(); wiz.refresh()
+elif mode=='packageinstall'   : AddonsInstallieren.starten(); wiz.forceUpdate(); wiz.refresh()
+elif mode=='repoinstallall'   : AddonsInstallieren.repoinstallall(); wiz.forceUpdate(); wiz.refresh()
 elif mode=='autoadvanced'   : showAutoAdvanced(); wiz.refresh()
 elif mode=='removeadvanced' : removeAdvanced(); wiz.refresh()
 elif mode=='asciicheck'     : wiz.asciiCheck()
