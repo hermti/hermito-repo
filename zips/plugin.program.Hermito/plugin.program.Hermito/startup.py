@@ -106,9 +106,8 @@ FAILED         = False
 ###########################
 #### Check Updates   ######
 ###########################
-ebi('UpdateAddonRepos()')
-xbmc.sleep(500)
-ebi('UpdateLocalAddons()')
+
+wiz.forceUpdate(True)
 
 def checkUpdate():
 	BUILDNAME      = wiz.getS('buildname')

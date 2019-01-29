@@ -798,6 +798,7 @@ def splitNotify(notify):
 
 def forceUpdate(silent=False):
 	ebi('UpdateAddonRepos()')
+	xbmc.sleep(1000)
 	ebi('UpdateLocalAddons()')
 	if silent == False: LogNotify("[COLOR %s]%s[/COLOR]" % (COLOR1, ADDONTITLE), '[COLOR %s]Suche Addon Updates[/COLOR]' % COLOR2)
 
