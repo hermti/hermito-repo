@@ -799,7 +799,7 @@ def splitNotify(notify):
 def forceUpdate(silent=False):
 	ebi('UpdateAddonRepos()')
 	ebi('UpdateLocalAddons()')
-	if silent == False: LogNotify("[COLOR %s]%s[/COLOR]" % (COLOR1, ADDONTITLE), '[COLOR %s]Forcing Addon Updates[/COLOR]' % COLOR2)
+	if silent == False: LogNotify("[COLOR %s]%s[/COLOR]" % (COLOR1, ADDONTITLE), '[COLOR %s]Suche Addon Updates[/COLOR]' % COLOR2)
 
 def convertSpecial(url, over=False):
 	total = fileCount(url); start = 0

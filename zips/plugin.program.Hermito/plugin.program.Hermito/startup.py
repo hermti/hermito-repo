@@ -106,6 +106,10 @@ FAILED         = False
 ###########################
 #### Check Updates   ######
 ###########################
+ebi('UpdateAddonRepos()')
+xbmc.sleep(500)
+ebi('UpdateLocalAddons()')
+
 def checkUpdate():
 	BUILDNAME      = wiz.getS('buildname')
 	BUILDVERSION   = wiz.getS('buildversion')

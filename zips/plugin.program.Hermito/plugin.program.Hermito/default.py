@@ -671,7 +671,6 @@ def youtubeMenu(url=None):
 	setView('files', 'viewType')
 
 def maintMenu(view=None):
-	wiz.forceUpdate()
 	on = '[B][COLOR lime]AN[/COLOR][/B]'; off = '[B][COLOR red]AUS[/COLOR][/B]'
 	autoclean   = 'true' if AUTOCLEANUP    == 'true' else 'false'
 	cache       = 'true' if AUTOCACHE      == 'true' else 'false'
