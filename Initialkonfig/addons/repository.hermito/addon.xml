@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.hermito" name="Hermito's Kodi Addons" version="1.0.3" provider-name="Hermito">
+	<extension point="xbmc.addon.repository" name="Hermito's Kodi Addon Repository">
+		<info compressed="false">https://github.com/hermti/hermito-repo/raw/master/zips/addons.xml</info>
+		<checksum>https://github.com/hermti/hermito-repo/raw/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/hermti/hermito-repo/raw/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Hermito's Addon Repository</summary>
+		<description>Download and install Hermito's addon repository!</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
