@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.hermito.aio" name="Hermito AIO Installer" version="1.0.1" provider-name="Hermito">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+		<import version="0.0.0" addon="repository.cdrepo"/>
+		<import version="0.0.0" addon="repository.colossus"/>
+		<import version="0.0.0" addon="repository.exodusredux"/>
+		<import version="0.0.0" addon="repository.Firestickplusman"/>
+		<import version="0.0.0" addon="repository.Ghost"/>
+		<import version="0.0.0" addon="repository.guilouz"/>
+		<import version="0.0.0" addon="repository.hermito"/>
+		<import version="0.0.0" addon="repository.jsergio"/>
+		<import version="0.0.0" addon="repository.Kodianer.NEU"/>
+		<import version="0.0.0" addon="repository.kodil"/>
+		<import version="0.0.0" addon="repository.kodinerds"/>
+		<import version="0.0.0" addon="repository.lastship"/>
+		<import version="0.0.0" addon="repository.marcelveldt"/>
+		<import version="0.0.0" addon="repository.sgkodi"/>
+		<import version="0.0.0" addon="repository.StreamArmy"/>
+		<import version="0.0.0" addon="repository.turkvod"/>
+		<import version="0.0.0" addon="repository.universalscrapers"/>
+		<import version="0.0.0" addon="repository.xstream"/>
+		<import version="0.0.0" addon="plugin.audio.CannaPower"/>
+		<import version="0.0.0" addon="plugin.audio.radio_de"/>
+		<import version="0.0.0" addon="plugin.program.Hermito"/>
+		<import version="0.0.0" addon="plugin.program.super.favourites"/>
+		<import version="0.0.0" addon="plugin.video.covenant"/>
+		<import version="0.0.0" addon="plugin.video.doku-stream.org"/>
+		<import version="0.0.0" addon="plugin.video.dokumonster"/>
+		<import version="0.0.0" addon="plugin.video.dokustreams.de"/>
+		<import version="0.0.0" addon="plugin.video.exodusredux"/>
+		<import version="0.0.0" addon="plugin.video.ghost.tv"/>
+		<import version="0.0.0" addon="plugin.video.KidsTube"/>
+		<import version="0.0.0" addon="plugin.video.lastship"/>
+		<import version="0.0.0" addon="plugin.video.sport365.live"/>
+		<import version="0.0.0" addon="plugin.video.SportsDevil"/>
+		<import version="0.0.0" addon="plugin.video.turkvod"/>
+		<import version="0.0.0" addon="plugin.video.tvone1111"/>
+		<import version="0.0.0" addon="plugin.video.tvoneplus"/>
+		<import version="0.0.0" addon="plugin.video.videodevil"/>
+		<import version="0.0.0" addon="plugin.video.WorldOfWrestling"/>
+		<import version="0.0.0" addon="plugin.video.xstream"/>
+		<import version="0.0.0" addon="plugin.video.youtube"/>
+		<import version="0.0.0" addon="plugin.video.zeus"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Hermito AIO Installer</summary>
+		<description lang="en">Es werden direkt alle Addons aus Hermito`s Repo installiert.</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
