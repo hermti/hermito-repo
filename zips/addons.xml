@@ -953,7 +953,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.program.Hermito" name="[B][COLOR skyblue]Hermito Assistent[/COLOR][/B]" version="1.0.1" provider-name="Hermito">
+<addon id="plugin.program.Hermito" name="[B][COLOR skyblue]Hermito Assistent[/COLOR][/B]" version="1.0.2" provider-name="Hermito">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
