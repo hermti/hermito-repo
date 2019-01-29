@@ -1,0 +1,8 @@
+<favourites>
+	<favourite name="Dokustreams.de" thumb="special://home/addons\plugin.video.dokustreams.de\icon.png">RunAddon(plugin.video.dokustreams.de)</favourite>
+	<favourite name="Galileo" thumb="https://raw.githubusercontent.com/kodinerds/repo/master/plugin.video.galileo/icon.png">RunAddon(plugin.video.galileo)</favourite>
+	<favourite name="dokumonster.de" thumb="special://home/addons\plugin.video.dokumonster\icon.png">RunAddon(plugin.video.dokumonster)</favourite>
+	<favourite name="Doku5" thumb="special://home/addons\plugin.video.doku5.com\resources\icon.png">RunAddon(plugin.video.doku5.com)</favourite>
+	<favourite name="Doku-Stream.org" thumb="special://home/addons\plugin.video.doku-stream.org\icon.png">RunAddon(plugin.video.doku-stream.org)</favourite>
+	<favourite name="DMAX Mediathek" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.L0RE.dmax/icon.png">RunAddon(plugin.video.L0RE.dmax)</favourite>
+</favourites>

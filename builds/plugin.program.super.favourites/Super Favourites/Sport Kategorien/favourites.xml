@@ -1,0 +1,22 @@
+<favourites>
+	<favourite name="SportsDevil" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.SportsDevil/icon.png">RunAddon(plugin.video.SportsDevil)</favourite>
+	<favourite name="DSS" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.dss/icon.png">RunAddon(plugin.video.dss)</favourite>
+	<favourite name="Planet MMA" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.ufc-finest/icon.png">RunAddon(plugin.video.ufc-finest)</favourite>
+	<favourite name="World Of Wrestling" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.WorldOfWrestling/icon.png">RunAddon(plugin.video.WorldOfWrestling)</favourite>
+	<favourite name="Sport Total" thumb="https://raw.githubusercontent.com/kodinerds/repo/master/plugin.video.sporttotal/icon.png">RunAddon(plugin.video.sporttotal)</favourite>
+	<favourite name="3. Liga" thumb="special://home/addons\plugin.video.bundesliga3\icon.png">RunAddon(plugin.video.bundesliga3)</favourite>
+	<favourite name="Kicker.tv" thumb="special://home/addons\plugin.video.kicker_tv\icon.png">RunAddon(plugin.video.kicker_tv)</favourite>
+	<favourite name="Laola1.tv free" thumb="http://neu.kodianer.de/repos/kodianer/plugin.video.laola1free/icon.png">RunAddon(plugin.video.laola1free)</favourite>
+	<favourite name="UEFA Champions League" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.ucl/icon.png">RunAddon(plugin.video.ucl)</favourite>
+	<favourite name="[COLOR orange][B]Sports World[/B][/COLOR]" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.sportsworld/icon.png">RunAddon(plugin.video.sportsworld)</favourite>
+	<favourite name=" ZiggoSport" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.zigosport/icon.png">RunAddon(plugin.video.zigosport)</favourite>
+	<favourite name="NBA On-demand" thumb="https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.video.nbaondemand/icon.png">RunAddon(plugin.video.nbaondemand)</favourite>
+	<favourite name="NFL Teams" thumb="http://mirrors.kodi.tv/addons/krypton/plugin.video.nfl-teams/icon.png">RunAddon(plugin.video.nfl-teams)</favourite>
+	<favourite name="Extreme Sports" thumb="special://home/addons\plugin.video.extreme\icon.png">RunAddon(plugin.video.extreme)</favourite>
+	<favourite name="[COLORdarkgoldenrod]WrestleManiac[/COLOR]" thumb="http://mrnumbers.xyz/repo2/master/zips/plugin.video.wrestlemaniac/icon.png">RunAddon(plugin.video.wrestlemaniac)</favourite>
+	<favourite name="Sportschau" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.sportschau/icon.png">RunAddon(plugin.video.sportschau)</favourite>
+	<favourite name="Eurosport" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.eurosport/icon.png">RunAddon(plugin.video.eurosport)</favourite>
+	<favourite name="Sport1" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.sport1de/icon.png">RunAddon(plugin.video.sport1de)</favourite>
+	<favourite name="Sport365" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.sport365.live/icon.png">RunAddon(plugin.video.sport365.live)</favourite>
+	<favourite name="Sportdeutschland.TV" thumb="http://sgkodi.de/SGK-Repo/Repo-Daten/plugin.video.sportdeutschland_tv/icon.png">RunAddon(plugin.video.sportdeutschland_tv)</favourite>
+</favourites>

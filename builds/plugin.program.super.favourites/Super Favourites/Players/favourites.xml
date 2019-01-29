@@ -1,0 +1,12 @@
+<favourites>
+	<favourite name="Lastship" thumb="http://ghostrepo.de/Plugins/plugin.video.lastship/icon.png">RunAddon(plugin.video.lastship)</favourite>
+	<favourite name="xStream" thumb="special://home/addons\plugin.video.xstream\icon.png">RunAddon(plugin.video.xstream)</favourite>
+	<favourite name="Incursion" thumb="http://ghostrepo.de/Plugins/plugin.video.incursion/icon.png">RunAddon(plugin.video.incursion)</favourite>
+	<favourite name="[COLOR orangered][B]Gurzil[/B][/COLOR]" thumb="http://ghostrepo.de/Plugins/plugin.video.gurzil/icon.png">RunAddon(plugin.video.gurzil)</favourite>
+	<favourite name="[COLOR red][B]FlixNet[/B][/COLOR]" thumb="http://ghostrepo.de/Plugins/plugin.video.flixnet/icon.png">RunAddon(plugin.video.flixnet)</favourite>
+	<favourite name="Covenant" thumb="http://ghostrepo.de/Plugins/plugin.video.covenant/icon.png">RunAddon(plugin.video.covenant)</favourite>
+	<favourite name="Legendary" thumb="http://ghostrepo.de/Plugins/plugin.video.Legendary/icon.png">RunAddon(plugin.video.Legendary)</favourite>
+	<favourite name="Atomic" thumb="http://ghostrepo.de/Plugins/plugin.video.atomic/icon.png">RunAddon(plugin.video.atomic)</favourite>
+	<favourite name="[COLORgreen]Yoda[/COLOR]" thumb="special://home/addons\plugin.video.Yoda\icon.jpg">RunAddon(plugin.video.Yoda)</favourite>
+	<favourite name="Exodus Redux" thumb="special://home/addons\plugin.video.exodusredux\icon.png">RunAddon(plugin.video.exodusredux)</favourite>
+</favourites>
