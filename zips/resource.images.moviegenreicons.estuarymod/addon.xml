@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.moviegenreicons.estuarymod" name="Movie Genres Icons for Estuary MOD V2" version="1.0.4" provider-name="Guilouz">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movie genres icons Pack for Estuary MOD V2</summary>
+		<description lang="en">Movie genres icons Pack.</description>
+		<summary lang="fr">Pack d'icônes de genres vidéos pour Estuary MOD V2</summary>
+		<description lang="fr">Pack d'icônes de genres vidéos.</description>
+		<platform>all</platform>
+		<source>https://github.com/Guilouz/resource.images.moviegenreicons.estuarymod</source>
+		<assets>
+			<icon>resources_/icon.png</icon>
+			<fanart>resources_/fanart.jpg</fanart>
+			<screenshot>resources_/screenshot-01.jpg</screenshot>
+			<screenshot>resources_/screenshot-02.jpg</screenshot>
+			<screenshot>resources_/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>[B]1.0.4[/B][CR]• Fix accented characters[CR][CR][B]1.0.3[/B][CR]• Fix accented characters[CR][CR][B]1.0.2[/B][CR]• Remove Textures.xbt[CR][CR][B]1.0.1[/B][CR]• Add Spanish genres[CR][CR][B]1.0.0[/B][CR]• Initial release[CR][CR]</news>
+	</extension>
+</addon>

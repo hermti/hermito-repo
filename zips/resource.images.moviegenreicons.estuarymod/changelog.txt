@@ -1,0 +1,14 @@
+[B]1.0.4[/B]
+• Fix accented characters
+
+[B]1.0.3[/B]
+• Fix accented characters
+
+[B]1.0.2[/B]
+• Remove Textures.xbt
+
+[B]1.0.1[/B]
+• Add Spanish genres
+
+[B]1.0.0[/B]
+• Initial release
