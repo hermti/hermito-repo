@@ -2027,6 +2027,23 @@
 	</extension>
 </addon>
 
+<addon id="repository.rector.stuff" name="Rector Stuff" version="1.0.0" provider-name="rmrector">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Rector Repository">
+		<info>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/rmrector/repository.rector.stuff/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">A little place for my stuff.</summary>
+		<description lang="en">I'm Rector, I do stuff, I put it here.</description>
+		<platform>all</platform>
+		<disclaimer />
+	</extension>
+</addon>
+
 <addon id="repository.sgkodi" name="[B][COLORblue]SGK[/COLOR][/B][COLORwhite]ODI REPOSITORY[/COLOR]" version="1.1.3" provider-name="SGK">
     <extension point="xbmc.addon.repository" name="Kodi Addons + Repos">
 		<info compressed="false">http://sgkodi.de/SGK-Repo/Repo-Daten/addons.xml</info>
@@ -2117,6 +2134,29 @@
     </extension>
 </addon>
 
+<addon id="resource.images.moviegenreicons.estuarymod" name="Movie Genres Icons for Estuary MOD V2" version="1.0.4" provider-name="Guilouz">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movie genres icons Pack for Estuary MOD V2</summary>
+		<description lang="en">Movie genres icons Pack.</description>
+		<summary lang="fr">Pack d'icônes de genres vidéos pour Estuary MOD V2</summary>
+		<description lang="fr">Pack d'icônes de genres vidéos.</description>
+		<platform>all</platform>
+		<source>https://github.com/Guilouz/resource.images.moviegenreicons.estuarymod</source>
+		<assets>
+			<icon>resources_/icon.png</icon>
+			<fanart>resources_/fanart.jpg</fanart>
+			<screenshot>resources_/screenshot-01.jpg</screenshot>
+			<screenshot>resources_/screenshot-02.jpg</screenshot>
+			<screenshot>resources_/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>[B]1.0.4[/B][CR]• Fix accented characters[CR][CR][B]1.0.3[/B][CR]• Fix accented characters[CR][CR][B]1.0.2[/B][CR]• Remove Textures.xbt[CR][CR][B]1.0.1[/B][CR]• Add Spanish genres[CR][CR][B]1.0.0[/B][CR]• Initial release[CR][CR]</news>
+	</extension>
+</addon>
+
 <addon id="resource.images.weathericons.white" name="Weather Icons - White" version="0.0.6" provider-name="Team Kodi">
 	<extension point="kodi.resource.images" compile="true" type="weather" />
 	<requires>
@@ -2158,6 +2198,119 @@
   </extension>
 </addon>
 
+<addon id="script.artwork.beef" name="Artwork Beef" version="0.23.1" provider-name="rmrector">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.json" version="6.20.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+		<import addon="script.module.requests" version="2.9.1" />
+		<import addon="script.common.plugin.cache" version="2.5.8" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<menu id="kodi.core.manage">
+				<item library="context.py">
+					<label>AB: $ADDON[script.artwork.beef 32410]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_gui.py">
+					<label>AB: $ADDON[script.artwork.beef 32411]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_debug_remove.py">
+					<label>AB: $ADDON[script.artwork.beef 32427]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_debug_logitem.py">
+					<label>AB: $ADDON[script.artwork.beef 32430]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+			</menu>
+			<item library="context.py">
+				<label>AB: $ADDON[script.artwork.beef 32410]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_gui.py">
+				<label>AB: $ADDON[script.artwork.beef 32411]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_remove.py">
+				<label>AB: $ADDON[script.artwork.beef 32427]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_logitem.py">
+				<label>AB: $ADDON[script.artwork.beef 32430]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.service" start="login" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Automatically adds extra artwork for your media.</summary>
+		<description lang="en">Artwork Beef automatically adds extra artwork for TV shows and movies into your library. It grabs them from wonderful web services and the file system.</description>
+		<disclaimer lang="en">Artwork sources: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB</disclaimer>
+		<summary lang="es">Agrega automáticamente ilustraciones adicionales para sus medios.</summary>
+		<description lang="es">Artwork Beef agrega automáticamente ilustraciones adicionales para Series TV y Películas a su biblioteca. Las ilustraciones son agregadas desde Servicios web y el Sistema de archivos local.</description>
+		<disclaimer lang="es">Fuente para ilustraciones: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB</disclaimer>
+		<news>
+v0.23.1 (2018-12-02)
+- Fix: Remove generated thumb from Kodi texture cache when removing art
+- Fix: show actual message for "remote control" is required to pre-cache artwork
+
+v0.23.0 (2018-11-17)
+- Feature: save configured artwork to Kodi's whitelist in advancedsettings.xml
+- Feature: cleaning remote URLs to artwork is optional
+- Feature: automatically adding keyart from TMDB is optional
+- Feature: action to update local artwork only for all media items
+- Fix: better handle non-UTF8 file paths
+- Fix: warn that "remote control" is required to pre-cache artwork
+		</news>
+		<source>https://github.com/rmrector/script.artwork.beef</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=258886</forum>
+		<website>https://rmrector.github.io/script.artwork.beef/</website>
+		<license>The MIT License</license>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+		<language />
+		<email />
+	</extension>
+</addon>
+
+<addon id="script.artwork.helper" name="Artwork Helper" version="0.9.0" provider-name="rrector">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.json" version="6.20.0" />
+		<import addon="xbmc.addon" version="17.0.0" />
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Artwork Helper provides a couple of tools to skins and other add-ons for working with artwork.</summary>
+		<description lang="en">Artwork Helper provides a couple of tools to skins and other add-ons for working with artwork. See README.md for detailed usage.</description>
+		<disclaimer lang="en">Artwork Helper does not directly add functionality on its own and must be supported by skins or other add-ons.</disclaimer>
+		<source>https://github.com/rmrector/script.artwork.helper</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=236649</forum>
+		<news>
+v0.9.0 (2018-03-25)
+- Feature: add a path to grab artwork work the currently playing item
+- Feature: add path option to grab artwork from multiple artists
+
+v0.8.0 (2017-11-08)
+- Update for Leia compatibility, Krypton is now lowest supported
+- remove `shuffle`
+		</news>
+		<license>The MIT License</license>
+		<platform>all</platform>
+		<language />
+		<website />
+		<email />
+	</extension>
+</addon>
+
 <addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="TheCollective" version="2.5.10">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
@@ -2192,6 +2345,88 @@
 		<summary>Metadata for the Covenant Addon</summary>
 		<description>Metadata for Covenant are maintained separately to make distribution of the the addon itself easier/faster.</description>
 		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.cu.lrclyrics" name="CU LRC Lyrics" version="5.5.9" provider-name="Taxigps, ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.chardet" version="2.2.1"/>
+		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
+		<import addon="script.module.requests" version="2.18.4"/>
+	</requires>
+	<extension point="xbmc.python.lyrics" library="default.py"/>
+	<extension point="xbmc.service" library="default.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="be_BY">CU LRC Lyrics</summary>
+		<summary lang="bg_BG">CU LRC Лирики</summary>
+		<summary lang="ca_ES">CU LRC Lyrics</summary>
+		<summary lang="da_DK">CU LRC Lyrics</summary>
+		<summary lang="de_DE">CU LRC-Songtext</summary>
+		<summary lang="el_GR">Στίχοι CU LRC</summary>
+		<summary lang="en_GB">CU LRC Lyrics</summary>
+		<summary lang="en_NZ">CU LRC Lyrics</summary>
+		<summary lang="en_US">CU LRC Lyrics</summary>
+		<summary lang="es_ES">CU LRC Lyrics</summary>
+		<summary lang="fr_FR">CU LRC Lyrics</summary>
+		<summary lang="fr_CA">Paroles CU LRC</summary>
+		<summary lang="gl_ES">Letras de CU LRC</summary>
+		<summary lang="he_IL">CU LRC Lyrics</summary>
+		<summary lang="hr_HR">CU LRC tekstovi pjesama</summary>
+		<summary lang="hu_HU">CU LRC Dalszöveg</summary>
+		<summary lang="id_ID">Lirik CU LRC</summary>
+		<summary lang="it_IT">CU LRC Lyrics</summary>
+		<summary lang="ko_KR">CU LRC Lyrics</summary>
+		<summary lang="lt_LT">CU LRC dainų žodžiai</summary>
+		<summary lang="nl_NL">CU LRC songteksten</summary>
+		<summary lang="nb_NO">CU LRC sangtekster</summary>
+		<summary lang="pl_PL">CU LRC Lyrics</summary>
+		<summary lang="pt_PT">CU LRC Lyrics</summary>
+		<summary lang="pt_BR">CU LRC Letras</summary>
+		<summary lang="ro_RO">Versuri CU LRC</summary>
+		<summary lang="sk_SK">CU LRC Lyrics</summary>
+		<summary lang="sl_SI">CU LRC Lyrics</summary>
+		<summary lang="sv_SE">CU LRC Lyrics</summary>
+		<summary lang="zh_CN">CU LRC Lyrics 歌词插件</summary>
+		<summary lang="zh_TW">CU LRC Lyrics 歌詞腳本</summary>
+		<description lang="be_BY">CU LRC Lyrics is a lyrics script for Kodi. It supports regular as well as LRC Lyrics. The script can search synchronized/unsynchronized lyrics embedded, from file or by scrapers. It can read .lrc/.txt lyrics file saved at the same path by same file name with .mp3(or other type of music).</description>
+		<description lang="bg_BG">CU LRC Лирики е добавка за лирики. Поддържа обикновени текстови файлове и .lrc файлове. Може да търси за синхронизирани/несинхронизирани лирики вградени в аудиофайловете или да ги извлича от различни източници. Може да прочита .lrc и .txt файлове съхраняващи лирики, които се намират в папката на дадения аудио файл (с разширение .mp3 например) и носят неговото име.</description>
+		<description lang="ca_ES">CU LRC Lyrics es un script de lletres de cançons per a Kodi. Suporta lletres normal tan com LRC Lyrics. El script busca lletres sincronitzades o no, incrustades al fitxer d'àudio, des de un altre fitxer o per scrapers. Pot llegir fitxers .lrc/.txt guardats al mateix directori i nom de fitxer amb .mp3(o un altre tipus de música).</description>
+		<description lang="da_DK">CU LRC Lyrics er et script til sangtekster til Kodi. Det understøtter almindelige såvel som LRC sangtekster. Script'et kan søge i synkroniserede/usynkroniserede sangtekster som er inkodede i filer eller ved hjælp af scrapere. Det kan læse .lrc/.txt sangtekstfiler som er gemt i den samme mappe og med samme filnavn som mp3'en (eller andre typer af musikfiler).</description>
+		<description lang="de_DE">CU LRC-Songtext ist ein Songtextskript für Kodi, das sowohl normale als auch LRC-Songtexte unterstützt. Das Skript kann nach synchronisierten/unsynchronisierten eingebetteten Songtexten von Datei oder Scraper suchen. Es kann .lrc/.txt-Songtextdateien lesen, die im gleichen Pfad und mit dem gleichen Dateinamen mit .mp3 (oder eine anderen Musikart) gespeichert wurden.</description>
+		<description lang="el_GR">Οι Στίχοι CU LRC είναι ένα script στίχων για το Kodi. Υποστηρίζει συνηθισμένους στίχους καθώς και Στίχους LRC. Το script μπορεί να αναζητήσει συγχρονισμένους και μη στίχους, ενσωματωμένους, από αρχεία ή από scraper. Μπορεί να διαβάσει αρχεία στίχων τύπου .lrc/.txt που βρίσκονται στον ίδιο φάκελο και έχουν το ίδιο όνομα με το .mp3 (ή άλλης κατάληξης μουσική).</description>
+		<description lang="en_GB">CU LRC Lyrics is a lyrics script for Kodi. It supports regular as well as LRC Lyrics. The script can search synchronized/unsynchronized lyrics embedded, from file or by scrapers. It can read .lrc/.txt lyrics file saved at the same path by same file name with .mp3(or other type of music).</description>
+		<description lang="en_NZ">CU LRC Lyrics is a lyrics script for Kodi. It supports regular as well as LRC Lyrics. The script can search synchronised/unsynchronised lyrics embedded, from file or by scrapers. It can read .lrc/.txt lyrics file saved at the same path by same file name with .mp3(or other type of music).</description>
+		<description lang="en_US">CU LRC Lyrics is a lyrics script for Kodi. It supports regular as well as LRC Lyrics. The script can search synchronized/unsynchronized lyrics embedded, from file or by scrapers. It can read .lrc/.txt lyrics file saved at the same path by same file name with .mp3(or other type of music).</description>
+		<description lang="es_ES">CU LRC Lyrics es un script de letras para Kodi. Es compatible tanto con letra regular como LRC Lyrics. El script puede buscar desde archivo o a través de scrapers letras incrustadas sincronizadas o no sincronizadas. Puede leer archivos .lrc/.txt guardados en la misma carpeta con el mismo nombre del archivo *.mp3 (u otro tipo de archivo de audio).</description>
+		<description lang="fr_FR">CU LRC Lyrics est un script pour gérer les paroles dans Kodi. Il supporte les formats de paroles habituels aussi bien que LRC. Le script peut chercher des paroles synchronisées/désynchronisées intégrées dans les fichier ou par collecteurs. Il peut lire les fichiers paroles .lrc/.txt stockés dans le même dossier et avec le même nom que le fichier .mp3 (ou autre type de format musical).</description>
+		<description lang="fr_CA">Paroles CU LRC est un script de paroles pour Kodi. Il prend en charge les paroles régulières et LRC. Le script peut rechercher des paroles synchronisées/désynchronisées intégrées, d'un fichier ou de récupérateurs. Il peut lire les fichiers de paroles .lrc/.txt enregistrés dans le même chemin et avec le me nom que le .mp3 (ou autres types de musique).</description>
+		<description lang="gl_ES">Letras CU LRC é un script de letras para Kodi. Soporta letras normais como as LRC. O script pode buscar letras sincronizadas/non sincronizadas incrustadas, ou buscar a partir dun ficheiro ou de scrapers. Pode ler letras de ficheiros .lrc/.txt gardados na mesma ruta do ficheiro .mp3 (ou outro tipo de música).</description>
+		<description lang="he_IL">CU LRC Lyrics הינו סקריפט מילות שירים עבור Kodi התומך בפורמט LRC והן בטקסט רגיל. הסקריפט מסוגל לחפש מילות שיר מסונכרות/לא מסונכרות המוטמעות בשיר, מקובץ מקומי או בעזרת סקרייפר. הסקריפט מסוגל לקרוא קובץ מילות שיר txt/lrc השמור באותו נתיב עם שם זהה לקובץ ה-mp3 (או סוג אחר של קובץ מוזיקה).</description>
+		<description lang="hr_HR">CU LRC tekstovi pjesama je skripta za Kodi. Podržavna redovne i LRC tekstove pjesama. Skripta može pretraživati usklađivati/uklanjati ugrađene tekstove pjesama, iz datoteke ili sakupljača. Može čitati .lrc/.txt datoteke tekstova pjesama spremljene u istu putanju s istim nazivom datoteke sa .mp3 (ili drugim vrstama glazbe).</description>
+		<description lang="hu_HU">A CU LRC Dalszöveg egy kiegészítő az Kodi-hez, ami támogatja  a hagyományos és az LRC dalszövegek keresését, megjelenítését. A dalszöveg lehet szinkronizált, vagy szinkronizálatlan, a zenefájlba beágyazott, vagy leolvasókkal letöltött, vagy akár származhat a zene könyvtárában található .lrc vagy .txt fájlokból is.</description>
+		<description lang="id_ID">Lirik CU LRC adalah script lirik untuk Kodi. Mendukung lirik regular maupun LRC. Script ini mampu mencari lirik dengan singkronisasi maupun tidak yang tercantum pada berkas atau melalui alat penyalin. Script dapat membaca berkas lirik .lrc/.txt yang disimpan di lokasi dan nama berkas yang sama dengan .mp3 (atau format musik lainnya).</description>
+		<description lang="it_IT">CU LRC Lyrics è uno script per i testi per Kodi. Supporta testi come LRC. Lo script può cercare testi incorporati sincronizzati e non, da file o tramite scapers. Legge file .lrc/.txt salvati nello stesso percorso e con lo stesso nome dell'.mp3 (o altri tipi di musica)</description>
+		<description lang="ko_KR">CU LRC Lyrics는 Kodi를 위한 가사 수집기입니다. 일반 가사와 LRC 가사를 지원하며, 내장 가동기/비동기 가사를 검색하거나 파일 내장 가사를 찾습니다. mp3(또는 다른 형식의 음악 파일)와 같은 경로에 저장되어 있는 .lrc/.txt 형식의 가사를 읽어옵니다.</description>
+		<description lang="lt_LT">CU LRC Lyrics yra dainų žodžių atsiuntimo skriptas, skirtas Kodi. Palaikomi tiek įprasti, tiek LRC dainų žodžiai. Skriptas gali ieškoti sinchronizuotų / nesinchronizuotų dainų žodžių, integruotų failuose arba naudojant skreperius. Jis gali nuskaityti .lrc/.txt dainų žodžių failus, išsaugotus toje pačioje vietoje ir tokiu pačiu pavadinimu kaip ir .mp3 failas (ar kitokio muzikinio failo tipo).</description>
+		<description lang="nl_NL">CU LRC Lyrics is een script voor songteksten in Kodi. Het ondersteunt zowel reguliere als LRC songteksten. Het script ondersteunt gesynchroniseerde of ongesynchroniseerde songteksten die ingebed zijn in een bestand, in een los bestand staan of van een scraper. Het kan .lrc/.txt songtekst-bestanden lezen die opgeslagen zijn op hetzelfde pad en dezelfde bestandsnaam hebben als de .mp3 (of ander type bestand).</description>
+		<description lang="nb_NO">CU LRC Lyrics er et skript for å vise sangtekster i Kodi. Den støtter vanlige samt LRC sangtekster. Skriptet kan søke synkroniserte / usynkroniserte sangtekster innebygd, fra en fil eller via skrapere. Den kan lese .lrc / .txt filer som er lagret på den samme banen og med samme filnavn (.mp3 eller annen type musikk).</description>
+		<description lang="pl_PL">CU LRC Lyrics jest dodatkiem obsługującym teksty utworów dla Kodi. Obsługuje teksty utworów zarówno zwykłe jak i zsynchronizowane. Dodatek potrafi wyszukać teksty zapisane lokalnie, wbudowane w pliki utworów, a także pobierać je z Internetu. Potrafi wczytać teksty w formatach .lrc/.txt zapisane w tym samym folderze co pliku utworu .mp3 (lub innym wspierany formacie).</description>
+		<description lang="pt_PT">CU LRC Lyrics é um script de letras para o Kodi. Suporta letras normais e LRC. O script pode encontrar letras sincronizadas/dessincronizadas embutidas, ou procurar a partir de ficheiro ou de colectores. Pode ler letras de ficheiros .lrc/.txt guardados na mesma localização do ficheiro .mp3 (ou outro tipo de música).</description>
+		<description lang="pt_BR">CU LRC Lyrics é script de letras de músicas para Kodi. Ele suporta regular bem como Letras LRC. O script pode procurar por letras embutidas sincronizadas/dessincronizadas, de arquivos ou usando scrapers. Ele pode ler arquivos de letras .lrc/txt salvos no mesmo caminho com o mesmo nome do arquivo .mp3 (ou outro formato de música).</description>
+		<description lang="sk_SK">CU LRC Lyrics je doplnok poskytujúci texty skladieb pre Kodi. Podporuje bežné ako aj LRC formáty. Doplnok môže vyhľadávať synchronizované/nesynchronizované Texty skladieb vložené, v samostatnom súbore alebo cez sťahovače. Dokáže čítať .lrc/.txt súbory v rovnakom priečinku a s rovnakým názvom ako .mp3 súbor (alebo iný hudobný súbor).</description>
+		<description lang="sl_SI">CU LRC Lyrics je skripta za besedila pesmi za Kodi. Podpira redne kot tudi LRC besedila pesmi. Skripta lahko išče sinhronizirana/nesinhronizirana besedila pesmi, vgrajena, iz datoteke ali od ponudnikov. Bere lahko .lrc/.txt formate zapisa datotek iz iste mape kot je istoimenska datoteka .mp3 (ali drigi format zapisa glasbe).</description>
+		<description lang="sv_SE">CU LRC Lyrics är ett skript för Kodi. Det stödjer såväl vanliga som LRC texter. Skriptet kan söka synkroniserade/osynkroniserade texter inbäddade från fil eller från skraport. Det kan läsa .lrc/.txt filer sparade med samma sökväg och filnamn som .mp3 (eller annan typ av musik).</description>
+		<description lang="zh_CN">CU LRC Lyrics 是 Kodi 的歌词插件。它支持原 LRC Lyrics 歌词插件的功能。这个插件会搜索内嵌的、本地文件或通过刮削器获取同步/非同步歌词。它可以读取以相同文件名与歌曲文件保存在相同目录的 .lrc/.txt 歌词文件。</description>
+		<description lang="zh_TW">CU LRC Lyrics 是為 Kodi 而設的歌詞腳本。它支援一般格式的歌詞以及 LRC 格式的歌詞。此腳本能夠搜尋歌曲檔案內嵌歌詞的同步及非同步歌詞，同時也能使用刮削器在線搜尋、本地文件或通过刮削器获取同步/非同步歌词。它可以讀取放在同一個資料夾內，而又與歌曲相同命名的 .lrc/.txt 歌詞檔。</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=147340</forum>
+		<source>https://gitlab.com/ronie/script.cu.lrclyrics/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
 	</extension>
 </addon>
 
@@ -2421,6 +2656,26 @@
 		<summary>Icons für das Lastship Addon</summary>
 		<description>Themen für Lastship werden seperat aktualisiert und gepflegt um die Verteilung des Addons einfacher zu machen</description>
 		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.libraryeditor" name="Library Editor Script" version="0.9.0" provider-name="phil65">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">Library Editor Script</summary>
+		<description lang="en">This script makes it possible to edit media details manually from within Kodi. Needs Skin Support.</description>
+		<summary lang="fr">Library Editor Script</summary>
+		<description lang="fr">Ce script permet d'éditer manuellement les détails des médias depuis Kodi. Nécessite le support du thème.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>-</forum>
+		<source>-</source>
+		<email>-</email>
 	</extension>
 </addon>
 
@@ -3354,6 +3609,25 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     </extension>
 </addon>
 
+<addon id="script.playalbum" name="Play Album Script" version="3.0.4" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<language></language>
+		<summary lang="en_GB">Play Album Script</summary>
+		<description lang="en_GB">Script will play a full album when executed in the album info dialog.</description>
+		<platform>all</platform>
+		<forum>https://forum.kodi.tv/showthread.php?tid=104189</forum>
+		<source>https://gitlab.com/ronie/script.playalbum</source>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.SGKPAIR"
   name="[B][COLORblue]SGK[/COLOR][/B][COLORwhite]PAIR[/COLOR]"
   version="1.0.2"
@@ -3375,6 +3649,25 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 [COLORblue]https://www.paypal.me/KodiUnlimited[/COLOR]</description>
 	<disclaimer></disclaimer>
   </extension>
+</addon>
+
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="1.0.12" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+    <extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+        <description>Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
+	</extension>
 </addon>
 
 	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.24" provider-name="marcelveldt">
@@ -3542,6 +3835,81 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 	</extension>
 </addon>
 
+<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" version="7.0.1" provider-name="WayneD,marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.thetvdb" version="1.0.20" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Информация за предстоящите ТВ сериали.</summary>
+		<summary lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament.</summary>
+		<summary lang="de">Erhalten Sie Infos über die nächsten Ausstrahlungstermine der Serien in Ihrer Bibliothek. </summary>
+		<summary lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών</summary>
+		<summary lang="en">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_NZ">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_US">Get info for TV Shows Next Aired.</summary>
+		<summary lang="es">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="es_MX">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="fr">Obtenir les prochaines dates de diffusion de vos séries TV.</summary>
+		<summary lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé.</summary>
+		<summary lang="gl">Obter a info. das Seguintes Emisións das Series de TV.</summary>
+		<summary lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה.</summary>
+		<summary lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju.</summary>
+		<summary lang="hu">Információ a sorozatok következő vetítési idejéről.</summary>
+		<summary lang="it">Ottieni info per le Serie TV trasmesse prossimamente.</summary>
+		<summary lang="ko">TV 쇼 방송 일정을 가져옵니다.</summary>
+		<summary lang="lt">Gauti TV laidos kitos transliacijos informaciją.</summary>
+		<summary lang="nl">Ophalen info voor komende TV afleveringen.</summary>
+		<summary lang="no">Hent informasjon om kommende TV-programmer.</summary>
+		<summary lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie.</summary>
+		<summary lang="pt">Obter info para Próximas Exibições de Séries TV.</summary>
+		<summary lang="pt_BR">Saiba sobre próximas exibições de séries de TV.</summary>
+		<summary lang="ro">Află despre emisiuni care urmează să fie difuzate</summary>
+		<summary lang="ru">Информация о следующих ТВ передачах.</summary>
+		<summary lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale.</summary>
+		<summary lang="sv">Hämta info för nästa sändning av TV-serier.</summary>
+		<summary lang="zh">获取即将播出的剧集的信息。</summary>
+		<description lang="bg">Сваля информация за предстоящите ТВ сериали. Вече никога няма да пропускате епизод от ТВ сериали, които следите.</description>
+		<description lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament. No te'n perdràs cap mai més.</description>
+		<description lang="de">TV Show Next Aired liefert Termin-Informationen über die anstehenden Episoden der Serien aus der Datenbank. Dazu gibt es eine Wochenansicht mit allen in der nächsten Woche laufenden Episoden sowie (bei vorhandenem Skin Support) die direkte Integration der Informationen in die Ansichten des jeweiligen Skins. Sie werden nie wieder eine Folge verpassen.</description>
+		<description lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών. Δε θα ξαναχάσετε επεισόδιο ποτέ.</description>
+		<description lang="en">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_NZ">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_US">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="es">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="es_MX">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="fr">Ce script interroge votre médiathèque puis vas récupérer les infos sur les prochaines diffusions de vos séries. vous n'en manquerez plus aucune.</description>
+		<description lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé. Vous n'en manquerez plus jamais une.</description>
+		<description lang="gl">Obter a info. das Seguintes Emisións das Series de TV. Non esquecerá ningunha.</description>
+		<description lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה. לעולם לא תחמיץ שוב פרק.</description>
+		<description lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju. Nikada nećete propustiti nijednu.</description>
+		<description lang="hu">Információ a sorozatok következő vetítési idejéről. Soha nem marad le mégegyszer semmiről.</description>
+		<description lang="it">Ottieni info per le Serie TV trasmesse prossimamente. Non ne perderai più una.</description>
+		<description lang="ko">TV 쇼 방송 일정을 가져옵니다. 놓치는 일은 절대 없을 것입니다.</description>
+		<description lang="lt">Gauti TV laidos kitos transliacijos informaciją. Jūs niekada daugiau jos nepraleisite.</description>
+		<description lang="nl">Ophalen info voor komende TV shows. Je zult ze nooit meer missen.</description>
+		<description lang="no">Få informasjon om neste TV-sending. Du vil aldri gå glipp av en episode igjen.</description>
+		<description lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie. Nigdy już żadnego nie przegapisz.</description>
+		<description lang="pt">Obter info para Próximas Exibições de Séries TV. Nunca mais vai perder uma.</description>
+		<description lang="pt_BR">Saiba sobre próximas exibições de séries de TV. Você nunca perderá um episódio.</description>
+		<description lang="ro">Află despre emisiuni care urmează să fie difuzate. Nu vei mai rata nici una.</description>
+		<description lang="ru">Получает информацию о следующих ТВ передачах. Теперь Вы никогда не пропустите ни одну ТВ передачу.</description>
+		<description lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale. Nikoli več ne boste zamudili nobene epizode.</description>
+		<description lang="sv">Hämta info för nästa sändning av TV-Serie. Du kommer inte att missa en igen.</description>
+		<description lang="zh">获取即将播出的剧集的信息。你不会再错过好节目了。</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=186090</forum>
+		<website>http://github.com/marcelveldt/script.tv.show.next.aired</website>
+		<source>https://github.com/marcelveldt/script.tv.show.next.aired.git</source>
+	</extension>
+</addon>
+
 <addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.8" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
@@ -3586,6 +3954,23 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="service.nextup.notification" name="Nextup Service Notification" provider-name="im85288" version="2.0.00">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0"/>
+    </requires>
+    <extension library="service.py" point="xbmc.service"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Provides a postplay screen or netflix style nextup pop up notification or both together!</summary>
+        <disclaimer lang="en">This plugin is a standalone plugin.</disclaimer>
+        <platform>all</platform>
+        <language/>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <broken>replaced by upnext</broken>
+    </extension>
 </addon>
 
 <addon id="service.xbmc.versioncheck"
