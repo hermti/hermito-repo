@@ -1,0 +1,39 @@
+[2019-01-30 15:34:45] 2019-01-30 15:34:44.881000
+[2019-01-30 15:34:46] Continuing Start Up Script
+[2019-01-30 15:34:46] [Path Check] Started
+[2019-01-30 15:34:46] [Path Check] Good!
+[2019-01-30 15:34:46] [Auto Install Repo] Started
+[2019-01-30 15:34:46] [Auto Install Repo] Nicht aktiviert
+[2019-01-30 15:34:46] [Auto Update Wizard] Started
+[2019-01-30 15:34:47] [Auto Update Wizard] No New Version vFalse
+[2019-01-30 15:34:47] [Notifications] Started
+[2019-01-30 15:34:47] [Notifications] Not Enabled
+[2019-01-30 15:34:47] [Installed Check] Started
+[2019-01-30 15:34:47] [Installed Check] Not Enabled
+[2019-01-30 15:34:47] [Build Check] Started
+[2019-01-30 15:34:47] [Build Check] First Run
+[2019-01-30 15:35:02] [First Run] [User Selected: Ignore Build Menu] [Next Check: 2019-02-02]
+[2019-01-30 15:35:03] [Trakt Data] Started
+[2019-01-30 15:35:03] [Trakt Data] Not Enabled
+[2019-01-30 15:35:03] [Real Debrid Data] Started
+[2019-01-30 15:35:03] [Real Debrid Data] Saving all Data
+[2019-01-30 15:35:03] [Login Data] Started
+[2019-01-30 15:35:03] [Login Data] Not Enabled
+[2019-01-30 15:35:03] [Auto Clean Up] Started
+[2019-01-30 15:35:03] [Auto Clean Up] Cache: Off
+[2019-01-30 15:35:03] [Auto Clean Up] Old Thumbs: On
+[2019-01-30 15:35:03] 0 total thumbs cleaned up.
+[2019-01-30 15:35:03] [Auto Clean Up] Packages: On
+[2019-01-30 15:35:11] [ Version : '1.0.4' ] [ Mode : 'None' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:35:19] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:35:27] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'misc' ] [ Url : 'None' ]
+[2019-01-30 15:35:35] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'backup' ] [ Url : 'None' ]
+[2019-01-30 15:35:40] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'tweaks' ] [ Url : 'None' ]
+[2019-01-30 15:35:59] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'backup' ] [ Url : 'None' ]
+[2019-01-30 15:36:15] [ Version : '1.0.4' ] [ Mode : 'None' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:36:20] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:36:34] [ Version : '1.0.4' ] [ Mode : 'maint' ] [ Name : 'tweaks' ] [ Url : 'None' ]
+[2019-01-30 15:36:45] [ Version : '1.0.4' ] [ Mode : 'convertpath' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:36:47] [Convert Paths to Special] Complete
+[2019-01-30 15:36:50] [ Version : '1.0.4' ] [ Mode : 'asciicheck' ] [ Name : 'None' ] [ Url : 'None' ]
+[2019-01-30 15:37:03] Source file: (C:\Users\user\AppData\Roaming\Kodi\)

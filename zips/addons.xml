@@ -1286,7 +1286,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.lastship" version="3.0.4" name="Lastship" provider-name="Lastship">
+<addon id="plugin.video.lastship" version="3.0.7" name="Lastship" provider-name="Lastship">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="repository.lastship" version="1.0.2" />
@@ -1314,9 +1314,16 @@
     			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
-- Add beliebige IMDB Listen
-- Fix Trailer abspiel Probleme
-- Hompagelink aktualisiert
+- Downgrade auf Stand von v3.0.5 (Da sich wahrscheinlich ein Fehler in v3.0.6 eingeschlichen hat)
+- Offline Seiten entfernt
+  view4u.co, szene-streamz.com, movie2k.st
+- [settings.xml] Menü neu geordnet und neu Strukturiert
+- Fix settings.xml Menü Bug
+- Update source_faultlog Url
+
+  Entfernt:
+  - UpNext Funktion im Lastship Menue
+  - Anzeigen, auch englischer Streams von s.to
 		</news>
 	</extension>
 </addon>
@@ -1483,7 +1490,7 @@
 
 <addon id="plugin.video.turkvod"
 	   name="TURKvod"
-	   version="3.3.8"
+	   version="3.4.1"
 	   provider-name="BerkEnkey">
 	<requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -2124,7 +2131,7 @@
 
 <addon
   id="resource.language.de_de"
-  version="9.0.13"
+  version="9.0.17"
   name="German"
   provider-name="Team Kodi">
   <requires>
@@ -2988,7 +2995,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.26" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.27" provider-name="jsergio">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" optional="true" />
@@ -3421,6 +3428,26 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<website></website>
 		<source>https://github.com/marcelveldt/script.skin.helper.service</source>
+	</extension>
+</addon>
+
+	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.19" provider-name="marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0"/>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+    <extension point="xbmc.python.script" library="default.py" />
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website></website>
+		<source>https://github.com/marcelveldt/script.skin.helper.skinbackup</source>
 	</extension>
 </addon>
 

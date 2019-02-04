@@ -34,6 +34,7 @@ def main():
 			self.dbfilename   = self.latestDB()
 			self.dbfilename   = os.path.join(self.databasepath, self.dbfilename)
 			self.swapUS()
+			
 			if not os.path.exists(os.path.join(self.databasepath, self.dbfilename)):
 				xbmcgui.Dialog().notification("AutoExec.py", "No Addons27.db file")
 				self.log("DB File not found.")
@@ -97,7 +98,7 @@ def main():
 				response = xbmc.executeJSONRPC(query)
 				xbmcgui.Dialog().notification("AutoExec.py", "Unknown Sources: Enabled")
 				self.log("Unknown Sources Set Settings: %s" % str(response), xbmc.LOGDEBUG)
-		
+
 		def dialogWatch(self):
 			x = 0
 			while not xbmc.getCondVisibility("Window.isVisible(yesnodialog)") and x < 100:
@@ -134,7 +135,7 @@ def main():
 		xbmcgui.Dialog().notification("AutoExec.py", "Starting Script...")
 		firstRun = enableAll()
 		xbmcgui.Dialog().notification("AutoExec.py", "All Addons Enabled")
-		xbmc.executebuiltin("SetGUILanguage(GERMAN)")
+		#xbmc.executebuiltin("SetGUILanguage(resource.language.de_de)")
 		xbmcgui.Dialog().ok(addonname, 'Kodi neustarten, sobald Addons', 'und die Sprache installiert sind')
 		xbmcvfs.delete('special://userdata/autoexec.py')
 	except Exception, e:

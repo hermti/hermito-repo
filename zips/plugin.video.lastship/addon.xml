@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.lastship" version="3.0.4" name="Lastship" provider-name="Lastship">
+<addon id="plugin.video.lastship" version="3.0.7" name="Lastship" provider-name="Lastship">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="repository.lastship" version="1.0.2" />
@@ -27,9 +27,16 @@
     			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>
-- Add beliebige IMDB Listen
-- Fix Trailer abspiel Probleme
-- Hompagelink aktualisiert
+- Downgrade auf Stand von v3.0.5 (Da sich wahrscheinlich ein Fehler in v3.0.6 eingeschlichen hat)
+- Offline Seiten entfernt
+  view4u.co, szene-streamz.com, movie2k.st
+- [settings.xml] Menü neu geordnet und neu Strukturiert
+- Fix settings.xml Menü Bug
+- Update source_faultlog Url
+
+  Entfernt:
+  - UpNext Funktion im Lastship Menue
+  - Anzeigen, auch englischer Streams von s.to
 		</news>
 	</extension>
 </addon>
