@@ -198,7 +198,7 @@ def index():
 	if HIDESPACERS == 'No': addFile(wiz.sep(), '', themeit=THEME3)
 	addDir ('Builds'        ,'builds',   icon=ICONBUILDS,   themeit=THEME2)
 	addDir ('Wartung'   ,'maint',    icon=ICONMAINT,    themeit=THEME2)
-	if wiz.platform() == 'android' or DEVELOPER == 'true': addDir ('Apk Installer' ,'apk', icon=ICONAPK, themeit=THEME1)
+	if wiz.platform() == 'android' or DEVELOPER == 'true': addDir ('Apk Installer' ,'apk', icon=ICONAPK, themeit=THEME2)
 	if not ADDONFILE == 'http://': addDir ('Addon/Repo Installer' ,'addons', icon=ICONADDONS, themeit=THEME1)
 	if not YOUTUBEFILE == 'http://' and not YOUTUBETITLE == '': addDir (YOUTUBETITLE ,'youtube', icon=ICONYOUTUBE, themeit=THEME1)
 	addDir ('Daten Sichern'     ,'savedata', icon=ICONSAVE,     themeit=THEME2)

@@ -107,8 +107,6 @@ FAILED         = False
 #### Check Updates   ######
 ###########################
 
-wiz.forceUpdate(True)
-
 def checkUpdate():
 	BUILDNAME      = wiz.getS('buildname')
 	BUILDVERSION   = wiz.getS('buildversion')
@@ -426,6 +424,7 @@ if AUTOCLEANUP == 'true':
 		else: wiz.log('[Auto Clean Up] Old Thumbs: Off', xbmc.LOGNOTICE)
 		if AUTOPACKAGES == 'true': wiz.log('[Auto Clean Up] Packages: On', xbmc.LOGNOTICE); wiz.clearPackagesStartup()
 		else: wiz.log('[Auto Clean Up] Packages: Off', xbmc.LOGNOTICE)
+		wiz.forceUpdate(True)
 else: wiz.log('[Auto Clean Up] Turned off', xbmc.LOGNOTICE)
 
 wiz.setS('kodi17iscrap', '')

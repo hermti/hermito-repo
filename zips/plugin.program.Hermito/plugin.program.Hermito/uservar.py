@@ -12,7 +12,7 @@ BUILDFILE      = 'https://ftp-hr-group.de/repo/autobuilds.txt'
 # 0 being every startup of kodi
 UPDATECHECK    = 3
 # Text File with apk info in it.
-APKFILE        = 'http://'
+APKFILE        = 'https://ftp-hr-group.de/repo/APK.txt'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
 YOUTUBETITLE   = ''
 YOUTUBEFILE    = 'http://'
@@ -79,7 +79,7 @@ CONTACTFANART  = 'http://'
 ### AUTO UPDATE #########################################
 ########## FOR THOSE WITH NO REPO #######################
 # Enable Auto Update 'Yes' or 'No'
-AUTOUPDATE     = 'Yes'
+AUTOUPDATE     = 'No'
 # Url to wizard version
 WIZARDFILE     = 'https://ftp-hr-group.de/repo/autobuilds.txt'
 #########################################################
@@ -88,13 +88,13 @@ WIZARDFILE     = 'https://ftp-hr-group.de/repo/autobuilds.txt'
 ### AUTO INSTALL ########################################
 ########## REPO IF NOT INSTALLED ########################
 # Enable Auto Install 'Yes' or 'No'
-AUTOINSTALL    = 'No'
+AUTOINSTALL    = 'Yes'
 # Addon ID for the repository
-REPOID         = ''
+REPOID         = 'repository.hermito'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = ''
+REPOADDONXML   = 'https://github.com/hermti/hermito-repo/raw/master/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL     = ''
+REPOZIPURL     = 'https://github.com/hermti/hermito-repo/raw/master/zips/repository.hermito/'
 #########################################################
 
 #########################################################
