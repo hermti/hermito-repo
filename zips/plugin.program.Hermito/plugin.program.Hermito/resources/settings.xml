@@ -135,7 +135,7 @@
 		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default=""/>
 		<setting id="adult" type="bool" label="Show Adult Addons: " enable="true" default="false"/>
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
-		<setting id="viewType" type="number" label="View Type" default="50" enable="!eq(-1,false)"/>
+		<setting id="viewType" type="number" label="View Type" default="55" enable="!eq(-1,false)"/>
 		<setting type="lsep" label="Notification Window on Startup:"/>
 		<setting id="notify" type="bool" label="Disable Notification on Startup" />
 		<setting id="noteid" type="text" label="Latest Notification" visible="false" />

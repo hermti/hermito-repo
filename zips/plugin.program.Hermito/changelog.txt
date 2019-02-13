@@ -1,3 +1,6 @@
+1.0.6
+Viewtype 55
+
 1.0.5 
 AutoUpdate nach AutoCleanup
 Repo hinzugefügt
