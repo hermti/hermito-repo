@@ -7,12 +7,12 @@ ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = 'Hermito Assistent'
 EXCLUDES       = [ADDON_ID, 'repository.hermito']
 # Text File with build info in it.
-BUILDFILE      = 'https://ftp-hr-group.de/repo/autobuilds.txt'
+BUILDFILE      = 'https://github.com/hermti/hermito-repo/raw/master/Assistent/autobuilds.txt'
 # How often you would list it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 3
 # Text File with apk info in it.
-APKFILE        = 'https://ftp-hr-group.de/repo/APK.txt'
+APKFILE        = 'https://github.com/hermti/hermito-repo/raw/master/Assistent/APK.txt'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
 YOUTUBETITLE   = ''
 YOUTUBEFILE    = 'http://'
@@ -81,7 +81,7 @@ CONTACTFANART  = 'http://'
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE     = 'No'
 # Url to wizard version
-WIZARDFILE     = 'https://ftp-hr-group.de/repo/autobuilds.txt'
+WIZARDFILE     = 'https://github.com/hermti/hermito-repo/raw/master/Assistent/autobuilds.txt'
 #########################################################
 
 #########################################################

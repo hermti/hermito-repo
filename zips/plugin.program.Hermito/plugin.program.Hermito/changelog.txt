@@ -1,3 +1,6 @@
+1.0.7
+Github als Quelle
+
 1.0.6
 Viewtype 55
 
