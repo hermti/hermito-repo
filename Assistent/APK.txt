@@ -1,0 +1,7 @@
+name="Kodi 18.0 Leia"
+section="no"
+url="https://ftp-hr-group.de/repo/kodi-18.0-Leia-armeabi-v7a.apk"
+icon="http://"
+fanart="http://"
+adult="no"
+description="Kodi 18.0 Leia"
