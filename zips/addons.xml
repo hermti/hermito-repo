@@ -2651,7 +2651,7 @@ v0.8.0 (2017-11-08)
 	</extension>
 </addon>
 
-<addon id="script.hermito.repos" name="Hermito Repo Installer" version="1.0.2" provider-name="Hermito">
+<addon id="script.hermito.repos" name="Hermito Repo Installer" version="1.0.3" provider-name="Hermito">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 		<import version="0.0.0" addon="repository.cdrepo"/>
@@ -2672,6 +2672,7 @@ v0.8.0 (2017-11-08)
 		<import version="0.0.0" addon="repository.turkvod"/>
 		<import version="0.0.0" addon="repository.universalscrapers"/>
 		<import version="0.0.0" addon="repository.xstream"/>
+		<import version="0.0.0" addon="repository.bugatsinho"/>
 	</requires>
 	<extension point="xbmc.python.script" library="addon.py">
 		<provides>executable</provides>
