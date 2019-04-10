@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.openkdwizard" name="[B][COLOR darkcyan]OpenKD Multi Wizard[/COLOR][/B]" version="5.01" provider-name="OpenKD">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="run_openkd_wizard.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="run_openkd_service.py" start="run"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">OpenKD Multi Wizard</summary>
+    <description lang="en">OpenKD Multi Wizard ,OpenKD Addons and Repos Installer and APK's.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+

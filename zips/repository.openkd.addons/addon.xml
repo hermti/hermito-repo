@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.openkd.addons" name="[COLOR lightyellow]OpenKD [/COLOR][COLOR darkcyan]Repository[/COLOR]" version="1.0.7" provider-name="[COLOR blue]OpenKD Team[/COLOR]">
+    <extension point="xbmc.addon.repository" name="[COLOR blue]OpenKD Repository[/COLOR]">
+        <info compressed="false">http://openkd.tv/wbb/openkd/repo/addons.xml</info>
+        <checksum>http://openkd.tv/wbb/openkd/repo/addons.xml.md5</checksum>
+        <datadir zip="true">http://openkd.tv/wbb/openkd/repo/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[COLOR darkcyan]OpenKD-Repository[/COLOR]</summary>
+        <description>OpenKD 
+https://www.facebook.com/OpenKD</description>
+        <platform>all</platform>
+    </extension>
+</addon>
