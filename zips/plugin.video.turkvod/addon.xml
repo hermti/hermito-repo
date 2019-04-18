@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.turkvod"
 	   name="TURKvod"
-	   version="3.5.4"
-	   provider-name="BerkEnkey">
+	   version="10.0.3"
+	   provider-name="berkenkey">
 	<requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.video.F4mProxy" version="2.8.8"/>

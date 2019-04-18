@@ -306,7 +306,7 @@
 
 <addon id="metadata.common.fanart.tv"
        name="fanart.tv Scraper Library"
-       version="3.6.0"
+       version="3.6.1"
        provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0"/>
@@ -420,7 +420,7 @@
 
 <addon id="metadata.common.theaudiodb.com"
        name="TheAudioDb Scraper Library"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0"/>
@@ -502,7 +502,7 @@
 
 <addon id="metadata.themoviedb.org"
        name="The Movie Database"
-       version="5.1.5"
+       version="5.1.7"
        provider-name="Team Kodi">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0"/>
@@ -1099,7 +1099,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
   </extension>
 </addon>
 
-<addon id="plugin.video.covenant" version="1.1.34" name="Covenant" provider-name="Covenant">
+<addon id="plugin.video.covenant" version="1.1.30" name="Covenant" provider-name="Covenant">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="repository.colossus" />
@@ -1653,8 +1653,8 @@ v0.12.9 (2018-04-16)
 
 <addon id="plugin.video.turkvod"
 	   name="TURKvod"
-	   version="3.5.4"
-	   provider-name="BerkEnkey">
+	   version="10.0.3"
+	   provider-name="berkenkey">
 	<requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.video.F4mProxy" version="2.8.8"/>
@@ -1923,16 +1923,17 @@ v0.12.9 (2018-04-16)
  </extension>
 </addon>
 
-<addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.2" provider-name="Bugatsinho">
+<addon id="repository.bugatsinho" name=" Bugatsinho repository" version="2.3" provider-name="Bugatsinho">
     <extension point="xbmc.addon.repository" name="Bugatsinho repository">
         <info compressed="false">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/bugatsinho/bugatsinho.github.io/master/_zips</datadir>
         <hashes>false</hashes>
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml</info>
-            <checksum>http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/addons.xml.md5</checksum>
-            <datadir zip="true">http://raw.githubusercontent.com/nemesis668/repository.streamarmy/master/zips/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            <hashes>false</hashes>
         </dir>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -1952,7 +1953,7 @@ v0.12.9 (2018-04-16)
     </extension>
 </addon>
 
-    <addon id="repository.cdrepo" name="[COLOR steelblue]CellarDoorTV [COLOR white]Repo[/COLOR]" version="4.6" provider-name="[COLOR forestgreen][B]C[/COLOR][COLOR gold]D[/COLOR][COLOR ghostwhite]T[/COLOR][COLOR mediumblue]V[/B][/COLOR] [COLOR ghostwhite]Builds[/COLOR]">
+    <addon id="repository.cdrepo" name="[COLOR deepskyblue]CellarDoorTV [COLOR white]Repo[/COLOR]" version="6.9" provider-name="[COLOR forestgreen][B]C[/COLOR][COLOR gold]D[/COLOR][COLOR ghostwhite]T[/COLOR][COLOR mediumblue]V[/B][/COLOR] [COLOR ghostwhite]Builds[/COLOR]">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
@@ -1964,9 +1965,9 @@ v0.12.9 (2018-04-16)
             <hashes>false</hashes>
 			</dir>
             <dir>
-                <info compressed="false">http://raw.github.com/frenchdj/frenchdj.repository/master/addons.xml</info>
-                <checksum>http://raw.github.com/frenchdj/frenchdj.repository/master/addons.xml.md5</checksum>
-                <datadir zip="true">http://raw.github.com/frenchdj/frenchdj.repository/master/repo/</datadir>
+                <info compressed="false">https://raw.githubusercontent.com/frenchdj/repository.frenchdj/master/_repo/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/frenchdj/repository.frenchdj/master/_repo/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/frenchdj/repository.frenchdj/master/_repo/</datadir>
             </dir>
             <dir>
                 <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
@@ -1986,7 +1987,7 @@ v0.12.9 (2018-04-16)
         </extension>
         <extension point="xbmc.addon.metadata">
 		<summary lang="en">CellarDoorTV Repository</summary>
-		<description lang="en">[COLOR gold]The Future Of Home Entertainment[/COLOR][CR]Kodi Repository for [COLOR steelblue]CellarDoorTV[/COLOR][CR][COLOR steelblue]CellarDoorTV[/COLOR] [COLOR white]Repo[/COLOR] allows you to install our CDTV Wizard and get access to the latest CDTV Custom Builds and more.</description>
+		<description lang="en">[COLOR gold]The Future Of Home Entertainment[/COLOR][CR]Kodi Repository for [COLOR steelblue]CellarDoorTV[/COLOR][CR][COLOR steelblue]CellarDoorTV[/COLOR] [COLOR white]Repo[/COLOR] allows you to install CDTV Wizard Krypton and CDTV Wizard Leia to get access to the latest CDTV Custom Builds and more.</description>
 		<platform>all</platform>
     <assets>
         <icon>icon.gif</icon>
@@ -2944,7 +2945,7 @@ v0.8.0 (2017-11-08)
 	</extension>
 </addon>
 
-<addon id="script.lastship.artwork" version="2.0.3" name="Lastship Artwork" provider-name="Lastship Team">
+<addon id="script.lastship.artwork" version="2.0.4" name="Lastship Artwork" provider-name="Lastship Team">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
 	</requires>
@@ -2978,7 +2979,7 @@ v0.8.0 (2017-11-08)
 
 <addon id="script.module.addon.common"
 	     name="Common addon methods"
-	     version="2.0.1"
+	     version="2.0.0"
 	     provider-name="Eldorado (original: t0mm0)">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -3090,7 +3091,7 @@ v0.8.0 (2017-11-08)
 
 <addon id="script.module.certifi"
        name="certifi"
-       version="2017.07.27.1"
+       version="2019.3.9"
        provider-name="Kenneth Reitz">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
@@ -3098,15 +3099,18 @@ v0.8.0 (2017-11-08)
   <extension point="xbmc.python.module"
              library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python SSL Certificates</summary>
-    <description lang="en_GB">Packed for KODI from https://github.com/certifi/python-certifi</description>
+    <summary lang="en_GB">Python SSL Root Certificates</summary>
+    <description lang="en_GB">Packed for KODI from https://pypi.org/project/certifi/</description>
     <platform>all</platform>
     <language></language>
     <license>MPL-2.0</license>
     <forum></forum>
     <website>https://github.com/certifi/python-certifi</website>
-    <source>https://github.com/beenje/script.module.certifi</source>
-    <email>beenje AT gmail.com</email>
+    <source>https://github.com/Freso/script.module.certifi</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -3264,7 +3268,7 @@ v0.8.0 (2017-11-08)
 
 <addon id="script.module.idna"
        name="idna"
-       version="2.6"
+       version="2.8"
        provider-name="Kim Davies">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
@@ -3279,8 +3283,11 @@ v0.8.0 (2017-11-08)
     <license>BSD</license>
     <forum></forum>
     <website>https://github.com/kjd/idna</website>
-    <source>https://github.com/beenje/script.module.idna</source>
-    <email>beenje AT gmail.com</email>
+    <source>https://github.com/Freso/script.module.idna</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -3384,8 +3391,8 @@ v0.8.0 (2017-11-08)
 
 <addon id="script.module.metahandler"
      name="metahandler"
-     version="3.0.3"
-     provider-name="Eldorado, jsergio">
+     version="3.0.2.1"
+     provider-name="Metahandler Team, Jsergio">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.simplejson" version="3.3.0"/>
@@ -3395,7 +3402,7 @@ v0.8.0 (2017-11-08)
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Downloads Artwork for TV shows, Movies and Music videos for addons and stores them in a local SQLITE database</summary>
-    <description lang="en">Queries, stores, and returns metadata for TV shows, Movies and Musicvideos. [CR]Sources:[CR]www.thetvdb.com[CR]www.themoviedb.org[CR]www.imdb.com[CR]www.omdbapi.com[CR]This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
+	<description lang="en">Queries, stores, and returns metadata for TV shows, Movies and Musicvideos. [CR]Sources:[CR]www.thetvdb.com[CR]www.themoviedb.org[CR]www.imdb.com[CR]www.omdbapi.com[CR]This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
     <disclaimer lang="en"></disclaimer>
     <language></language>
     <platform>all</platform>
@@ -3553,7 +3560,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
 
 <addon id="script.module.requests"
        name="requests"
-       version="2.19.1"
+       version="2.21.0"
        provider-name="kennethreitz">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
@@ -3572,12 +3579,15 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     <license>Apache2</license>
     <forum></forum>
     <website>http://python-requests.org</website>
-    <source>https://github.com/beenje/script.module.requests</source>
-    <email>beenje AT gmail.com</email>
+    <source>https://github.com/Freso/script.module.requests</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.27" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.28" provider-name="jsergio">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" optional="true" />
@@ -3644,22 +3654,25 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     </extension>
 </addon>
 
-<addon id="script.module.simplejson" name="simplejson" version="3.4.1" provider-name="Bob Ippolito">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.python.requests" version="2.16.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<language></language>
-		<summary lang="en">Simple, fast, extensible JSON encoder/decoder for Python</summary>
-		<description lang="en">Simple, fast, extensible JSON encoder/decoder for Python</description>
-		<disclaimer lang="en">Code taken from https://pypi.python.org/pypi/simplejson/</disclaimer>
-		<license>MIT License, Academic Free License v. 2.1</license>
-		<website>https://pypi.python.org/pypi/simplejson/</website>
-		<source>https://pypi.python.org/pypi/simplejson/</source>
-	</extension>
+<addon id="script.module.simplejson"
+       name="simplejson"
+       version="3.4.0"
+       provider-name="Bob Ippolito">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+    <description lang="en">Simple, fast, extensible JSON encoder/decoder for Python</description>
+    <disclaimer lang="en">Code taken from https://pypi.python.org/pypi/simplejson/</disclaimer>
+    <license>MIT License, Academic Free License v. 2.1</license>
+    <website>https://pypi.python.org/pypi/simplejson/</website>
+    <source>https://pypi.python.org/pypi/simplejson/</source>
+  </extension>
 </addon>
 
 <addon id="script.module.singledispatch"
@@ -3851,7 +3864,7 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 
 <addon id="script.module.urllib3"
        name="urllib3"
-       version="1.22"
+       version="1.24.1"
        provider-name="shazow">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
@@ -3860,18 +3873,21 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
              library="lib" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">urllib3 is a powerful, sanity-friendly HTTP client for Python</summary>
-    <description lang="en_GB">Packed for KODI from https://github.com/shazow/urllib3</description>
+    <description lang="en_GB">Packed for KODI from https://pypi.org/project/urllib3/</description>
     <platform>all</platform>
     <language></language>
     <license>MIT</license>
     <forum></forum>
     <website>https://urllib3.readthedocs.io/en/latest/</website>
-    <source>https://github.com/beenje/script.module.urllib3</source>
-    <email>beenje AT gmail.com</email>
+    <source>https://github.com/Freso/script.module.urllib3</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.15" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.08a" provider-name="tvaddons">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" optional="true" />

@@ -1,5 +1,28 @@
 ﻿$outpath="C:\Users\user\Documents\GitHub\hermito-repo\zips\_integrieren"
+$suchordner="C:\Users\user\Documents\GitHub\hermito-repo\zips"
 
+###schon vorhandene Zips löschen
+$zips=gci $outpath -filter *.zip |Sort-Object name
+$anzahl=$zips.count
+$zaehler=1
+write-host "Vorhanden?..." -ForegroundColor green
+foreach ($zipfile in $zips)
+{
+    write-host "$zaehler / $anzahl" -ForegroundColor green -NoNewline
+    $zaehler++
+    $Zipdatei=$zipfile.name
+    $gefunden = ((gci $suchordner -Recurse $Zipdatei -Exclude $outpath).count)
+    $gefunden--
+    write-host " $gefunden" -NoNewline
+    write-host " $Zipdatei"
+    if ($gefunden -gt 0)
+    {
+        Remove-Item $zipfile -Confirm:$false     
+    }
+}
+
+
+### ZIPs entpacken und Ordner erstellen
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 function Unzip
 {
