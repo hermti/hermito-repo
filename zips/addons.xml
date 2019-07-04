@@ -1340,7 +1340,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
   </extension>
 </addon>
 
-<addon id="plugin.video.lastship" version="3.1.0" name="Lastship" provider-name="Lastship">
+<addon id="plugin.video.lastship" version="4.0.3" name="Lastship" provider-name="Lastship">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="repository.lastship" version="1.0.2" />
