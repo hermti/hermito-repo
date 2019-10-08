@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.xstream" name="xStream Repository" version="1.1.3" provider-name="xStream-Team">
+<addon id="repository.xstream" name="xStream Repository" version="1.1.4" provider-name="xStream-Team">
     <extension point="xbmc.addon.repository" name="xStream Repository">
-        <info compressed="false">https://raw.github.com/lastship/xStreamRepo/master/addons.xml</info>
-        <checksum>https://raw.github.com/lastship/xStreamRepo/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.github.com/lastship/xStreamRepo/master/zips/</datadir>
+        <info compressed="false">https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml</info>
+        <checksum>https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/streamxstream/xStreamRepo/master/</datadir>
         <dir>
-            <info compressed="false">https://raw.github.com/lastship/xStreamRepo/master/addons.xml</info>
-            <checksum>https://raw.github.com/lastship/xStreamRepo/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.github.com/lastship/xStreamRepo/master/zips/</datadir>
+            <info compressed="false">https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml</info>
+            <checksum>https://raw.github.com/streamxstream/xStreamRepo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/streamxstream/xStreamRepo/master/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">

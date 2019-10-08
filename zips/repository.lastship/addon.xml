@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.lastship" name="Lastship Repository" version="1.0.4" provider-name="Lastship">
+<addon id="repository.lastship" name="Lastship Repository" version="1.0.5" provider-name="Lastship">
 	<extension point="xbmc.addon.repository" name="Lastship Repository">
 	<dir>
         <info compressed="false">https://github.com/lastship/Lastship-Repo/raw/master/addons.xml</info>

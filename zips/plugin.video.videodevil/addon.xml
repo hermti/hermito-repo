@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.videodevil" version="1.7.204" name="VideoDevil" provider-name="xbmc-adult">
+<addon
+  id="plugin.video.videodevil"
+  version="1.7.235"
+  name="VideoDevil"
+  provider-name="xbmc-adult">
   <requires>
    <import addon="xbmc.python" version="2.14.0"/>
   </requires>
