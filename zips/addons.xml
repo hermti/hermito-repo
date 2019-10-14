@@ -1675,7 +1675,7 @@ v0.12.9 (2018-04-16)
 
 <addon id="plugin.video.turkvod"
 	   name="TURKvod"
-	   version="10.3.7"
+	   version="10.3.8"
 	   provider-name="berkenkey">
 	<requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -2488,7 +2488,7 @@ https://www.facebook.com/OpenKD</description>
   </extension>
 </addon>
 
-<addon id="script.artwork.beef" name="Artwork Beef" version="0.26.2" provider-name="rmrector">
+<addon id="script.artwork.beef" name="Artwork Beef" version="0.27.0" provider-name="rmrector">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="xbmc.json" version="6.20.0" />
@@ -2546,13 +2546,10 @@ https://www.facebook.com/OpenKD</description>
 		<description lang="es">Artwork Beef agrega automáticamente ilustraciones adicionales para Series TV y Películas a su biblioteca. Las ilustraciones son agregadas desde Servicios web y el Sistema de archivos local.</description>
 		<disclaimer lang="es">Fuente para ilustraciones: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB, KyraDB</disclaimer>
 		<news>
-v0.26.2 (2019-09-14)
-- Fix: identifying local movie set artwork
+v0.27.0 (2019-10-13)
+- Feature: sort KyraDB results by 'likes'
 
-v0.26.1 (2019-09-07)
-- Fix: automated settings for movie animated art and characterart
-
-v0.26.0 (2019-08-11)
+v0.26.0-2 (2019-08-11 - 2019-09-14)
 - Feature: add settings to enable / disable each web service individually
 - Fix: require both keys from users for KyraDB
 - Fix: error with Jarvis / old urllib3
@@ -3997,7 +3994,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
   </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="4.0.55" provider-name="Resolver Team">
+<addon id="script.module.urlresolver" name="URLResolver" version="4.0.56" provider-name="Resolver Team">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" optional="true" />
@@ -4041,9 +4038,9 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
     </extension>
 </addon>
 
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="18.1107.0" provider-name="Rick Phillips (ruuk)">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="19.912.0" provider-name="Rick Phillips (ruuk)">
     <requires>
-        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="xbmc.python" version="2.14.0" />
         <import addon="script.module.addon.signals" version="0.0.1"/>
     </requires>
     <extension point="xbmc.python.script" library="control.py">
@@ -4060,7 +4057,7 @@ AMF3, the default serialization for ActionScript 3.0, provides various advantage
         <description lang="es">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video de cientos de sitios. La versión está basada en la versión de fecha youtube-dl: YY.MDD.V donde V es la subversión específica del complemento. También permite descargas con la opción de descarga en segundo plano con una cola y un administrador de colas.</description>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
         <forum>https://forum.kodi.tv/showthread.php?tid=200877</forum>
-        <source>http://github.com/ruuk/script.module.youtube.dl</source>
+        <source>https://github.com/ruuk/script.module.youtube.dl</source>
     </extension>
 </addon>
 
