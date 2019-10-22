@@ -1,0 +1,17 @@
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.ghost.iptv" name="[B][COLOR lightyellow]Ghost IPTV[/COLOR][/B]" version="1.4" provider-name="Anonymous">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[B][COLOR lightyellow]Ghost IPTV[/COLOR][/B]</summary>
+    <language>en</language>
+    <description lang="en">[B][COLOR lightyellow]Ghost IPTV[/COLOR][/B] Zugang bekommt ihr in Telegram</description>
+     <platform>all</platform>
+  </extension>
+</addon>

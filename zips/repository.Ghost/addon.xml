@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Ghost" name="[B][COLOR red]Ghost Repo[/COLOR][/B]" version="1.0" provider-name="Ghost">
+<addon id="repository.Ghost" name="[B][COLOR ghostwhite]Ghost Repo[/COLOR][/B]" version="2.0.4" provider-name="Ghost">
 	<extension point="xbmc.addon.repository" name="Ghost Repo">
-		<info compressed="false">http://ghostrepo.de/Plugins/addons.xml</info>
-		<checksum>http://ghostrepo.de/Plugins/addons.xml.md5</checksum>
-		<datadir zip="true">http://ghostrepo.de/Plugins/</datadir>
+		<info compressed="false">https://ghost-repo.de/Plugins/addons.xml</info>
+		<checksum>https://ghost-repo.de/Plugins/addons.xml.md5</checksum>
+		<datadir zip="true">https://ghost-repo.de/Plugins/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>[COLOR red]Ghost Repo[/COLOR]</summary>
-		<description>[COLOR red]Ghost Repo[/COLOR]</description>
+		<summary>[COLOR ghostwhite]Ghost Repo[/COLOR]</summary>
+		<description>[COLOR ghostwhite]Ghost Repo[/COLOR]</description>
 		<platform>all</platform>
 	</extension>
 </addon>

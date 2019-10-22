@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<addon id="plugin.video.tele5_de" name="Tele5 Mediathek" version="1.5.4" provider-name="w4ki and a little bit of realvito">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Tele5 - Mediathek</summary>
+		<summary lang="en_GB">Tele5 - Mediathek</summary>
+		<description lang="de_DE">Das einzigartige Unterhaltungsprogramm aus dem TELE 5 Universum! Freuen Sie sich auf vollständige Episoden von Original-Serien, Filme oder exklusive Videos.[CR]Hollywood-Klassiker wie Ben Hur oder Spartacus, Hollywood-Stars wie Kirk Douglas oder Clint Eastwood, die ganz Hollywood geprägt haben, gibt es regelmäßig in der TELE 5 Mediathek.</description>
+		<description lang="en_GB">The unique entertainment program from the TELE 5 universe! Enjoy full episodes of original series, movies or exclusive videos.[CR]Hollywood classics like Ben Hur or Spartacus, Hollywood stars like Kirk Douglas or Clint Eastwood, all of which have shaped Hollywood, are featured regularly in the TELE 5 media library.</description>
+		<disclaimer lang="de_DE">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/55451-L0REs-Blog/</forum>
+		<website>https://www.tele5.de</website>
+		<email></email>
+		<source>https://github.com/kodinerds/repo/tree/master/plugin.video.tele5_de</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>[B]Version 1.5.4  (13.10.2019)[/B] by w4ki[CR]
+- fixed: Serien lassen sich nicht mehr abspielen
+- added: Bei Schlefaz werden auch FSK 18 Filme angezeigt (wenn aktiv)</news>
+	</extension>
+</addon>

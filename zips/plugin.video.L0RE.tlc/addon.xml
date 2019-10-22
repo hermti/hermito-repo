@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<addon id="plugin.video.L0RE.tlc" name="TLC Mediathek" version="1.0.3" provider-name="L0RE">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">TLC Mediathek</summary>
+		<summary lang="en_GB">TLC Mediathek</summary>
+		<description lang="de_DE">Anklicken und Abschalten! Gönn dir die beste Unterhaltung: Bewegende Schicksale, packender Crime, süße Tiere.[CR]Erlebe pure Emotionen auf tlc.de.</description>
+		<description lang="en_GB">Click and switch off! Treat yourself to the best entertainment: moving fates, thrilling crime, sweet animals.[CR]Experience pure emotions on tlc.de.</description>
+		<disclaimer lang="de_DE">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 1991</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/55451-L0REs-Blog/</forum>
+		<website>https://www.tlc.de</website>
+		<email></email>
+		<source>https://github.com/kodinerds/repo/tree/master/plugin.video.L0RE.tlc</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>[B][COLOR orangered]Version 1.0.3  (20.10.2019)[/COLOR][/B] by realvito[CR]
+- fixed: Titelanzeige aller Serien-Episoden fehlerhaft
+		</news>
+	</extension>
+</addon>

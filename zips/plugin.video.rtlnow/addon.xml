@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.rtlnow" name="TV Now" version="0.6.11" provider-name="L0RE">
+ <requires>
+        <import addon="xbmc.python" version="2.1.0"/>   
+        <import addon="script.common.plugin.cache" version="2.5.5"/> # Add this    
+          <import addon="inputstream.adaptive" version="2.2.21"/>
+         <import addon="script.module.inputstreamhelper" version="0.3.4"/>
+
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Test Plugin von L0RE</summary>
+    <summary lang="de">Test Plugin von L0RE</summary>
+    <description lang="en">Test Plugin von L0RE</description>
+    <description lang="de">Test Plugin von L0RE</description>
+    <website>https://www.tvnow.de/</website>
+    <email>andreas at vogler dot name</email>
+    <platform>all</platform>
+    <news>0.6.11
+- Added Check Widevine option to the addon settings. The user can now enable or disable the Widevine installation check.    
+0.6.10
+- Update from https://widevine.rtl.de to https://widevine.tvnow.de    
+- Added is Widevine installed check 
+0.4.24
+- Update Logo
+0.4.23
+-Update von frong73 um anbindung in PVR zu ermöglichen</news>
+    <assets>
+        <screenshot>resources/rtlnow1.png</screenshot>
+        <screenshot>resources/rtlnow2.png</screenshot>
+	<icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
